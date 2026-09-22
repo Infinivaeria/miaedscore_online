@@ -146,7 +146,8 @@ div.galleryTable {
 
 
 
- <% @@line_db["page_views"].pad['page_views_database', 'page_views_table'].set(0) do |hash|
+ <% page_views_table = @@line_db["page_views"].pad['page_views_database', 'page_views_table']
+   page_views_table.set(0) do |hash|
           #  break if post_index > @@line_db[@user].pad['blog_database', 'blog_statistics_table'].latest_id - 1
     if hash['page_views'].nil?
         hash['page_views'] = 0
@@ -155,10 +156,11 @@ div.galleryTable {
       end
   end
 
-@@line_db["page_views"].pad['page_views_database', 'page_views_table'].save_partition_to_file!(0)
+page_views_table.save_partition_to_file!(0)
+page_views = page_views_table.get(0)['page_views']
   %>
 
-♾️ [<%= @@line_db["page_views"].pad['page_views_database', 'page_views_table'].get(0)['page_views'] %>] -- (c) 2026-2032 <a href="https://miaedscore.online">MiaedScore.online</a> -- <%= $dog_blog_version %><br>
+♾️ [<%= page_views %>] -- (c) 2026-2032 <a href="https://miaedscore.online">MiaedScore.online</a> -- <%= $dog_blog_version %><br>
 <br />
 <center><%= formatted_pst_time %></center>
 <br />
@@ -175,10 +177,6 @@ div.galleryTable {
 
 
 <%
-
-# make sure the files exist no matter what
-FileUtils.touch("./main_request_log.txt") if !File.exist?("./main_request_log.txt")
-FileUtils.touch('./hitches.txt') if !File.exist?('./hitches.txt')
 
  @hitch_cookie = @r.params['h']
       @hitch_cookie = '' if @hitch_cookie.nil? || @hitch_cookie.empty? || @hitch_cookie == 'undefined'

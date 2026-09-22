@@ -409,16 +409,20 @@ class CGMFS
   end
 
   def image_bytes_to_num_id(user:, filename:)
-    File.open("public/gallery_index/#{user}/#{filename}", 'rb') do |file|
-      sum = file.read.each_byte.sum
-      @sum_identifier = sum.to_i
-    end
+    @sum_identifier = byte_sum("public/gallery_index/#{user}/#{filename}")
   end
 
-  def image_bytes_to_num_id_spec_fullpath(filename: String)
-    File.open("#{filename}", 'rb') do |file|
-      sum = file.read.each_byte.sum
-      @sum_identifier = sum.to_i
+  def image_bytes_to_num_id_spec_fullpath(filename:)
+    @sum_identifier = byte_sum(filename)
+  end
+
+  def byte_sum(filename)
+    File.open(filename, 'rb') do |file|
+      sum = 0
+      while (chunk = file.read(16 * 1024))
+        sum += chunk.each_byte.sum
+      end
+      sum
     end
   end
 
@@ -1058,19 +1062,17 @@ class CGMFS
         @title = "Post Attachment to Gallery ID #{@id}"
 
         if @url_params && !@url_params.strip.empty?
-
+          FileUtils.mkdir_p("public/gallery_index/#{@user}/attachments")
           begin
-            @uri_url = URI.open(@url_params.to_s)
+            URI.open(@url_params.to_s, open_timeout: 5, read_timeout: 30) do |uri|
+              @meta = uri.meta['content-type']&.split('/')&.last || 'bin'
+              @file_name = Time.now.to_f.to_s + '_attachment' + '.' + @meta
+              @attachment_path = "public/gallery_index/#{@user}/attachments/#{@file_name}"
+              File.open(@attachment_path, 'wb') { |file| IO.copy_stream(uri, file) }
+            end
           rescue StandardError
             next "<html><body>Upload failed. Invalid attachment URL. <a href='#{domain_name(r)}/gallery/view/#{@user}/id/#{@id}/attachments/upload'>Upload</a></body></html>"
           end
-          @uploaded_filehandle = @uri_url.read
-          @meta = @uri_url.meta['content-type']&.split('/')&.last || 'bin' # this doesn't seem to work for some urls
-
-          @file_name = Time.now.to_f.to_s + '_attachment' + '.' + @meta
-
-          FileUtils.mkdir_p("public/gallery_index/#{@user}/attachments")
-          File.open("public/gallery_index/#{@user}/attachments/#{@file_name}", 'wb') { |file| file.write(@uploaded_filehandle) }
           @gallery = @@line_db[@user].pad['gallery_database', 'gallery_table']
           @id = id
           @image = @gallery.get(@id)
@@ -1080,7 +1082,7 @@ class CGMFS
                          else
                            @image['attachments']
                          end
-          @attachments << { 'file_attachment_name' => @file_name, 'file_attachment_size' => @uploaded_filehandle.size, 'extension' => File.extname(@file_name), 'file_attachment_date' => TZInfo::Timezone.get('America/Los_Angeles').utc_to_local(Time.now).to_s }
+          @attachments << { 'file_attachment_name' => @file_name, 'file_attachment_size' => File.size(@attachment_path), 'extension' => File.extname(@file_name), 'file_attachment_date' => TZInfo::Timezone.get('America/Los_Angeles').utc_to_local(Time.now).to_s }
 
           @gallery.set(@id) do |hash|
             hash['attachments'] = @attachments
@@ -1097,10 +1099,12 @@ class CGMFS
             next "<html><body>Upload failed. Missing attachment file. <a href='#{domain_name(r)}/gallery/view/#{@user}/id/#{@id}/attachments/upload'>Upload</a></body></html>"
           end
 
-          @uploaded_filehandle = r.params['file'][:tempfile].read
           @file_name = Time.now.to_f.to_s + '_' + r.params['file'][:filename]
           FileUtils.mkdir_p("public/gallery_index/#{@user}/attachments")
-          File.open("public/gallery_index/#{@user}/attachments/#{@file_name}", 'wb') { |file| file.write(@uploaded_filehandle) }
+          @attachment_path = "public/gallery_index/#{@user}/attachments/#{@file_name}"
+          @uploaded_tempfile = r.params['file'][:tempfile]
+          @uploaded_tempfile.rewind
+          File.open(@attachment_path, 'wb') { |file| IO.copy_stream(@uploaded_tempfile, file) }
           @gallery = @@line_db[@user].pad['gallery_database', 'gallery_table']
           @id = id
           @image = @gallery.get(@id)
@@ -1110,7 +1114,7 @@ class CGMFS
                          else
                            @image['attachments']
                          end
-          @attachments << { 'file_attachment_name' => @file_name, 'file_attachment_size' => @uploaded_filehandle.size, 'extension' => File.extname(@file_name), 'file_attachment_date' => TZInfo::Timezone.get('America/Los_Angeles').utc_to_local(Time.now).to_s }
+          @attachments << { 'file_attachment_name' => @file_name, 'file_attachment_size' => File.size(@attachment_path), 'extension' => File.extname(@file_name), 'file_attachment_date' => TZInfo::Timezone.get('America/Los_Angeles').utc_to_local(Time.now).to_s }
 
           @gallery.set(@id) do |hash|
             hash['attachments'] = @attachments
@@ -1156,23 +1160,10 @@ class CGMFS
         @user = user
         @title = "#{@user}'s Gallery Tags Search Function"
         @gallery = @@line_db[@user].pad['gallery_database', 'gallery_table']
-        @tags_array = []
-        @images = @gallery.data_arr.map { |image| image }
-        @images = @images.compact
-        @tags = @images.map { |image| image['tags'] }.flatten
-        @tags.each do |tag|
-          next if tag.nil?
-
-          tag.split(', ').each do |split_tag|
-            @tags_array << split_tag
-          end
-        end
-        @tags_array = @tags_array.uniq
-        @images = @gallery.data_arr.map { |image| image }
-        @images = @images.compact
-        @image_tags = @images.map { |image| image['tags'] }
-        # remove nils in tags
-        @image_tags = @image_tags.reject { |tag| tag.nil? }
+        @images = @gallery.data_arr.compact
+        @tags = @images.filter_map { |image| image['tags'] }
+        @tags_array = @tags.flat_map { |tags| tags.split(', ') }.uniq
+        @image_tags = @tags
         if @search_params
           @search_params_set = @search_params.split(', ').compact.to_set
           # get rid of nil tags in @images_set
@@ -1249,47 +1240,28 @@ class CGMFS
         end
 
         if @recache
-          GC.start
           thread = Thread.new do
-            @images = @gallery.data_arr.map { |image| image }
-            @images = @images.compact
-            @tags = @images.map { |image| image['tags'] }.flatten
-
-            @similar_tags = {}
+            @images = @gallery.data_arr.compact
+            tag_counts = Hash.new(0)
+            @similar_tags = Hash.new { |hash, tag| hash[tag] = Set.new }
 
             @images.each do |image|
-              next if image['tags'].nil?
-
-              image_tags = image['tags'].split(', ')
+              image_tags = image['tags']&.split(', ')&.uniq
+              next if image_tags.nil? || image_tags.empty?
 
               image_tags.each do |tag|
-                @similar_tags[tag] ||= Set.new
-                @images.each do |other_image|
-                  next if other_image['tags'].nil?
-
-                  other_image_tags = other_image['tags'].split(', ')
-                  @similar_tags[tag].merge(other_image_tags - [tag]) if other_image_tags.include?(tag)
-                end
+                tag_counts[tag] += 1
+                @similar_tags[tag].merge(image_tags - [tag])
               end
             end
             @similar_tags.each { |tag, tags| @similar_tags[tag] = tags.to_a }
-            # @similar_tags.each { |tag, tags| @similar_tags[tag] = tags.uniq }
-
-            @tags.each do |tag|
-              next if tag.nil?
-
-              tag.split(', ').each do |split_tag|
-                @tags_array << split_tag
-              end
-            end
-            @tags_array = @tags_array.uniq
             @images_set = @images.to_set
             @images_set = @images_set.reject { |image| image['tags'].nil? }
 
-            @split_tags = @tags_array
+            @split_tags = tag_counts.keys
 
             @split_tags.each do |tag|
-              tag_quantity = @gallery.data_arr.count { |image| image['tags']&.split(', ')&.include?(tag) }
+              tag_quantity = tag_counts[tag]
               @tags_set << "<a href='#{domain_name(@r)}/gallery/view/#{@user}/tags/search/?search_tags=#{tag}'>#{tag}(#{tag_quantity})</a>"
             end
 
