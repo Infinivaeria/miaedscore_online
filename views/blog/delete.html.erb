@@ -1,0 +1,13 @@
+<div style="text-align: center;">
+  <div id='entry' style='border:2px black solid; font-size:42px; display: inline-block;'> 
+  <% @posts.each do |post| %>
+     <% if post["id"] %>
+     <% lock_status = @@line_db[@user].pad["blog_database", "blog_table"].get(post["id"].to_i)["blog_status_locked"] %>
+    <%= lock_status %>
+    <a href="<%= domain_name(@r) %>/blog/<%= @user %>/view/<%= post["id"].to_s %>/"><%= post["blog_post_title"] %> : 
+    <a href="<%= domain_name(@r) %>/blog/<%= @user %>/delete/<%= post["id"].to_s %>"><%= "🔒" if lock_status %><%= "🔓" if !lock_status %>(<%= post["id"].to_s %>)::- </a><br /><br>
+    <% else %>
+    <% next %>
+    <% end %>
+  <br />
+  <% end %>

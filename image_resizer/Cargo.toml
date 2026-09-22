@@ -1,0 +1,36 @@
+[package]
+name = "image_resizer"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.97"
+async-native-tls = "0.5.0"
+async-std = { version = "1.13.1", features = ["async-attributes", "async-process", "attributes", "futures-core", "io_safety", "unstable"] }
+base64 = "0.22.1"
+chrono = { version = "0.4.40", features = ["pure-rust-locales", "rkyv-64", "rkyv-validation", "serde"] }
+image = { version = "0.25.6", features = ["serde", "color_quant"] }
+magnus = { version = "0.7.1", features = ["bytes", "embed"] }
+md5 = "0.8.0"
+native-tls = "0.2.14"
+notify = { version = "8.0.0", features = ["kqueue", "mio", "serde"] }
+once_cell = "1.21.3"
+oneshot = { version = "0.1.11", features = ["loom"] }
+serde = "1.0.219"
+serde_json = "1.0.140"
+surf = { version = "2.3.2", default-features = true }
+
+tokio =  { version = "1.44.1", features = ["full"] }
+tokio-native-tls = "0.3.1"
+url = { version = "2.5.4", features = ["serde"] }
+
+[profile.dev]
+opt-level = 3
+
+[profile.release]
+debug = false
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
+

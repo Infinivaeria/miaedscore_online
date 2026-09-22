@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {  "ruby.rubocop.executePath": "C:\\Ruby33-x64\\bin\\",
+
+	"ruby.rubocop.suppressRubocopWarnings": true,
+"ruby.rubocop.onSave": true,
+
+	"solargraph.useBundler": true,
+"ruby.rubocop.useBundler": true,
+"terminal.integrated.sendKeybindingsToShell": true,
+"git.ignoreLimitWarning": true,
+	"settings": {  },
+}
+}
+

@@ -1,0 +1,35 @@
+<style>
+    .center {
+        text-align: center;
+    }
+</style>
+<div class="center">
+    <form action="<%= domain_name(@r) %>/gallery/uwu/add_image/uwu_id/<%= @id %>" method="post" enctype="multipart/form-data">
+        <input type="text" name="image_id">        
+        <input type="submit" value="ADD IMAGE TO UwU COLLECTIONS BY *ID*">
+    </form><br /><br />
+    <hr><br /><br />
+    <form action="<%= domain_name(@r) %>/gallery/uwu/edit/id/<%= @id %>" method="post" enctype="multipart/form-data">
+        <input type="text" name="title"  value="<%= @collection['title'] %>">
+        <textarea rows="20" cols="30" name="description"><%= @collection['description'] %></textarea>
+        <input type="submit" value="EDIT UwU COLLECTION">
+    </form>
+
+</div>
+<br><br><br><hr>
+<% @images.each_with_index do |image, index| %>
+    <div class="center">
+        <div class="image">
+            <p><%= image[1]['title'] %></p>
+            <p><%= image[1]['description'] %></p>
+            <a href="<%= domain_name(@r) %>/gallery/view/<%= @user %>/id/<%= image[0] %>" border="0">
+                <img src="<%= domain_name(@r) %>/gallery_index/<%= @user %>/thumbnail_<%= image[1]['file'] %>" alt="<%= image[1]['title'] %>">
+            </a>
+            <a href="<%= "#{domain_name(@r)}/gallery/uwu/delete_image/uwu_id/#{@id}/gallery_id/#{image[0]}" %>">DELETE</a>
+        </div>
+    </div>
+<% end %>
+<div class="center">
+    <a href="<%= domain_name(@r) %>/gallery/uwu/view/<%= @user %>">Go Back</a>
+</div>
+

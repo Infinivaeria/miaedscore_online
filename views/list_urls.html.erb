@@ -1,0 +1,15 @@
+<% @list.each_with_index do |hash, index| %>
+  <% break if hash.empty? %>
+  <br><br>
+  <% log(hash['url'] ) %>
+  <% if (hash['url'].match? /(.*)(\.jpg|\.png)/) && @r.params['image'] != "0" %>
+
+    <% dimensions = FastImage.size(hash['url']) if hash['url'].match? /(.*)((\.jpg)|(\.png))/ %>
+    <a href="<%= hash['url'] %>"><img src="<%= hash['url'] %>" width="<%= (dimensions[0] * 0.25).ceil %>" height=<%= (dimensions[1] * 0.25).ceil %> alt="Image: <%= hash['url'] %>" /></a><br>
+  <% end %>
+  
+  <a href="<%= hash["url"] %>"><%= hash["url"] %></a><br>
+  Size[W, H]: <%= FastImage.size(hash["url"]) if hash['url'].match? /(.*)((\.jpg)|(\.png))/ %>
+  <a href="https://hudl.ink/u/<%= index %>">https://hudl.ink/u/<%= index %></a><br>
+  <br><br>  
+ <% end %>

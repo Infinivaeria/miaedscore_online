@@ -1,0 +1,415 @@
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 173.28.186.199
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-05 11:40:32 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 127.0.0.1
+LOG: request referrer: 
+LOG: request user_agent: Ruby
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-05 11:47:23 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 149.154.161.253
+LOG: request referrer: 
+LOG: request user_agent: TelegramBot (like TwitterBot)
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-05 11:47:23 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 173.28.186.199
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-05 11:48:20 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 127.0.0.1
+LOG: request referrer: 
+LOG: request user_agent: Ruby
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-05 15:56:50 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 68.205.94.22
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (Android 12; Mobile; rv:106.0) Gecko/106.0 Firefox/106.0
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-05 15:56:56 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 173.28.186.199
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.35
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-06 11:22:29 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 31.52.146.208
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-06 16:46:09 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 31.52.146.208
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) (Dullahan:1.12.3.202111032221 [64bit] - SecondLife/6.6.3.67470 (Firestorm-Releasex64; firestorm skin))  Chrome/91.0.4472.114 [64bit] Safari/537.36
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-06 16:46:11 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 173.28.186.199
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.35
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-06 18:10:41 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 173.28.186.199
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.35
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-06 20:14:21 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 173.28.186.199
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.35
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-06 20:14:44 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 127.0.0.1
+LOG: request referrer: 
+LOG: request user_agent: Ruby
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-06 20:17:08 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 76.174.115.44
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-06 20:17:12 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 173.28.186.199
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.35
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-06 20:18:31 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 95.90.184.57
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-06 23:37:28 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 173.28.186.199
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.35
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-07 02:40:49 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 176.63.3.215
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-11 11:30:49 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 212.24.165.73
+LOG: request referrer: https://www.google.com/
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-11 11:30:53 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 173.28.186.199
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.42
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-18 09:18:05 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 177.207.74.199
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:61.0) Gecko/20100101 Firefox/61.0
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-18 21:43:27 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 135.125.219.40
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (compatible; PaperLiBot/2.1; https://support.paper.li/hc/en-us/articles/360006695637-PaperLiBot)
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-18 21:45:00 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 173.28.186.199
+LOG: request referrer: https://t.co/
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.42
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-18 21:45:06 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 136.243.80.152
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (compatible; TrendsmapResolver/0.1)
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-18 21:48:55 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 45.72.76.175
+LOG: request referrer: 
+LOG: request user_agent: Anthill
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-18 21:56:07 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 173.28.186.199
+LOG: request referrer: https://t.co/
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.42
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-19 15:28:29 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 111.253.32.83
+LOG: request referrer: https://t.co/
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-19 15:40:01 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 173.28.186.199
+LOG: request referrer: https://t.co/
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.42
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-20 07:59:05 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 125.230.66.105
+LOG: request referrer: https://t.co/
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-21 06:50:55 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 42.60.80.171
+LOG: request referrer: https://www.furaffinity.net/
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:107.0) Gecko/20100101 Firefox/107.0
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-21 08:14:01 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 135.125.219.40
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (compatible; PaperLiBot/2.1; https://support.paper.li/hc/en-us/articles/360006695637-PaperLiBot)
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-21 09:16:32 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 35.240.26.48
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (compatible; +https://tweetedtimes.com)
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-21 09:43:31 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 70.250.146.53
+LOG: request referrer: https://www.furaffinity.net/
+LOG: request user_agent: Mozilla/5.0 (Linux; Android 13; Pixel 4a) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-11-21 13:16:33 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 173.28.186.199
+LOG: request referrer: https://steamcommunity.com/
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.54
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-12-31 09:43:20 +0000
+LOG: hudl.ink/bashasset_eng -> hudl.ink:8080 Redirection Request:
+LOG: request path: /bashasset_eng ; request host: hudl.ink
+LOG: request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+LOG: request ip: 173.28.186.199
+LOG: request referrer: 
+LOG: request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.54
+LOG: AJAX request?: false
+LOG: Timestamp: 2022-12-31 14:30:49 +0000
+hudl.ink/bashasset_eng -> itch.io(zeropivot/bashasset) Redirection Request:
+request path: /bashasset_eng ; request host: hudl.ink
+request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+request ip: 216.244.66.249
+request referrer: 
+request user_agent: Mozilla/5.0 (compatible; DotBot/1.2; +https://opensiteexplorer.org/dotbot; help@moz.com)
+AJAX request?: false
+Timestamp: 2023-06-12 17:37:49 +0000
+hudl.ink/bashasset_eng -> itch.io(zeropivot/bashasset) Redirection Request:
+request path: /bashasset_eng ; request host: hudl.ink
+request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+request ip: 216.244.66.249
+request referrer: 
+request user_agent: Mozilla/5.0 (compatible; DotBot/1.2; +https://opensiteexplorer.org/dotbot; help@moz.com)
+AJAX request?: false
+Timestamp: 2023-09-12 11:20:24 +0000
+hudl.ink/bashasset_eng -> itch.io(zeropivot/bashasset) Redirection Request:
+request path: /bashasset_eng ; request host: hudl.ink
+request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+request ip: 207.46.13.151
+request referrer: 
+request user_agent: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/103.0.5060.134 Safari/537.36
+AJAX request?: false
+Timestamp: 2023-10-28 22:04:29 +0000
+hudl.ink/bashasset_eng -> itch.io(zeropivot/bashasset) Redirection Request:
+request path: /bashasset_eng ; request host: hudl.ink
+request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+request ip: 216.244.66.249
+request referrer: 
+request user_agent: Mozilla/5.0 (compatible; DotBot/1.2; +https://opensiteexplorer.org/dotbot; help@moz.com)
+AJAX request?: false
+Timestamp: 2023-12-15 15:07:03 +0000
+hudl.ink/bashasset_eng -> itch.io(zeropivot/bashasset) Redirection Request:
+request path: /bashasset_eng ; request host: hudl.ink
+request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+request ip: 40.77.167.230
+request referrer: 
+request user_agent: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36
+AJAX request?: false
+Timestamp: 2023-12-19 22:21:10 +0000
+hudl.ink/bashasset_eng -> itch.io(zeropivot/bashasset) Redirection Request:
+request path: /bashasset_eng ; request host: hudl.ink
+request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+request ip: 216.244.66.249
+request referrer: 
+request user_agent: Mozilla/5.0 (compatible; DotBot/1.2; +https://opensiteexplorer.org/dotbot; help@moz.com)
+AJAX request?: false
+Timestamp: 2024-03-16 13:53:47 +0000
+hudl.ink/bashasset_eng -> itch.io(zeropivot/bashasset) Redirection Request:
+request path: /bashasset_eng ; request host: hudl.ink
+request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+request ip: 207.46.13.154
+request referrer: 
+request user_agent: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36
+AJAX request?: false
+Timestamp: 2024-03-30 23:36:06 +0000
+hudl.ink/bashasset_eng -> itch.io(zeropivot/bashasset) Redirection Request:
+request path: /bashasset_eng ; request host: hudl.ink
+request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+request ip: 47.128.37.104
+request referrer: 
+request user_agent: Mozilla/5.0 (Linux; Android 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; Bytespider; spider-feedback@bytedance.com)
+AJAX request?: false
+Timestamp: 2024-05-10 05:12:44 +0000
+hudl.ink/bashasset_eng -> itch.io(zeropivot/bashasset) Redirection Request:
+request path: /bashasset_eng ; request host: hudl.ink
+request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+request ip: 47.128.62.4
+request referrer: 
+request user_agent: Mozilla/5.0 (Linux; Android 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; Bytespider; spider-feedback@bytedance.com)
+AJAX request?: false
+Timestamp: 2024-05-16 03:58:49 +0000
+hudl.ink/bashasset_eng -> itch.io(zeropivot/bashasset) Redirection Request:
+request path: /bashasset_eng ; request host: hudl.ink
+request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+request ip: 216.244.66.249
+request referrer: 
+request user_agent: Mozilla/5.0 (compatible; DotBot/1.2; +https://opensiteexplorer.org/dotbot; help@moz.com)
+AJAX request?: false
+Timestamp: 2024-06-19 11:57:23 +0000
+hudl.ink/bashasset_eng -> itch.io(zeropivot/bashasset) Redirection Request:
+request path: /bashasset_eng ; request host: hudl.ink
+request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+request ip: 47.128.123.104
+request referrer: 
+request user_agent: Mozilla/5.0 (Linux; Android 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; Bytespider; spider-feedback@bytedance.com)
+AJAX request?: false
+Timestamp: 2024-07-18 00:55:05 +0000
+hudl.ink/bashasset_eng -> itch.io(zeropivot/bashasset) Redirection Request:
+request path: /bashasset_eng ; request host: hudl.ink
+request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+request ip: 216.244.66.249
+request referrer: 
+request user_agent: Mozilla/5.0 (compatible; DotBot/1.2; +https://opensiteexplorer.org/dotbot; help@moz.com)
+AJAX request?: false
+Timestamp: 2024-09-22 10:52:27 +0000
+hudl.ink/bashasset_eng -> itch.io(zeropivot/bashasset) Redirection Request:
+request path: /bashasset_eng ; request host: hudl.ink
+request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+request ip: 40.77.167.235
+request referrer: 
+request user_agent: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36
+AJAX request?: false
+Timestamp: 2024-09-27 13:16:29 +0000
+hudl.ink/bashasset_eng -> itch.io(zeropivot/bashasset) Redirection Request:
+request path: /bashasset_eng ; request host: hudl.ink
+request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+request ip: 40.77.167.23
+request referrer: 
+request user_agent: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36
+AJAX request?: false
+Timestamp: 2024-09-29 10:27:41 +0000
+hudl.ink/bashasset_eng -> itch.io(zeropivot/bashasset) Redirection Request:
+request path: /bashasset_eng ; request host: hudl.ink
+request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+request ip: 40.77.167.243
+request referrer: 
+request user_agent: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36
+AJAX request?: false
+Timestamp: 2024-09-30 10:25:53 +0000
+hudl.ink/bashasset_eng -> itch.io(zeropivot/bashasset) Redirection Request:
+request path: /bashasset_eng ; request host: hudl.ink
+request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+request ip: 40.77.167.25
+request referrer: 
+request user_agent: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36
+AJAX request?: false
+Timestamp: 2024-10-01 10:26:09 +0000
+hudl.ink/bashasset_eng -> itch.io(zeropivot/bashasset) Redirection Request:
+request path: /bashasset_eng ; request host: hudl.ink
+request hash: #<CGMFS::RodaRequest GET /bashasset_eng>
+request ip: 52.167.144.187
+request referrer: 
+request user_agent: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36
+AJAX request?: false
+Timestamp: 2024-10-02 10:39:12 +0000

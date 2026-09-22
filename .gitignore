@@ -1,0 +1,56 @@
+.DS_Store
+log/**/*
+tmp/**/*
+vendor/gems/*
+!vendor/gems/cache/
+.sass-cache/*
+db/*.db
+.*.sw*
+db
+public
+log.txt
+local.txt
+aritywolf_redir.txt
+artywalf_redir.txt
+main_request_log.txt
+page_views.txt
+Gemfile.lock
+Gemfile
+hitches.txt
+config/puma.pid
+config/puma.state
+page_views_local.txt
+server_main_domain_name.txt
+# Rust / Cargo build artifacts
+/target/
+/build/
+
+# Rust compiled outputs
+*.rlib
+*.rmeta
+*.a
+
+# Shared libraries
+*.so
+*.dylib
+*.dll
+
+# Executables and objects
+*.exe
+*.o
+*.obj
+
+# Debug symbols
+*.pdb
+*.dSYM/
+
+# rustfmt backups
+**/*.rs.bk
+
+# Coverage/profiling files
+*.profraw
+*.profdata
+
+# wasm-pack output
+/pkg/
+tiade-maeepers-saerver-all/server.log

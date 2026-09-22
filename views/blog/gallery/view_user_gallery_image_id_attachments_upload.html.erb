@@ -1,0 +1,10 @@
+<!-- Form for uploading files -->
+<form action="<%= domain_name(@r) %>/gallery/view/<%= @user %>/id/<%= @id %>/attachments/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Upload">
+</form>
+<!-- Form for URL uploads -->
+<form action="<%= domain_name(@r) %>/gallery/view/<%= @user %>/id/<%= @id %>/attachments/upload" method="post">
+    <input type="text" name="url" id="url" placeholder="Enter URL">
+    <input type="submit" value="Upload">
+</form>

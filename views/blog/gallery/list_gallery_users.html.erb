@@ -1,0 +1,6 @@
+<br>
+<center><a href="/blog/login">(➕🔒)</a></center><br /><br />
+<% @@line_db.databases.each do |user| %>
+<% next if user == 'urls_redir' || user == 'blog' || user == "user_blog_database" || user == "secondlife_ai" %>
+    <center><a href="<%= "#{domain_name(@r)}/gallery/view/#{user}" %>"><%= user %></a></center>
+<% end %>

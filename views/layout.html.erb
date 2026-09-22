@@ -1,0 +1,355 @@
+<%# family_logged_in(r) works if and only if $lockdown = true (CGMFS.rb; main loop) %>
+<%= family_logged_in?(@r) %>
+
+
+<% if @file %>
+  <% @thumbnail_file = "#{domain_name(@r)}/card" %>
+  <% else %>
+  <% @thumbnail_file = "#{domain_name(@r)}/card" %>
+<% end %>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title><%= h(@title) %></title>
+    <link rel="stylesheet" href="<%= domain_name(@r) %>/style.css" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="<%= domain_name(@r) %>/favicon.ico">
+    <!-- the embed cards don't embed images on bluesky; probably admin incompetance or a setting somewhere, but everything was tried at one time -->
+    <meta property="og:site_name" content="miaedscore.online" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<%= h(@title) %> - by <%= h(@user) %>" />
+    <meta property="og:image" content="<%= @thumbnail_file %>" />
+    <meta property="og:url" content="<%= domain_name(@r) %>/<%= @type %>/<%= @user %>/view/<%= @id %>" />
+    <meta property="og:description" content="Post By <%= h(@description || @title || @user) %>" />
+    <meta name="description" content="Post By <%= h(@description || @title || @user) %>" />
+    <meta name="keywords" content="stimky.info, stinkbutt, stink, butt, stinky, stimky, musky, muskium, stinkbutt.info, info, stinky info, stimky info, onlyfurs, only furs, onlyfans, porn, pr0n, pornography, nsfw, sfw, gay, homosexual, faggot, faggotry, stinky faggotry, stimky faggotry, stinky stimky champions, champions, gods of stink, gods of musk, gods of stimk, stinky gods, stinky wolf gods, stinky dogg gods, stinky yeen gods, miaedscore.online, miaedscore, miaed-score, vore, vorny, musk, musky, stinky, stimky, acetone, stinky acetone, stinky stimky champions, codename sniffa, sniffa, demiurge, simulation, simulator, sim, second life, stinky, stimky, stinky.zip, stimky.zip onemoondogg, pornography, porn, pron, pr0n, furry porn, vore, cock vore, anal vore, galleries, deviantart, furaffinity, midscore, mid, mids, midscorian, wolf, one moon planet, onemoonplane, blog,  gamedev, gamedevelopment, indiegamedev, game, api, anthro, anthropomorphic, dragon, dragons, furry, furries, comic, comics, web, webcomic, dreamsigns, addictions, earth, planets, war, science, sciencefiction, wolf, wolves, lynx, fennec, fox, foxes, gallery, anthro, anthropomorphic, commission, commissions, actors, manedwolf, maned_wolf, canines, canids, fennecfox, future, german shepherd, axelshep, aylocollie, furryfurry, nsfw, gay, homosexual, faggotry, market, commissions, algorithm, simulator earth, simulation, role playing game, rpg, actors: simulator, actors: simula, simula, programming, coding, computer science rockstars, comp sci rockstars, computer science, computer information systems, mathematics, calculus, physics, furry artist, artist, canid, canines, role playing game, role-playing game, blog, journal, cdn, api, gallery, furry blog, furry gallery, emojis, emoji, collie, german shepherd, gshep, g-shep, hyena, yeen, striped hyena, aardwolf, spotted hyena, mathematics, discrete mathematics, phd, gaymer, furfag, furfaggotry, nsfl, flcl, anime, style, art style, artistry, digital art, zoophile hunters, pedophile hunters, bigot hunters, trans hunters, trans exposers, bigot exposers, pedophile exposers, democrat, republican, cenrist, democrat lol, sexy, signup, mega-game.net, meta game, meta, metaworld, furfaggotry, blogger, blog, gnosis, gnostic, gnocticism, ai, artificlal intelligence, service, blogger, gallery, furry gallery, furry bloggers, furry blogger, gay, homosexual, queer, twin flames, rhuxwolf, aylowolf, rhuxfolf, aylofolf, metagame, game, gaming, games, video games, software, hardware" />
+    <meta name="author" content="Miaede-Score">
+    <meta name="twitter:card" content="summary_large_image" /> <!-- changed 2021-04-15 -->
+    <meta name="twitter:site" content="Miaedscore.online" />
+    <meta name="twitter:title" content="<%= h(@title) %>" />
+    <meta name="twitter:url" content="<%= domain_name(@r) %>/<%= @type %>/<%= @user %>/view/<%= @id %>" />
+    <meta name="twitter:description" content="<%=h @description || @title || @user %>" />
+    <meta name="twitter:image" content="<%= @thumbnail_file %>" />
+    <meta name="twitter:creator" content="@Miaedscore" />
+    <meta name="twitter:domain" content="miaedscore.online"/>
+    <meta property="bsky:card" content="summary_large_image">
+    <meta property="bsky:site" content="araety.org"> <!-- Replace with your Bluesky handle if available -->
+    <meta property="bsky:title" content="<%= h(@title) %>">
+    <meta property="bsky:description" content="<%=h @description || @title || @user %>">
+    <meta property="bsky:image" content="https://miaedscore.online/card">
+    <meta name="msvalidate.01" content="AAA4058A3DABDECA9018AD89DD143C68" />
+  </head>
+  <body>
+  <style>
+
+body {
+	color: white;
+    background-color: rgb(85, 115, 145);
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.text
+{
+	color: white;
+	background-color: lightslategray;
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+	display: flex;
+}
+
+.node {
+	flex: 1;
+	flex-basis: auto;
+}
+
+a:link {
+	color:rgb(39, 38, 38);
+
+}
+
+a:visited {
+	color:rgb(255, 255, 255);
+}
+
+a:active {
+	color:red;
+}
+
+div.galleryTable {
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+
+}
+
+.divTable.galleryTable .divTableCell, .divTable.galleryTable .divTableHead {
+
+}
+.divTable{ display: table; }
+.divTableRow { display: table-row; }
+.divTableHeading { display: table-header-group;}
+.divTableCell, .divTableHead { display: table-cell;}
+.divTableHeading { display: table-header-group;}
+.divTableFoot { display: table-footer-group;}
+.divTableBody { display: table-row-group;}
+.day { border: 1px solid black; padding: 10px; display: inline-block; width: 40px; text-align: center; }
+.week { clear: both; }
+  </style>
+  <div>
+  <center>
+  <br>
+  <a href="<%= domain_name(@r) %>/blog/<%= @user %>">
+    <div style="font-size: 72px; overflow-wrap: break-word;">
+      1️⃣🌓🌎
+    </div>
+  </a>
+  <font size="16"><a href="<%= domain_name(@r) %>/blog">(📃)</a>,<a href="<%= domain_name(@r) %>/gallery">(🖼️)</a></font><br><br>
+  <font size="3"><%= SolarDance.sun_dance_message %></font><br>
+  <font size="3"><%= "Gregorian: #{Calendar.new.gregorian}" %></font><br>
+  <font size="3"><%= "Julian: #{Calendar.new.julian_primitive} -> #{Calendar.new.julian}" %></font><br>
+  <% @ae_calendar = AECalendar.new %>
+  <font size="3"><%= "AE Calendar: #{@ae_calendar.ae_date(DateTime.now)}" %></font><br>
+  <%= "<font size=\"4\">#{MoonPhaseDetails.print_details_for_date(Date.today)}</font>" %>
+<br />
+  <br /><b>120</b>🕰️<%= convert_to_120_second_time_pst  %> PST<br />
+  <br />
+  <%= MoonPhase13.new.display %>
+  <hr>
+ <br>
+  <% if session['user'] %>
+   <h1>(👤[<a href="/gallery/upload">(🔢)</a>; <a href="/gallery/upload/url">(🔗🔢)</a>;  <a href="/blog/<%= session['user'] %>/new">(📝)</a>|<a href="/gallery/view/<%= session['user'] %>">(🖼️)</a>],[<a href="/blog/<%= session['user'] %>">(📃)</a>]) <a href="/gallery/view/<%= session['user'] %>"><%= session['user'] %></a></h1><br>
+  <% end %>
+  <br>
+  </center>
+  </div>
+  <br>
+    <%= yield %>
+    <%= assets(:js) %>
+  </body>
+  <center>
+  <hr>
+  <font face="consolas">
+  <% stop_rendering_time = Time.now.to_f %>
+  <b></b> 📐 <%= ((stop_rendering_time - @start_rendering_time.to_f)).round(5) %>s [<%= ((stop_rendering_time - @start_rendering_time.to_f)*1000).round(5) %>ms]<br><br>
+
+
+<br>
+
+
+
+
+ <% @@line_db["page_views"].pad['page_views_database', 'page_views_table'].set(0) do |hash|
+          #  break if post_index > @@line_db[@user].pad['blog_database', 'blog_statistics_table'].latest_id - 1
+    if hash['page_views'].nil?
+        hash['page_views'] = 0
+      else
+        hash['page_views'] += 1
+      end
+  end
+
+@@line_db["page_views"].pad['page_views_database', 'page_views_table'].save_partition_to_file!(0)
+  %>
+
+♾️ [<%= @@line_db["page_views"].pad['page_views_database', 'page_views_table'].get(0)['page_views'] %>] -- (c) 2026-2032 <a href="https://miaedscore.online">MiaedScore.online</a> -- <%= $dog_blog_version %><br>
+<br />
+<center><%= formatted_pst_time %></center>
+<br />
+
+
+<br>
+<br>
+<br>
+<center><font size="3"><div size="5" id="ip_addr_resolv">🏘️<b>[🌐<%= request.ip %>]</b></div></font></center>
+<br>
+<a href="<%= domain_name(@r) %>/blog/login">[➕🔒]</a>|<a href="<%= domain_name(@r) %>/blog/logout">[➖🔒]</a><br>
+</center>
+</html>
+
+
+<%
+
+# make sure the files exist no matter what
+FileUtils.touch("./main_request_log.txt") if !File.exist?("./main_request_log.txt")
+FileUtils.touch('./hitches.txt') if !File.exist?('./hitches.txt')
+
+ @hitch_cookie = @r.params['h']
+      @hitch_cookie = '' if @hitch_cookie.nil? || @hitch_cookie.empty? || @hitch_cookie == 'undefined'
+      #@hitch_cookie = @hitch_cookie.gsub(/[^a-zA-Z0-9]/, '') # Sanitize the hitch cookie to allow only alphanumeric characters
+
+      File.open('./hitches.txt', 'a') { |f| f.puts("#{request.ip} - #{Time.now.to_s} - #{@hitch_cookie}\n") }
+      %>
+<%
+
+
+File.open('main_request_log.txt', 'a') do |f| %>
+     <%
+      # Log the request method
+      f.puts "request_method: #{@r.request_method}"
+
+      # Log the host
+      f.puts "host: #{@r.host}"
+
+      f.puts "ip: #{@r.ip}"
+
+      # Log the path
+      f.puts "path: #{@r.path}"
+
+      # Log the GET parameters
+      f.puts "GET_params: #{@r.GET}"
+
+      # Log the POST parameters
+      f.puts "POST_params: #{@r.POST}"
+      begin
+        hostname = Resolv.getname(request.ip) if $resolv
+        f.puts "hostname: #{hostname}" if $resolv
+      rescue Resolv::ResolvError
+        f.puts "hostname: unknown" if $resolv
+      end
+      f.puts "AJAX request? #{@r.xhr?}"
+      f.puts "cookies: #{@r.cookies}"
+      f.puts "REFERRER: #{@r.referrer}"
+      f.puts "timestamp: #{TZInfo::Timezone.get('America/Los_Angeles').utc_to_local(Time.now)}"
+      f.puts "User-Agent: #{@r.user_agent}"
+      f.puts "Timestamp (UTC): #{Time.now.utc}"
+
+      f.puts #newline
+      # ... add more logs as needed ...
+end
+      %>
+
+
+
+
+
+<br><br>
+<br />
+<br />
+<br />
+  <center><pre>    # Average length of a full lunar cycle (in days)
+MOON_CYCLE_DAYS = 29.53
+
+# The 27 fabled moon rotations with emojis:
+MOON_ROTATIONS = [
+  'New Moon 🌑', # 1
+  'Waxing Crescent 🌒',     # 2
+  'First Quarter 🌓',       # 3
+  'Waxing Gibbous 🌔',      # 4
+  'Full Moon 🌕',           # 5
+  'Waning Gibbous 🌖',      # 6
+  'Last Quarter 🌗',        # 7
+  'Waning Crescent 🌘',     # 8
+  'Supermoon 🌝',           # 9
+  'Blue Moon 🔵🌙',         # 10
+  'Blood Moon 🩸🌙',        # 11
+  'Harvest Moon 🍂🌕',      # 12
+  "Hunter's Moon 🌙🔭",     # 13
+  'Wolf Moon 🐺🌕',         # 14
+  'Pink Moon 🌸🌕', # 15
+  'Snow Moon 🌨️', # 16
+  'Snow Moon Snow 🌨️❄️', # 17
+  'Avian Moon 🦅', # 18
+  'Avian Moon Snow 🦅❄️',    # 19
+  'Skunk Moon 🦨',           # 20
+  'Skunk Moon Snow 🦨❄️',    # 21
+  'Cosmic Moon 🌌🌕', # 22
+  'Celestial Moon 🌟🌕', # 23
+  'Otter Moon 🐕🌌', # 24
+  'Muskium Otter Muskium Stinky Stimky Otter Moon 🦨🌌', # 25
+  'Light Elemental Moon 💡🌕', # 26
+  'Dark Elemental Moon 🌑🌕' # 27
+
+]
+# Define 27 corresponding species with emojis.
+SPECIES = [
+  'Dogg 🐶', # New Moon
+  'Folf 🦊🐺', # Waxing Crescent
+  'Aardwolf 🐾',
+  'Spotted Hyena 🐆',
+  'Folf Hybrid 🦊✨',
+  'Striped Hyena 🦓',
+  'Dogg Prime 🐕⭐',
+  'WolfFox 🐺🦊', # Waning Crescent
+  'Brown Hyena 🦴',
+  'Dogg Celestial 🐕🌟',
+  'Folf Eclipse 🦊🌒',
+  'Aardwolf Luminous 🐾✨',
+  'Spotted Hyena Stellar 🐆⭐',
+  'Folf Nova 🦊💥',
+  'Brown Hyena Cosmic 🦴🌌',
+  'Snow Leopard 🌨️', # New Moon
+  'Snow Leopard Snow Snep 🌨️❄️',
+  'Avian 🦅',
+  'Avian Snow 🦅❄️',
+  'Skunk 🦨',
+  'Skunk Snow 🦨❄️',
+  'Infini-Vaeria Graevity-Infini 🌌🐕',
+  'Graevity-Infini Infini-Vaeria 🌟🐕',
+  'Otter 🦦',
+  'Muskium Otter Stinky Stimky 🦦🦨',
+  'Light Elf 💡',
+  'Light Elf Cosmic 🌑'
+
+]
+
+# Define 27 corresponding were-forms with emojis.
+WERE_FORMS = [
+  'WereDogg 🐶🌑',
+  'WereFolf 🦊🌙',
+  'WereAardwolf 🐾',
+  'WereSpottedHyena 🐆',
+  'WereFolfHybrid 🦊✨',
+  'WereStripedHyena 🦓',
+  'WereDoggPrime 🐕⭐',
+  'WereWolfFox 🐺🦊', # Waning Crescent
+  'WereBrownHyena 🦴',
+  'WereDoggCelestial 🐕🌟',
+  'WereFolfEclipse 🦊🌒',
+  'WereAardwolfLuminous 🐾✨',
+  'WereSpottedHyenaStellar 🐆⭐',
+  'WereFolfNova 🦊💥', # Wolf Moon
+  'WereBrownHyenaCosmic 🦴🌌', # Pink Moon
+  'WereSnowLeopard 🐆❄️',
+  'WereSnowLeopardSnow 🐆❄️❄️', # Pink Moon
+  'WereAvian 🦅', # New Moon
+  'WereAvianSnow 🦅❄️', # Pink Moon
+  'WereSkunk 🦨', # New Moon
+  'WereSkunkSnow 🦨❄️', # New Moon
+  'WereInfiniVaeriaGraevity 🐕🌌',
+  'WereGraevityInfiniInfiniVaeria 🌟🐕',
+  'WereOtter 🦦',
+  'WereMuskiumOtterStinkyStimky 🦦🦨',
+  'WereLightElf 💡',
+  'WereLightElfCosmic 🌑'
+]
+
+
+# Normal Moon Phases
+  PHASES = [
+    ["New Moon", "🌑"],
+    ["Waxing Crescent I", "🌒"],
+    ["Waxing Crescent II", "🌒"],
+    ["First Quarter", "🌓"],
+    ["Waxing Gibbous I", "🌔"],
+    ["Waxing Gibbous II", "🌔"],
+    ["Full Moon", "🌕"],
+    ["Waning Gibbous I", "🌖"],
+    ["Waning Gibbous II", "🌖"],
+    ["Last Quarter", "🌗"],
+    ["Waning Crescent I", "🌘"],
+    ["Waning Crescent II", "🌘"],
+    ["Dark Moon", "🌑"]
+  ]
+</pre>
+</center>
+
+<br><br><br><br><br><br>
+
+

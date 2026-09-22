@@ -1,0 +1,33 @@
+<% lock_status = @@line_db[@user].pad["blog_database", "blog_table"].get(@id)["blog_status_locked"] %>
+<% existing_id = @@line_db[@user].pad["blog_database", "blog_table"].get(@id)["id"] %>
+<% if @id && !lock_status && existing_id %>
+  <div style="text-align: center;">
+    <div class="text" id='entry' style='border:2px darkgray solid; font-size:16px; display: inline-block;'>
+    <center>
+    <h1><%= @post["blog_post_title"].to_s %></h1>
+    🔗<%= "<a href='#{domain_name(@r)}/blog/#{@user}/view/#{@post["id"]}'>(#{@post["id"]})</a>" %> | <%= "<a href='#{domain_name(@r)}/blog/#{@user}'>All</a>" %><br>
+    📅<%= @post["blog_post_date"].to_s %><br>
+    ⏲️🔐<%= @post["timestamp"].to_s %> |
+    ✍️<%= @post["blog_post_author"].to_s %> |
+    🏷️<%= tags2posts(@post["blog_post_tags"], @user, @r) %><br />
+    <a target="_blank" rel="noopener noreferrer" href="/blog/render/?id=<%= @post['id'] %>&user=<%= @user %>">(🪟)</a>
+    <% if session["user"] == @user %>
+    📝<%= "<a href='#{domain_name(@r)}/blog/#{@user}/edit/#{@post["id"]}'>Edit</a>" %>
+    <% end %>
+    <br>
+    <hr>
+    <div class="text" id='post' style='text-align: left; border:2px white dotted; font-color:black; font-size:16px; display: inline-block;'>
+    <p><%= @post["blog_post_body"] %></p>
+    </div>
+    </center>
+    </div>
+    </div>
+    <br> <br>
+<% else %>
+  <center><h1>Sorry, that entry does not exist.</center></h1>
+<% end %>
+<br>
+<center>
+  <a href="<%= domain_name(@r) %>/blog/<%= @user %>">Back to <%= @user %>'s Main Blog Page</a>
+</center>
+

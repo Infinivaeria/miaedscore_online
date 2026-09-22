@@ -1,0 +1,8 @@
+partitioned_array/lib/file_methods.rb
+partitioned_array/lib/partitioned_array.rb
+partitioned_array/lib/managed_partitioned_array.rb
+partitioned_array/lib/file_context_managed_partitioned_array.rb
+partitioned_array/lib/file_context_managed_partitioned_array_manager.rb
+partitioned_array/lib/partitioned_array_database.rb
+partitioned_array/lib/support_modules.rb
+main_loop.rb

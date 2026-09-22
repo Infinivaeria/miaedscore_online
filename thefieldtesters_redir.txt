@@ -1,0 +1,70 @@
+THE FIELD TESTERS (REDIR REQUEST):
+request path: /thefieldtesters/ ; request host: midscore.io
+request ip: 185.211.32.247
+request *REFERRER*: 
+request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.35
+request params: {"something"=>"this"}
+Timestamp: 2023-05-12 11:18:27 +0000
+THE FIELD TESTERS (REDIR REQUEST):
+request path: /the-field-testers/ ; request host: midscore.io
+request ip: 185.211.32.247
+request *REFERRER*: 
+request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.35
+request params: {"ref"=>"starseeds"}
+Timestamp: 2023-05-12 11:30:51 +0000
+THE FIELD TESTERS (REDIR REQUEST):
+request path: /the-field-testers/ ; request host: midscore.io
+request ip: 185.211.32.247
+request *REFERRER*: 
+request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.35
+request params: {"ref"=>"share_x"}
+Timestamp: 2023-05-12 11:35:55 +0000
+THE FIELD TESTERS (REDIR REQUEST):
+request path: /the-field-testers/ ; request host: midscore.io
+request ip: 162.157.84.217
+request *REFERRER*: 
+request user_agent: Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Mobile Safari/537.36
+request params: {"ref"=>"starseeds"}
+Timestamp: 2023-05-12 12:23:45 +0000
+THE FIELD TESTERS (REDIR REQUEST):
+request path: /the-field-testers/ ; request host: midscore.io
+request ip: 185.211.32.247
+request *REFERRER*: 
+request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.35
+request params: {"ef"=>"second_life_profile"}
+Timestamp: 2023-05-12 12:39:31 +0000
+THE FIELD TESTERS (REDIR REQUEST):
+request path: /the-field-testers/ ; request host: midscore.io
+request ip: 50.88.170.63
+request *REFERRER*: 
+request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0
+request params: {"ef"=>"second_life_profile"}
+Timestamp: 2023-05-13 05:32:36 +0000
+THE FIELD TESTERS (REDIR REQUEST):
+request path: /the-field-testers/ ; request host: midscore.io
+request ip: 46.5.229.168
+request *REFERRER*: 
+request user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0
+request params: {"ref"=>"share_x"}
+Timestamp: 2023-05-13 12:25:45 +0000
+THE FIELD TESTERS (REDIR REQUEST):
+request path: /the-field-testers/ ; request host: midscore.io
+request ip: 5.31.31.20
+request *REFERRER*: 
+request user_agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
+request params: {"ref"=>"rust_programming_language_community_server"}
+Timestamp: 2023-05-18 03:33:58 +0000
+THE FIELD TESTERS (REDIR REQUEST):
+request path: /the-field-testers/ ; request host: midscore.io
+request ip: 85.138.240.128
+request *REFERRER*: 
+request user_agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
+request params: {}
+Timestamp: 2023-05-18 19:04:15 +0000
+THE FIELD TESTERS (REDIR REQUEST):
+request path: /the-field-testers/ ; request host: midscore.io
+request ip: 73.138.79.218
+request *REFERRER*: 
+request user_agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
+request params: {"ref"=>"rust_programming_language_community_server"}
+Timestamp: 2023-05-19 18:21:45 +0000

@@ -1,0 +1,99 @@
+    <% gallery = []
+       latest_id = @gallery.size %>
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title><%= @title %></title>
+      <style>
+         img {
+          max-width: 100%;
+          height: auto;
+      }
+      </style>
+    </head>
+    <body>
+    <center>
+      <form action="<%= "#{domain_name(@r)}/gallery/view/#{@user}/tags/search" %>" method="get">
+      <input type="text" id="search_tags" name="search_tags" placeholder="Search tags" required> <a href="<%= "#{domain_name(@r)}/gallery/view/#{@user}/tags/" %>">(🏷️,🏷️,...)</a>
+      <input type="submit" value="Search">
+      </form>
+      <br>
+      <br>
+      <center><h1>For <%= @user %>'s gallery</h1>
+      <font size="74"><a href="<%= "#{domain_name(@r)}/blog/render/?id=pin&user=#{@user}" %>">📌</a></font> <br /><br /> 
+      <font size="74"><a href="<%= "#{domain_name(@r)}/blog/#{@user}" %>">(📰)</a></font><br />
+      </center>
+<hr>
+      <h1><b><a href="<%= "#{domain_name(@r)}/gallery/uwu/view/#{@user}"%>">UwU⁉️</a></b></h1>
+      <hr>
+      <h1><b>OwO⁉️</b></h1>
+      <br>
+      <div style="display: flex; flex-wrap: wrap;">
+        <% @owo_count_gallery.each_with_index do |image, index| %>
+          <% next if image['owo_count'].nil? %>
+          <div style="padding: 11px; box-sizing: border-box;">
+            <div id="gallery_images">
+              <p style="text-align: center;"><%= convert_ints_to_emoji(image['owo_count']) %> OwOs</p>
+              <a href="<%= domain_name(@r) %>/gallery/view/<%= @user %>/id/<%= image['id'] %>" border="0">
+                <img src="<%= domain_name(@r) %>/gallery_index/<%= @user %>/thumbnail_<%= image['file'] %>" alt="<%= @title %>">
+              </a>
+              <% if !image['attachments'].nil? %>
+                <% image['attachments'].each_with_index do |attachment, index| %>
+                  <div class="attachment">
+                    *️⃣ <a href="/gallery_index/<%= @user %>/attachments/<%= attachment['file_attachment_name'] %>"><%= attachment['file_attachment_name'] %></a>
+                    <% if @user == session['user'] %>
+                     <a href="/gallery/view/<%= @user %>/id/<%= image['id'] %>/attachments/delete/<%= index %>">DELETE</a>
+                    <% end %>
+                  </div><br>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+<hr>
+      <br><br>
+      <h1><b>🖼️,🖼️,...</b></h1>
+      <form action="<%= "#{domain_name(@r)}/gallery/view/#{@user}/" %>" method="get">
+        <label for="modulo_display">➗</label>
+        <input type="text" id="modulo_display" name="modulo_display" value="<%= @modulo_display || 4 %>" required>
+        <label for="image_quantity">#️⃣</label>
+        <input type="text" id="image_quantity" name="quantity_displayed" value="<%= @quantity_displayed || 175 %>" required>
+        <input type="submit" value="Submit">
+      </form> <a href="<%= "#{domain_name(@r)}/gallery/reset_session/#{@user}" %>"><br>❌</a>
+<br>
+<center><a href="<%= domain_name(@r) %>/gallery/view/<%= @user %>/latest"><font size="74">[🆕]</font></a><a href="<%= domain_name(@r) %>/gallery/view/<%= @user %>?skip_by=0"><font size="74">[📁]</font></a></center>
+<br>
+<hr>
+      <br>
+      <br>
+       <center><a href="<%= domain_name(@r) %>/gallery/view/<%= @user %>?skip_by=0">[📁]</a> <%= @pages_html %><a href="<%= domain_name(@r) %>/gallery/view/<%= @user %>/latest">[🆕]</a></center>
+
+      <table padding="11" border="0">
+      <tr>
+        <% @gallery.each do |hash| %>
+          <%
+           gallery << hash
+          %>
+         <% end %>
+      <% latest_id.downto(0) do |id| %>
+        <% hash = gallery[id] %>
+        <% unless hash.nil? || hash == {} %>
+          <% if id % @modulo_display == 0 %>
+          </tr><tr>
+          <% end %>
+          <td>
+          <div id="gallery_images">
+            <a href="<%= domain_name(@r) %>/gallery/view/<%= @user %>/id/<%= hash['id'] %>" border="0">
+            <img src="<%= domain_name(@r) %>/gallery_index/<%= @user %>/thumbnail_<%= hash['file'] %>" alt="<%= @title %>">
+            </a>
+          </div>
+          </td>
+
+        <% end %>
+        <% end %>
+    </table>
+  </center>
+  <center><div><a href="<%= domain_name(@r) %>/gallery/view/<%= @user %>?skip_by=0">[📁]</a> <%= @pages_html %><a href="<%= domain_name(@r) %>/gallery/view/<%= @user %>/latest">[🆕]</a></div></center>
+  </body>
+  </html>

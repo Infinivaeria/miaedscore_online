@@ -1,0 +1,27 @@
+<div class="uwu-collections">
+    <div style="text-align: center;"><h1>UwU Collection id #<%= @id %></h1></div>
+    <div style="text-align: center;"><h2>Title: <%= @collection['title'] %></h2></div>
+    <div style="text-align: center;">Description: <%= @collection['description'] %></div>
+    <<div style="text-align: center;"><a href="<%= "#{domain_name(@r)}/gallery/uwu/view/#{@user}" %>" class="btn btn-primary my-2">Back to UwU Collections</a></div>
+</div>
+<br>
+<div style="text-align: center;">🖼️</div>
+<div class="gallery-images">
+    <% @images.each_with_index do |image, index| %>
+        <div class="image">
+           <div style="text-align: center;"><p><%= image[1]['title'] %></p></div>
+           <div style="text-align: center;"><p><%= image[1]['description'] %></p></div>
+            <div style="text-align: center;">
+                <a href="<%= domain_name(@r) %>/gallery/view/<%= @user %>/id/<%= image[0] %>" border="0">
+                    <img src="<%= domain_name(@r) %>/gallery_index/<%= @user %>/thumbnail_<%= image[1]['file'] %>" alt="<%= image[1]['title'] %>">
+                </a>
+            </div>
+            </a></div>
+    <% end %>
+</div>
+
+
+
+
+
+

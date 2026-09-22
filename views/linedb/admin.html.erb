@@ -1,0 +1,30 @@
+
+
+
+
+
+    <title>Administration</title>
+   </head>
+   <body>
+   
+<%= @@line_db.databases %>
+<br />
+<br />
+Add DB Name: 
+     <form action="/admin/add" method="POST">
+       
+       <input type="hidden" name="<%= csrf_field %>" value="<%= csrf_token("/admin/add") %>">
+       <input type="text" name="db_name">
+       <input type="submit" value="Submit">
+     </form>
+<br />
+<br />
+Remove DB Name:
+     <form action="/admin/delete" method="POST">
+       
+       <input type="hidden" name="<%= csrf_field %>" value="<%= csrf_token("/admin/delete") %>">
+       <input type="text" name="db_name">
+       <input type="submit" value="Submit">
+     </form>
+   </body>
+</html> 

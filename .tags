@@ -1,0 +1,150 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+CGMFS	cgmfs.rb	/^class CGMFS < Roda$/;"	c	inherits:Roda
+CGMFS	cgmfs/routes/api/api.rb	/^class CGMFS$/;"	c
+CGMFS	cgmfs/routes/api/file.rb	/^class CGMFS$/;"	c
+CGMFS	cgmfs/routes/api/screens.rb	/^class CGMFS$/;"	c
+CGMFS	cgmfs/routes/api/screens/list.rb	/^class CGMFS$/;"	c
+CGMFS	cgmfs/routes/api/sl/sl.rb	/^class CGMFS$/;"	c
+CGMFS	cgmfs/routes/api/text.rb	/^class CGMFS$/;"	c
+CGMFS	cgmfs/routes/root.rb	/^class CGMFS$/;"	c
+CGMFS	cgmfs/routes/u/u.rb	/^class CGMFS$/;"	c
+CGMFS	cgmfs/routes/uploads/list.rb	/^  class CGMFS$/;"	c
+CGMFS	cgmfs/routes/uploads/uploads.rb	/^class CGMFS$/;"	c
+DB_NAME	cgmfs.rb	/^  DB_NAME = 'url_slice'$/;"	C	class:CGMFS
+DB_NAME	db_init.rb	/^DB_NAME = 'sl_slice'$/;"	C	class:
+DB_NAME	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  DB_NAME = 'partitioned_array_slice'$/;"	C	class:PartitionedArray
+DB_NAME	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  DB_NAME = 'partitioned_array_slice'$/;"	C	class:PartitionedArray
+DB_SIZE	cgmfs.rb	/^  DB_SIZE = 10 # Caveat: The DB_SIZE is the total # of partitions, but you subtract it by one since the first partition is 0, in code.$/;"	C	class:CGMFS
+DB_SIZE	db_init.rb	/^DB_SIZE = 10$/;"	C	class:
+DB_SIZE	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  DB_SIZE = 10 # Caveat: The DB_SIZE is the total # of partitions, but you subtract it by one since the first partition is 0, in code.$/;"	C	class:PartitionedArray
+DB_SIZE	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  DB_SIZE = 10 # Caveat: The DB_SIZE is the total # of partitions, but you subtract it by one since the first partition is 0, in code.$/;"	C	class:PartitionedArray
+DB_SIZE	partitioned_array_test.rb	/^DB_SIZE = 6$/;"	C	class:
+DEBUGGING	cgmfs.rb	/^  DEBUGGING = false$/;"	C	class:CGMFS
+DEBUGGING	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  DEBUGGING = false$/;"	C	class:PartitionedArray
+DEBUGGING	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  DEBUGGING = false$/;"	C	class:PartitionedArray
+DEFAULT_PATH	cgmfs.rb	/^  DEFAULT_PATH = '.\/db\/url_shorten' # default fallSback\/write to current path$/;"	C	class:CGMFS
+DEFAULT_PATH	db_init.rb	/^DEFAULT_PATH = '.\/db\/sl'$/;"	C	class:
+DEFAULT_PATH	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  DEFAULT_PATH = '.\/CGMFS' # default fallSback\/write to current path$/;"	C	class:PartitionedArray
+DEFAULT_PATH	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  DEFAULT_PATH = '.\/CGMFS' # default fallSback\/write to current path$/;"	C	class:PartitionedArray
+DOMAIN_NAME	cgmfs.rb	/^DOMAIN_NAME = 'https:\/\/hudl.ink'$/;"	C	class:
+JSONeval	lib/partitioned_array/v1.2.1/json_parse.rb	/^class JSONeval$/;"	c
+JSONeval	lib/partitioned_array/v1.2.2/json_parse.rb	/^class JSONeval$/;"	c
+ManagedPartitionedArray	lib/partitioned_array/v1.2.1/managed_partitioned_array.rb	/^class ManagedPartitionedArray < PartitionedArray$/;"	c	inherits:PartitionedArray
+ManagedPartitionedArray	lib/partitioned_array/v1.2.2/managed_partitioned_array.rb	/^class ManagedPartitionedArray < PartitionedArray$/;"	c	inherits:PartitionedArray
+OFFSET	cgmfs.rb	/^  OFFSET = 1 # This came with the math, but you can just state the PARTITION_AMOUNT in total and not worry about the offset in the end$/;"	C	class:CGMFS
+OFFSET	db_init.rb	/^OFFSET = 1$/;"	C	class:
+OFFSET	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  OFFSET = 1 # This came with the math, but you can just state the PARTITION_AMOUNT in total and not worry about the offset in the end$/;"	C	class:PartitionedArray
+OFFSET	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  OFFSET = 1 # This came with the math, but you can just state the PARTITION_AMOUNT in total and not worry about the offset in the end$/;"	C	class:PartitionedArray
+OFFSET	partitioned_array_test.rb	/^OFFSET = 1$/;"	C	class:
+PARTITION_ADDITION_AMOUNT	cgmfs.rb	/^  PARTITION_ADDITION_AMOUNT = 10$/;"	C	class:CGMFS
+PARTITION_ADDITION_AMOUNT	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  PARTITION_ADDITION_AMOUNT = 3$/;"	C	class:PartitionedArray
+PARTITION_ADDITION_AMOUNT	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  PARTITION_ADDITION_AMOUNT = 3$/;"	C	class:PartitionedArray
+PARTITION_AMOUNT	cgmfs.rb	/^  PARTITION_AMOUNT = 4 # The initial, + 1$/;"	C	class:CGMFS
+PARTITION_AMOUNT	db_init.rb	/^PARTITION_AMOUNT = 4$/;"	C	class:
+PARTITION_AMOUNT	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  PARTITION_AMOUNT = 3 # The initial, + 1$/;"	C	class:PartitionedArray
+PARTITION_AMOUNT	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  PARTITION_AMOUNT = 3 # The initial, + 1$/;"	C	class:PartitionedArray
+PARTITION_AMOUNT	partitioned_array_test.rb	/^PARTITION_AMOUNT = 3$/;"	C	class:
+PAUSE_DEBUG	cgmfs.rb	/^  PAUSE_DEBUG = false$/;"	C	class:CGMFS
+PAUSE_DEBUG	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  PAUSE_DEBUG = false$/;"	C	class:PartitionedArray
+PAUSE_DEBUG	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  PAUSE_DEBUG = false$/;"	C	class:PartitionedArray
+PID_LOC	kill_server.rb	/^PID_LOC = "config\/puma.pid"$/;"	C	class:
+PUBLIC_URL_PATH	cgmfs.rb	/^  PUBLIC_URL_PATH = :static$/;"	C	class:CGMFS
+PartitionedArray	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^class PartitionedArray$/;"	c
+PartitionedArray	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^class PartitionedArray$/;"	c
+ROOT	cgmfs/routes/root.rb	/^  ROOT = ""$/;"	C	class:CGMFS
+SERVER_IP	cgmfs.rb	/^SERVER_IP = '137.184.10.18'$/;"	C	class:
+add	lib/partitioned_array/v1.2.1/managed_partitioned_array.rb	/^  def add(return_added_element_id: true, &block) $/;"	f	class:ManagedPartitionedArray
+add	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def add(return_added_element_id: true, &block) $/;"	f	class:PartitionedArray
+add	lib/partitioned_array/v1.2.2/managed_partitioned_array.rb	/^  def add(return_added_element_id: true, &block) $/;"	f	class:ManagedPartitionedArray
+add	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def add(return_added_element_id: true, &block) $/;"	f	class:PartitionedArray
+add_partition	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def add_partition$/;"	f	class:PartitionedArray
+add_partition	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def add_partition$/;"	f	class:PartitionedArray
+all_nils?	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def all_nils?(array)$/;"	f	class:PartitionedArray
+all_nils?	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def all_nils?(array)$/;"	f	class:PartitionedArray
+allocate	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def allocate(db_size: @db_size, partition_amount_and_offset: @partition_amount_and_offset, override: false)$/;"	f	class:PartitionedArray
+allocate	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def allocate(db_size: @db_size, partition_amount_and_offset: @partition_amount_and_offset, override: false)$/;"	f	class:PartitionedArray
+data_arr	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+data_arr	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+data_arr2ruby	lib/partitioned_array/v1.2.1/json_parse.rb	/^  def self.data_arr2ruby(json_string)$/;"	F	class:JSONeval
+data_arr2ruby	lib/partitioned_array/v1.2.2/json_parse.rb	/^  def self.data_arr2ruby(json_string)$/;"	F	class:JSONeval
+data_arr=	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+data_arr=	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+db_name	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+db_name	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+db_name=	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+db_name=	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+db_path	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+db_path	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+db_path=	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+db_path=	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+db_size	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+db_size	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+db_size=	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+db_size=	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+debug	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def debug(string)$/;"	f	class:PartitionedArray
+debug	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def debug(string)$/;"	f	class:PartitionedArray
+debug_and_pause	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def debug_and_pause(message)$/;"	f	class:PartitionedArray
+debug_and_pause	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def debug_and_pause(message)$/;"	f	class:PartitionedArray
+delete	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def delete(id)$/;"	f	class:PartitionedArray
+delete	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def delete(id)$/;"	f	class:PartitionedArray
+delete_partition	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def delete_partition(partition_id)$/;"	f	class:PartitionedArray
+delete_partition	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def delete_partition(partition_id)$/;"	f	class:PartitionedArray
+delete_partition_subelement	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def delete_partition_subelement(id, partition_id)$/;"	f	class:PartitionedArray
+delete_partition_subelement	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def delete_partition_subelement(id, partition_id)$/;"	f	class:PartitionedArray
+each	lib/partitioned_array/v1.2.1/managed_partitioned_array.rb	/^  def each$/;"	f	class:ManagedPartitionedArray
+each	lib/partitioned_array/v1.2.2/managed_partitioned_array.rb	/^  def each$/;"	f	class:ManagedPartitionedArray
+get	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def get(id, hash: false)$/;"	f	class:PartitionedArray
+get	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def get(id, hash: false)$/;"	f	class:PartitionedArray
+get_partition	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def get_partition(partition_id)$/;"	f	class:PartitionedArray
+get_partition	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def get_partition(partition_id)$/;"	f	class:PartitionedArray
+initialize	lib/partitioned_array/v1.2.1/managed_partitioned_array.rb	/^  def initialize(db_size: DB_SIZE, partition_amount_and_offset: PARTITION_AMOUNT + OFFSET, db_path: DEFAULT_PATH, db_name: DB_NAME) $/;"	f	class:ManagedPartitionedArray
+initialize	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def initialize(db_size: DB_SIZE, partition_amount_and_offset: PARTITION_AMOUNT + OFFSET, db_path: DEFAULT_PATH, db_name: DB_NAME)$/;"	f	class:PartitionedArray
+initialize	lib/partitioned_array/v1.2.2/managed_partitioned_array.rb	/^  def initialize(db_size: DB_SIZE, partition_amount_and_offset: PARTITION_AMOUNT + OFFSET, db_path: DEFAULT_PATH, db_name: DB_NAME) $/;"	f	class:ManagedPartitionedArray
+initialize	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def initialize(db_size: DB_SIZE, partition_amount_and_offset: PARTITION_AMOUNT + OFFSET, db_path: DEFAULT_PATH, db_name: DB_NAME)$/;"	f	class:PartitionedArray
+json2ruby	lib/partitioned_array/v1.2.1/json_parse.rb	/^  def self.json2ruby(json_string)$/;"	F	class:JSONeval
+json2ruby	lib/partitioned_array/v1.2.2/json_parse.rb	/^  def self.json2ruby(json_string)$/;"	F	class:JSONeval
+latest_id	lib/partitioned_array/v1.2.1/managed_partitioned_array.rb	/^  attr_reader :latest_id$/;"	f	class:ManagedPartitionedArray
+latest_id	lib/partitioned_array/v1.2.2/managed_partitioned_array.rb	/^  attr_reader :latest_id$/;"	f	class:ManagedPartitionedArray
+load_from_files!	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def load_from_files!(db_folder: @db_folder)$/;"	f	class:PartitionedArray
+load_from_files!	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def load_from_files!(db_folder: @db_folder)$/;"	f	class:PartitionedArray
+load_last_entry_from_file!	lib/partitioned_array/v1.2.1/managed_partitioned_array.rb	/^  def load_last_entry_from_file!$/;"	f	class:ManagedPartitionedArray
+load_last_entry_from_file!	lib/partitioned_array/v1.2.2/managed_partitioned_array.rb	/^  def load_last_entry_from_file!$/;"	f	class:ManagedPartitionedArray
+load_partition_from_file!	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def load_partition_from_file!(partition_id)$/;"	f	class:PartitionedArray
+load_partition_from_file!	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def load_partition_from_file!(partition_id)$/;"	f	class:PartitionedArray
+menu	db_console.rb	/^def menu()$/;"	f	class:Object
+parse	cgmfs/routes/api/sl/sl.rb	/^  def parse(key, value)$/;"	f	class:CGMFS
+partition_amount_and_offset	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+partition_amount_and_offset	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+partition_amount_and_offset=	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+partition_amount_and_offset=	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+range_arr	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+range_arr	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+range_arr2ruby	lib/partitioned_array/v1.2.1/json_parse.rb	/^  def self.range_arr2ruby(json_string)$/;"	F	class:JSONeval
+range_arr2ruby	lib/partitioned_array/v1.2.2/json_parse.rb	/^  def self.range_arr2ruby(json_string)$/;"	F	class:JSONeval
+range_arr=	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+range_arr=	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+range_db_get	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def range_db_get(range_arr, db_num)$/;"	f	class:PartitionedArray
+range_db_get	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def range_db_get(range_arr, db_num)$/;"	f	class:PartitionedArray
+rel_arr	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+rel_arr	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+rel_arr2ruby	lib/partitioned_array/v1.2.1/json_parse.rb	/^  def self.rel_arr2ruby(json_string);end$/;"	F	class:JSONeval
+rel_arr2ruby	lib/partitioned_array/v1.2.2/json_parse.rb	/^  def self.rel_arr2ruby(json_string);end$/;"	F	class:JSONeval
+rel_arr=	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+rel_arr=	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  attr_accessor :range_arr, :rel_arr, :db_size, :data_arr, :partition_amount_and_offset, :db_path, :db_name$/;"	f	class:PartitionedArray
+request_deflection	cgmfs.rb	/^def request_deflection(request, r)$/;"	f	class:Object
+require_dir	require_dir.rb	/^def require_dir(dir)$/;"	f	class:Object
+ruby2json	lib/partitioned_array/v1.2.1/json_parse.rb	/^  def self.ruby2json(ruby_ds)$/;"	F	class:JSONeval
+ruby2json	lib/partitioned_array/v1.2.2/json_parse.rb	/^  def self.ruby2json(ruby_ds)$/;"	F	class:JSONeval
+save_all_to_files!	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def save_all_to_files!(db_folder: @db_folder, db_path: @db_path, db_name: @db_name)$/;"	f	class:PartitionedArray
+save_all_to_files!	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def save_all_to_files!(db_folder: @db_folder, db_path: @db_path, db_name: @db_name)$/;"	f	class:PartitionedArray
+save_last_entry_to_file!	lib/partitioned_array/v1.2.1/managed_partitioned_array.rb	/^  def save_last_entry_to_file!$/;"	f	class:ManagedPartitionedArray
+save_last_entry_to_file!	lib/partitioned_array/v1.2.2/managed_partitioned_array.rb	/^  def save_last_entry_to_file!$/;"	f	class:ManagedPartitionedArray
+save_partition_to_file!	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def save_partition_to_file!(partition_id, db_folder: @db_folder)$/;"	f	class:PartitionedArray
+save_partition_to_file!	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def save_partition_to_file!(partition_id, db_folder: @db_folder)$/;"	f	class:PartitionedArray
+set	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def set(id, &block)$/;"	f	class:PartitionedArray
+set	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def set(id, &block)$/;"	f	class:PartitionedArray
+set_partition_subelement	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def set_partition_subelement(id, partition_id, &block)$/;"	f	class:PartitionedArray
+set_partition_subelement	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def set_partition_subelement(id, partition_id, &block)$/;"	f	class:PartitionedArray
+string2range	lib/partitioned_array/v1.2.1/partitioned_array.rb	/^  def string2range(range_string)$/;"	f	class:PartitionedArray
+string2range	lib/partitioned_array/v1.2.2/partitioned_array.rb	/^  def string2range(range_string)$/;"	f	class:PartitionedArray

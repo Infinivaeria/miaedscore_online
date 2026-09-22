@@ -1,0 +1,34 @@
+<center>
+<form enctype='multipart/form-data' action=/r/admin/new method="POST">
+  <fieldset>
+    <legend>Add a new URL entry...</legend>
+
+    <label for="url_string_title">Url String Title:</label>
+    <input type="text" id="url_string_title" name="url_string_title"><br><br>
+
+    <label for="whole_url_name">Whole URL:</label>
+    <input type="text" id="whole_url_name" name="whole_url_name"><br><br>
+
+    <label for="url_password" id="url_password" name="url_password"></label>
+    <input type="password" id="url_password" name="url_password"><br><br>
+
+  </fieldset>
+
+  <input type="submit" value="Generate URL">
+</form>
+<br />
+<br />
+<center><b>DOMAIN LIST</b></center>
+
+ <a href="https://aritywolf.net/r/admin/view">ARITYWOLF.NET</a><br /><br /> <a href="https://aritywolf.com/r/admin/view">ARITYWOLF.COM</a><br /><br />
+ 
+
+<br />
+<% url_data = @@line_db["urls_redir"].pad["urls_database", "urls_table"].get(0) %>
+   <% if url_data["url_name_title"] %>
+   <%  url_data["url_name_title"].each do |url| %>
+
+    <%= "#{url[0]} - #{url[1]} - <a href=\"#{domain_name(@r)}/r/#{url[1]}\">#{domain_name(@r)}/r/#{url[1]}</a>" %> - <%= "<a href=\"#{domain_name(@r)}/r/admin/del/?url_to_delete=#{url[1]}\">DELETE</a><br />" %>
+    <% end %>
+<% end %> 
+</center>

@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "generated_at": "2026-03-02T17:00:18Z",
+    "total_unique_events": 0,
+    "date_range": {
+      "oldest": null,
+      "newest": null
+    }
+  },
+  "summary": {
+    "total_messages": 0,
+    "unique_speakers": 0,
+    "unique_avatars": 0
+  },
+  "entries": [],
+  "frequency_analysis": {
+    "by_day_of_week": [
+      {
+        "day": "Sunday",
+        "count": 0
+      },
+      {
+        "day": "Monday",
+        "count": 0
+      },
+      {
+        "day": "Tuesday",
+        "count": 0
+      },
+      {
+        "day": "Wednesday",
+        "count": 0
+      },
+      {
+        "day": "Thursday",
+        "count": 0
+      },
+      {
+        "day": "Friday",
+        "count": 0
+      },
+      {
+        "day": "Saturday",
+        "count": 0
+      }
+    ],
+    "by_hour_utc": [
+      {
+        "hour": "00",
+        "count": 0
+      },
+      {
+        "hour": "01",
+        "count": 0
+      },
+      {
+        "hour": "02",
+        "count": 0
+      },
+      {
+        "hour": "03",
+        "count": 0
+      },
+      {
+        "hour": "04",
+        "count": 0
+      },
+      {
+        "hour": "05",
+        "count": 0
+      },
+      {
+        "hour": "06",
+        "count": 0
+      },
+      {
+        "hour": "07",
+        "count": 0
+      },
+      {
+        "hour": "08",
+        "count": 0
+      },
+      {
+        "hour": "09",
+        "count": 0
+      },
+      {
+        "hour": "10",
+        "count": 0
+      },
+      {
+        "hour": "11",
+        "count": 0
+      },
+      {
+        "hour": "12",
+        "count": 0
+      },
+      {
+        "hour": "13",
+        "count": 0
+      },
+      {
+        "hour": "14",
+        "count": 0
+      },
+      {
+        "hour": "15",
+        "count": 0
+      },
+      {
+        "hour": "16",
+        "count": 0
+      },
+      {
+        "hour": "17",
+        "count": 0
+      },
+      {
+        "hour": "18",
+        "count": 0
+      },
+      {
+        "hour": "19",
+        "count": 0
+      },
+      {
+        "hour": "20",
+        "count": 0
+      },
+      {
+        "hour": "21",
+        "count": 0
+      },
+      {
+        "hour": "22",
+        "count": 0
+      },
+      {
+        "hour": "23",
+        "count": 0
+      }
+    ]
+  }
+}

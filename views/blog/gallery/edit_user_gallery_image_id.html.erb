@@ -1,0 +1,31 @@
+# /home/miaedscore/views/blog/gallery/edit_user_gallery_id.html.erb
+<%# # /gallery/edit/user/id/ID %>
+<%# Add your HTML and ERB code here for the edit page %>
+<h1>Edit User Gallery ID (<%= @id %>)</h1>
+<br>
+<img src="<%= "#{domain_name(@r)}/gallery_index/#{@user}/thumbnail_#{@file}" %>"><br><br>
+<form action="/gallery/edit/<%= @user %>/id/<%= @id %>" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="_method" value="patch">
+  <!-- Add your form fields here -->
+  <label for="title">Title:</label>
+  <input type="text" name="title" id="title" value="<%= @title %>">
+  <br>
+  <label for="tags">Tags:</label>
+  <textarea rows="4" cols="50" name="tags" id="tags"><%= @tags %></textarea>
+  <br>
+  <label for="file">File:</label>
+  <input type="file" name="file" id="file">
+  <br>
+  <label for="description">Description:</label>
+  <textarea name="description" id="description"  rows="40" cols="70"><%= @description %></textarea>
+  <br>
+  <input type="submit" value="save">
+</form>
+<br>
+<form action="/gallery/delete/<%= @user %>/id/<%= @id %>" method="get">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Entry!">
+</form>
+
+
+

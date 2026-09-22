@@ -1,0 +1,41 @@
+<% 0.upto(@@sl_db.max_partition_archive_id) do |archive_id| %>
+  <% @all = @@sl_db.load_from_archive!(partition_archive_id: archive_id) %>
+  <% @all.data_arr.each do |hash| %>
+  <%= next if hash.nil? %>
+    <% if @area == hash['sim_name'] %>
+      <% hash.each do |key, value| %>
+        <% if key == "message" || key == "avatar_name" %>
+          <%=
+            if key == "message"
+              parse(key, unescape(value)).force_encoding('UTF-8')
+            else
+              parse(key, value).force_encoding('UTF-8')
+            end
+          %>
+        <% else %>
+          <%# pass %>
+        <% end %>
+        <br>
+      <% end %> 
+      <br>
+        <% elsif (@area == '' || @area == 'all' || @area == nil) %>
+      <% hash.each do |key, value| %>
+        <% if key == "message" || key == "avatar_name" %>
+          <%=
+            if key == "message"
+              parse(key, unescape(value)).force_encoding('UTF-8')
+            else
+              parse(key, value).force_encoding('UTF-8')
+            end
+          %>
+        <% else %>
+          <%# pass %>
+        <% end %>
+       
+      <% end %>
+    <% end %>
+    <br>
+  <% end %>
+  <hr>
+  <br> <br>
+<% end %>

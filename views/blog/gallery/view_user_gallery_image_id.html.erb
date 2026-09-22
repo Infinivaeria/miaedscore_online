@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        a:link {
+            color: white;
+        }
+        a:visited {
+            color: white;
+        }
+    </style>
+    <script>
+    function toggleImageSize() {
+        var image = document.getElementById("gallery-image");
+        if (image.style.width === "50%") {
+            image.style.width = "auto";
+            image.style.height = "auto";
+        } else {
+            image.style.width = "50%";
+            image.style.height = "auto";
+        }
+    }
+
+    function fitToScreenSize() {
+        var image = document.getElementById("gallery-image");
+        if (image.style.width === "100%") {
+            image.style.width = "50%";
+        } else {
+            image.style.width = "100%";
+        }
+        image.style.height = "auto";
+    }
+
+    window.addEventListener("DOMContentLoaded", function() {
+        var image = document.getElementById("gallery-image");
+        if (image) {
+            image.style.width = "50%";
+        }
+    });
+</script>
+    <title><%= @user %> - <%= @image['title'] %></title>
+    <style>
+        .table {
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table-row {
+            display: table-row;
+        }
+        .table-header {
+            display: table-cell;
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            background-color: gray;
+        }
+        .table-data {
+            display: table-cell;
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            background-color: black;
+            color: gray;
+        }
+        .emoji {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+    </style>
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <center><div>
+        <form action="<%= "#{domain_name(@r)}/gallery/view/#{@user}/tags/search" %>" method="get">
+            <input type="text" id="search_tags" name="search_tags" placeholder="Search tags" required>
+            <a href="<%= "#{domain_name(@r)}/gallery/view/#{@user}/tags/" %>" style="color: white;">(🏷️,🏷️,...)</a>
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    </center>
+    <br>
+    <div class="image-container">
+        <img id="gallery-image" src="<%= "#{domain_name(@r)}/gallery_index/#{@user}/resized_#{@image["file"]}" %>" onclick="toggleImageSize()" alt="<%= h(@image['title'] || @title || 'Gallery image') %>">
+    </div>
+    <center><button onclick="fitToScreenSize()">(🗜️)</button></center>
+    <div class="table">
+        <div class="table-row">
+            <div class="table-header"><strong>(🧾)</strong></div>
+            <div class="table-data"><%= @image['title'] %></div>
+        </div>
+        <div class="table-row">
+            <div class="table-header"><strong>(📝)</strong></div>
+            <div class="table-data"><%= @markdown.render(h(@image['description'].to_s)) %></div>
+        </div>
+        <div class="table-row">
+            <div class="table-header"><strong>(🏷️,🏷️,..)</strong></div>
+            <div class="table-data"><%= parse_tags(user: @user, tag_string: @image['tags']) %></div>
+        </div>
+        <div class="table-row">
+            <div class="table-header"><strong>(⌚)</strong></div>
+            <div class="table-data"><%= @image['date'] %></div>
+        </div>
+        <div class="table-row">
+            <div class="table-header"><strong>(♾️)</strong></div>
+            <div class="table-data"><%= @image['views'] %></div>
+        </div>
+          <div class="table-row">
+            <div class="table-header"><strong>OwO</strong>
+            </div>
+            <div class="table-data">
+                <% if !@owo.nil? %>
+                <%= convert_ints_to_emoji(@owo) %>
+                <% else %>
+                ⊘
+                <% end %>
+            <% if session['user'] == @user %>
+                <% if @owo.nil? %>
+                <a href="<%= "#{domain_name(@r)}/gallery/owo/add?image_id=#{@image['id']}" %>">(OwO🪨)</a>
+                <% else %>
+                <a href="<%= "#{domain_name(@r)}/gallery/owo/add?image_id=#{@image['id']}" %>">(OwO➕➕)</a> || <a href="<%= "#{domain_name(@r)}/gallery/owo/sub?image_id=#{@image['id']}" %>">(OwO➖➖)</a> || <a href="<%= "#{domain_name(@r)}/gallery/owo/rem?image_id=#{@image['id']}"  %>">(OwO🔨)</a>
+                <% end %>
+            <% else %>
+
+            <% end %>
+            </div>
+        </div>
+          <div class="table-row">
+            <div class="table-header"><strong>(⏬💾)</strong></div>
+            <div class="table-data"><a href="<%= "#{domain_name(@r)}/gallery_index/#{@user}/#{@image["file"]}" %>" style="color: white;">DOWNLOAD</a></div>
+        </div>
+          <div class="table-row">
+            <div class="table-header"><strong>(🔗)</strong></div>
+            <div class="table-data"><a href="<%= "#{domain_name(@r)}/gallery/view/#{@user}/id/#{@id}" %>" style="color: white;">PERMA-LINK</a></div>
+        </div>
+                <div class="table-row">
+        <div class="table-header"><strong>(🆔)</strong></div>
+            <div class="table-data"><%= @id %>
+        </div>
+        </div>
+            <div class="table-row">
+                <% if @image["attachments"] && !@image["attachments"].empty? %>
+                    <div class="table-header"><strong>(📎)</strong></div>
+                     <div class="table-data">
+                     <a href="<%= domain_name(@r) %>/gallery/view/<%= @user %>/id/<%= @id %>/attachments/" style="color: white;">ATTACHMENTS LIST (📎)</a>
+                </div>
+                <% end %>
+    </div>
+                    <% if session['user'] == @user %>
+        <div class="table-row">
+
+            <div class="table-header"><strong>(📝)</strong></div>
+            <div class="table-data">
+                    <a href="<%= "#{domain_name(@r)}/gallery/edit/#{@user}/id/#{@image["id"]}" %>" style="color: white;">ADMIN: EDIT</a>
+            </div>
+             </div>
+              <% end %>
+
+        <% sum = @image['sum_identifier'].to_s.split('').map(&:to_i).sum %>
+        <div class="table-row">
+            <div class="table-header"><strong>(...#️⃣➕#️⃣...)</strong></div>
+            <div class="table-data">
+                (<%= @image['sum_identifier'].to_s || 0.to_s %>) -> (<%= sum %>)
+                </div>
+        </div>
+</div>
+      <% if session['user'] == @user %>  <center>  <a href="<%= "#{domain_name(@r)}/gallery/view/#{@user}/id/#{@id}/attachments/upload" %>" style="color: white;">UPLOAD ATTACHMENT</a> </center>
+      <br>
+      <% end %>
+    <center>
+        <a href="<%= "#{domain_name(@r)}/gallery/view/#{@user}" %>">Return to <%= @user %>'s Gallery</a>
+    </center>
+</body>
+</html>

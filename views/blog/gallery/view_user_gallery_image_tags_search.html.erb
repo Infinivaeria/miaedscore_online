@@ -1,0 +1,54 @@
+<style>
+    .image {
+        border: 1px solid white;
+        overflow: auto;
+        width: 50%;
+        height: 50%;
+        float: left;
+        box-sizing: border-box;
+    }
+
+    @media screen and (max-width: 768px) {
+        .image {
+            width: 100%;
+            height: auto;
+            float: none;
+        }
+    }
+</style>
+<center><form action="<%= "#{domain_name(@r)}/gallery/view/#{@user}/tags/search" %>" method="get">
+    <input type="text" id="search_tags" name="search_tags" placeholder="Search tags" required> <a href="<%= "#{domain_name(@r)}/gallery/view/#{@user}/tags/" %>">(🏷️,🏷️,...)</a>
+    <input type="submit" value="Search">
+</form>
+</center>
+<% if !@only_search %>
+    <br>
+    <br>
+    <h1>For <%= @user %>'s tags: <%= parse_tags(user: @user, tag_string: @search_params) %></h1> <!-- todo: work on tag version of tags list (this) -->
+    
+    <h2><% @search_params.split(', ').each do |tag| %>            
+            <% if @similar_tags_set.dig(tag) %>            
+               <%= parse_tags(user: @user, tag_string: @similar_tags_set[tag].join(', ')) %>
+            <% end %>
+        <% end %>
+    </h2>
+
+    
+    <div class="image-container">
+        <% @images_to_find.each do |image| %>
+            <% next if image.nil? %>
+            <div class="image">
+                <p><strong>(🧾)</strong> <%= image['title'] %></p>
+                <p><strong>(🆔)</strong> <%= image['id'] %></p>
+                <p><strong>(🏷️)</strong> <%= parse_tags(user: @user, tag_string: image["tags"], r: @r) %></p>
+                <p><strong>(⌚)</strong> <%= image['date'] %></p>
+                <p><strong>(♾️)</strong> <%= image['views'] %></p>
+                <p><strong>(🖼️)</strong> <a href="<%= "#{domain_name(@r)}/gallery_index/#{@user}/#{image['file']}" %>">(⏬➡️💾)</a></p>
+                <p><strong>(🔗)</strong> <a href="<%= "#{domain_name(@r)}/gallery/view/#{@user}/id/#{image['id']}" %>"><img src="<%= "#{domain_name(@r)}/gallery_index/#{@user}/thumbnail_#{image['file']}" %>" alt="<%= @title %>"></a></p>
+                <p><strong>(📌)</strong> <a href="<%= "#{domain_name(@r)}/gallery/edit/#{@user}/id/#{image['id']}" %>">(📝)</a></p>
+            </div>
+        <% end %>
+    </div>
+    <br>
+    <center>Back to <a href="<%= "#{domain_name(@r)}/gallery/view/#{@user}" %>">Gallery</a> | Back to <a href="<%= "#{domain_name(@r)}/gallery/view/#{@user}/tags" %>">Tags</a></center>
+<% end %>

@@ -1,0 +1,24 @@
+
+<%= @sl_db.data_arr %>
+
+<br>
+<br>
+<br>
+<hr>
+<% @sl_db.data_arr.each_with_index do |db_element, db_element_index| %>
+  <% if db_element.is_a?(Hash) %>
+    <% db_element.each do |key, value| %>
+      <% JSON.parse("[#{value}]").each_with_index do |hash, hash_index|
+        if hash.is_a?(Hash) %>
+          <%= hash["avatar_name"] %> <%= Base64.decode(hash["message"]) %>
+        <% end %>
+
+       <br>
+       <% end %>
+    <% end %>
+ <% end %>
+  <br>
+  <br>
+  <br>
+  <hr>
+<% end %>

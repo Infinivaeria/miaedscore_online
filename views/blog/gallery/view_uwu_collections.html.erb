@@ -1,0 +1,32 @@
+<div style="text-align: center;">
+<% if @user == session['user'] %>
+    <a href="<%= "#{domain_name(@r)}/gallery/uwu/new" %>" class="btn btn-primary my-2">New UwU Collection (user admin)</a>
+<% end %>
+<br>
+<br>
+<% @collections.each_with_index do |collection, index|  %>
+    <% next if collection.nil? %>
+    <% next if collection.empty? %>
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+            <h5 class="card-title">📝 <%= collection['title'] %></h5>
+            <p class="card-text">💬 <%= collection['description'] %></p>
+            <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+                <div style="text-align: center;"><a href="<%= "#{domain_name(@r)}/gallery/uwu/view/#{@user}/id/#{index}" %>" class="btn btn-sm
+                btn-outline-secondary">View</a></div>
+                <% if session['user'] == @user %>
+                    <div style="text-align: center;"><a href="<%= "#{domain_name(@r)}/gallery/uwu/edit/id/#{index}" %>" class="btn btn-sm
+                btn-outline-secondary">Edit</a> </div>
+                   <div style="text-align: center;"><a href="<%= "#{domain_name(@r)}/gallery/uwu/delete/id/#{index}" %>" class="btn btn-sm btn-outline-secondary">Delete</a></div>
+                <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% end %>
+<br><br>
+    <div style="text-align: center;"><a href="<%= "#{domain_name(@r)}/gallery/view/#{@user}" %>" class="btn btn-primary my-2">Go Back To <%= @user %>'s gallery</a></div>
+
+

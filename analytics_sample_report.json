@@ -1,0 +1,269 @@
+{
+  "metadata": {
+    "generated_at": "2026-03-02T17:00:50Z",
+    "script_version": "1.0",
+    "platform": "Second Life",
+    "total_unique_events": 11,
+    "date_range": {
+      "oldest": 1772460111,
+      "oldest_iso8601": "2026-03-02T14:01:51Z",
+      "newest": 1772463222,
+      "newest_iso8601": "2026-03-02T14:53:42Z"
+    }
+  },
+  "summary": {
+    "total_messages": 11,
+    "unique_speakers": 6,
+    "unique_avatars": 6,
+    "locations": 1,
+    "captured_by": [
+      "aritywolf"
+    ]
+  },
+  "entries": [
+    {
+      "avatar_id": "8c1af389-8954-414d-9686-f599b466bddc",
+      "avatar_name": "Vanharrow Resident",
+      "message": "tossed to this plane by the council of valkyries for daring to question",
+      "timestamp": 1772460111,
+      "timestamp_utc": "2026-03-02T14:01:51Z",
+      "english_entry": "Vanharrow Resident said \"tossed to this plane by the council of valkyries for daring to question\" at 2026-03-02T14:01:51Z (UTC)."
+    },
+    {
+      "avatar_id": "8c1af389-8954-414d-9686-f599b466bddc",
+      "avatar_name": "Vanharrow Resident",
+      "message": "So I venture forth from the forest of ancient valour now and then",
+      "timestamp": 1772460183,
+      "timestamp_utc": "2026-03-02T14:03:03Z",
+      "english_entry": "Vanharrow Resident said \"So I venture forth from the forest of ancient valour now and then\" at 2026-03-02T14:03:03Z (UTC)."
+    },
+    {
+      "avatar_id": "ea95fefd-d8c9-49d4-a364-bc827a3e4197",
+      "avatar_name": "Gretsdum Resident",
+      "message": "hey mccarp",
+      "timestamp": 1772460309,
+      "timestamp_utc": "2026-03-02T14:05:09Z",
+      "english_entry": "Gretsdum Resident said \"hey mccarp\" at 2026-03-02T14:05:09Z (UTC)."
+    },
+    {
+      "avatar_id": "9f23e6a9-6e15-4ddc-9282-e1892798a19a",
+      "avatar_name": "mcarp Mavendorf",
+      "message": "moo",
+      "timestamp": 1772460338,
+      "timestamp_utc": "2026-03-02T14:05:38Z",
+      "english_entry": "mcarp Mavendorf said \"moo\" at 2026-03-02T14:05:38Z (UTC)."
+    },
+    {
+      "avatar_id": "8ed8b37e-885f-4219-f11e-b83bf1d929c8",
+      "avatar_name": "Actors' N Bracelet v1.0",
+      "message": "Hello, Avatar!",
+      "timestamp": 1772461400,
+      "timestamp_utc": "2026-03-02T14:23:20Z",
+      "english_entry": "Actors' N Bracelet v1.0 said \"Hello, Avatar!\" at 2026-03-02T14:23:20Z (UTC)."
+    },
+    {
+      "avatar_id": "d5ff3724-1164-47bc-84b5-ae4be5514595",
+      "avatar_name": "ArityWolf Resident",
+      "message": "test",
+      "timestamp": 1772461573,
+      "timestamp_utc": "2026-03-02T14:26:13Z",
+      "english_entry": "ArityWolf Resident said \"test\" at 2026-03-02T14:26:13Z (UTC)."
+    },
+    {
+      "avatar_id": "9f23e6a9-6e15-4ddc-9282-e1892798a19a",
+      "avatar_name": "mcarp Mavendorf",
+      "message": "pass",
+      "timestamp": 1772461581,
+      "timestamp_utc": "2026-03-02T14:26:21Z",
+      "english_entry": "mcarp Mavendorf said \"pass\" at 2026-03-02T14:26:21Z (UTC)."
+    },
+    {
+      "avatar_id": "4661b637-b6eb-40d8-925a-d1b78c2ce414",
+      "avatar_name": "KintariusPyromancer Resident",
+      "message": "test",
+      "timestamp": 1772463054,
+      "timestamp_utc": "2026-03-02T14:50:54Z",
+      "english_entry": "KintariusPyromancer Resident said \"test\" at 2026-03-02T14:50:54Z (UTC)."
+    },
+    {
+      "avatar_id": "ea95fefd-d8c9-49d4-a364-bc827a3e4197",
+      "avatar_name": "Gretsdum Resident",
+      "message": "hahaha",
+      "timestamp": 1772463180,
+      "timestamp_utc": "2026-03-02T14:53:00Z",
+      "english_entry": "Gretsdum Resident said \"hahaha\" at 2026-03-02T14:53:00Z (UTC)."
+    },
+    {
+      "avatar_id": "ea95fefd-d8c9-49d4-a364-bc827a3e4197",
+      "avatar_name": "Gretsdum Resident",
+      "message": "Rhux.  you writing new script of epic failure or just testing anyone is online?",
+      "timestamp": 1772463209,
+      "timestamp_utc": "2026-03-02T14:53:29Z",
+      "english_entry": "Gretsdum Resident said \"Rhux.  you writing new script of epic failure or just testing anyone is online?\" at 2026-03-02T14:53:29Z (UTC)."
+    },
+    {
+      "avatar_id": "4661b637-b6eb-40d8-925a-d1b78c2ce414",
+      "avatar_name": "KintariusPyromancer Resident",
+      "message": "just a script that links to my server",
+      "timestamp": 1772463222,
+      "timestamp_utc": "2026-03-02T14:53:42Z",
+      "english_entry": "KintariusPyromancer Resident said \"just a script that links to my server\" at 2026-03-02T14:53:42Z (UTC)."
+    }
+  ],
+  "top_speakers": [
+    {
+      "speaker": "Gretsdum Resident",
+      "message_count": 3
+    },
+    {
+      "speaker": "Vanharrow Resident",
+      "message_count": 2
+    },
+    {
+      "speaker": "mcarp Mavendorf",
+      "message_count": 2
+    },
+    {
+      "speaker": "KintariusPyromancer Resident",
+      "message_count": 2
+    },
+    {
+      "speaker": "Actors' N Bracelet v1.0",
+      "message_count": 1
+    },
+    {
+      "speaker": "ArityWolf Resident",
+      "message_count": 1
+    }
+  ],
+  "frequency_analysis": {
+    "by_day_of_week": [
+      {
+        "day": "Sunday",
+        "count": 0
+      },
+      {
+        "day": "Monday",
+        "count": 11
+      },
+      {
+        "day": "Tuesday",
+        "count": 0
+      },
+      {
+        "day": "Wednesday",
+        "count": 0
+      },
+      {
+        "day": "Thursday",
+        "count": 0
+      },
+      {
+        "day": "Friday",
+        "count": 0
+      },
+      {
+        "day": "Saturday",
+        "count": 0
+      }
+    ],
+    "by_hour_utc": [
+      {
+        "hour": "00",
+        "count": 0
+      },
+      {
+        "hour": "01",
+        "count": 0
+      },
+      {
+        "hour": "02",
+        "count": 0
+      },
+      {
+        "hour": "03",
+        "count": 0
+      },
+      {
+        "hour": "04",
+        "count": 0
+      },
+      {
+        "hour": "05",
+        "count": 0
+      },
+      {
+        "hour": "06",
+        "count": 0
+      },
+      {
+        "hour": "07",
+        "count": 0
+      },
+      {
+        "hour": "08",
+        "count": 0
+      },
+      {
+        "hour": "09",
+        "count": 0
+      },
+      {
+        "hour": "10",
+        "count": 0
+      },
+      {
+        "hour": "11",
+        "count": 0
+      },
+      {
+        "hour": "12",
+        "count": 0
+      },
+      {
+        "hour": "13",
+        "count": 0
+      },
+      {
+        "hour": "14",
+        "count": 11
+      },
+      {
+        "hour": "15",
+        "count": 0
+      },
+      {
+        "hour": "16",
+        "count": 0
+      },
+      {
+        "hour": "17",
+        "count": 0
+      },
+      {
+        "hour": "18",
+        "count": 0
+      },
+      {
+        "hour": "19",
+        "count": 0
+      },
+      {
+        "hour": "20",
+        "count": 0
+      },
+      {
+        "hour": "21",
+        "count": 0
+      },
+      {
+        "hour": "22",
+        "count": 0
+      },
+      {
+        "hour": "23",
+        "count": 0
+      }
+    ]
+  }
+}

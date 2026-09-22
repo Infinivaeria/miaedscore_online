@@ -1,0 +1,11 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "name": "partitioned_array",
+            "path": "lib/partitioned_array"
+        }
+    ]
+}

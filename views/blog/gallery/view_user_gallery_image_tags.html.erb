@@ -1,0 +1,28 @@
+ <center><form action="<%= "#{domain_name(@r)}/gallery/view/#{@user}/tags/search" %>" method="get">
+    <input type="text" id="search_tags" name="search_tags" placeholder="Search tags" required> <a href="<%= "#{domain_name(@r)}/gallery/view/#{@user}/tags/" %>">(🏷️,🏷️,...)</a>
+    <input type="submit" value="Search">
+    </form></center>
+        <br>
+        <br>
+<div><style>
+       img {
+        max-width: 100%;
+        height: auto;
+    }
+    </style>
+    <br>
+    <h1>For <%= @user %>'s tags <a href="<%= "#{domain_name(@r)}/gallery/view/#{@user}" %>">(⬅️)</a> </h1> <!-- todo: work on tag version of tags list (this) --><br>
+    <div>
+        <br>
+        <div style="border: 1px solid black; font-family: Consolas; margin: 0 auto;">
+            <% @tags_set.each do |tag| %>
+                <%= tag %>,
+            <% end %>
+
+        </div>
+        <br>
+    </div>
+
+
+
+
