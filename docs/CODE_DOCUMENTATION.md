@@ -35,6 +35,10 @@ This document provides a practical map of the current miaedscore codebase: archi
 
 ## Core Routing Areas
 
+### Health check
+- `GET /health` returns `{"status":"ok"}` as JSON with `Cache-Control: no-store`.
+- This is a process liveness check; it does not verify database or external service readiness.
+
 ### Blog system
 Primary file:
 - cgmfs/routes/blog.rb
@@ -60,6 +64,12 @@ Important route groups:
 ### Gallery system
 Primary file:
 - cgmfs/routes/gallery.rb
+
+Tag search accepts comma-separated terms. Bare tags and `++tag` must all be
+present; `--tag` excludes images containing that tag. When `||tag` terms are
+provided, at least one must be present. Matching is case-sensitive.
+Prefix a literal tag beginning with an operator with a backslash, for example
+`\||tag`.
 
 Responsibilities:
 - Gallery item CRUD
@@ -160,11 +170,22 @@ Observed keys in blog entries:
 ## Authentication and Authorization (Current)
 - Session keys:
   - session['user']
-  - session['password']
   - session['admin']
-- Login route compares plaintext password values from stored table.
+- New account passwords use salted PBKDF2-SHA256 hashes. Existing plaintext
+  credentials continue to work and are not automatically migrated.
 - Route-level checks gate edit/new/delete/private actions for matching user.
-- Super password gate exists in login logic (hardcoded in route file).
+- Configure `CGMFS_SESSION_SECRET` with a random secret of at least 64 bytes,
+  `CGMFS_SUPER_PASSWORD` with the shared login-gate password, and
+  `CGMFS_SUPERADMIN_PASSWORD` with the superadmin account password. Set them in
+  the server process environment before startup; the two passwords must not be empty.
+- For compatibility, unset variables retain the old, publicly exposed defaults.
+  Replace all three before relying on them for security. Changing the session
+  secret invalidates existing sessions. Changing the shared login-gate password
+  also requires updating uploader clients that submit it.
+- Startup hashes the superadmin password from `CGMFS_SUPERADMIN_PASSWORD` in
+  memory each time; other account credentials remain in the stored table.
+- Versions without hash verification cannot authenticate accounts created with
+  this version. Back up the credential table before rolling back.
 
 ## Observability and Logging
 - Request and hitch logging currently occur in views/layout.html.erb.

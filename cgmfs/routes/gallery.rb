@@ -1,6 +1,7 @@
 # rubocop:disable Metrics/BlockLength, Layout/LineLength, Metrics/ClassLength, Metrics/MethodLength
 #
 require 'uri'
+require 'cgi'
 require 'fastimage'
 require 'fileutils'
 require 'tzinfo'
@@ -402,7 +403,6 @@ class CGMFS
 
   def logged_in?(r, user)
     return if session['user']
-    return if session['password']
     return if session['user'] == 'superadmin'
 
     r.redirect "#{domain_name(r)}/blog/login"
@@ -489,7 +489,6 @@ class CGMFS
   def family_logged_in?(r)
     return unless $lockdown == true
     return if session['user']
-    return if session['password']
     return if session['user'] == 'superadmin'
     return if r.path == '/blog/login' # Don't redirect if already at login
 
@@ -530,16 +529,14 @@ class CGMFS
     end
   end
 
+  def gallery_tag_link(user:, tag:, r: @r, label: tag)
+    query = tag.start_with?('++', '--', '||') ? "\\#{tag}" : tag
+    url = "#{domain_name(r)}/gallery/view/#{user}/tags/search?#{URI.encode_www_form('search_tags' => query)}"
+    "<a href='#{CGI.escapeHTML(url)}'>#{CGI.escapeHTML(label)}</a>"
+  end
+
   def parse_tags(user:, tag_string:, r: @r)
-    # parse the tags from the string
-    tags = tag_string.split(', ')
-    # output html that uses the user and tag_string to redirect to the tag
-    output = ''
-    tags.each_with_index do |tag, index|
-      output << "<a href='#{domain_name(r)}/gallery/view/#{user}/tags/search/?search_tags=#{tag}'>#{tag}</a>"
-      output << ', ' unless index == tags.size - 1
-    end
-    output
+    tag_string.split(', ').map { |tag| gallery_tag_link(user: user, tag: tag, r: r) }.join(', ')
   end
 
   class AECalendar
@@ -1160,35 +1157,39 @@ class CGMFS
         @user = user
         @title = "#{@user}'s Gallery Tags Search Function"
         @gallery = @@line_db[@user].pad['gallery_database', 'gallery_table']
-        @images = @gallery.data_arr.compact
-        @tags = @images.filter_map { |image| image['tags'] }
-        @tags_array = @tags.flat_map { |tags| tags.split(', ') }.uniq
-        @image_tags = @tags
         if @search_params
-          @search_params_set = @search_params.split(', ').compact.to_set
-          # get rid of nil tags in @images_set
-          @tags_to_reject = @search_params_set.select { |tag| tag.start_with?('--') }
-
-          # remove the '--' from the tags to reject
-          @tags_to_reject = @tags_to_reject.map { |tag| tag[2..-1] }
-
-          @search_params_set.reject! { |tag| tag.start_with?('--') }
-          @images_to_find = @images.select do |image|
-            image['tags'] && @search_params_set.subset?(image['tags'].split(', ').to_set)
-          end
-
-          @tags_to_reject.each do |rejected_tag|
-            @images_to_find = @images_to_find.reject do |image|
-              image['tags']&.split(', ')&.include?(rejected_tag)
+          @images = @gallery.data_arr.compact
+          @search_params_set = Set.new
+          @any_tags = Set.new
+          @tags_to_reject = Set.new
+          @search_params.split(',').each do |term|
+            term = term.strip
+            if term.start_with?('\\++', '\\--', '\\||')
+              @search_params_set.add(term[1..])
+            elsif term.start_with?('--')
+              term = term[2..].strip
+              @tags_to_reject.add(term) unless term.empty?
+            elsif term.start_with?('||')
+              term = term[2..].strip
+              @any_tags.add(term) unless term.empty?
+            else
+              term = term[2..].strip if term.start_with?('++')
+              @search_params_set.add(term) unless term.empty?
             end
           end
+          @images_to_find = @images.select do |image|
+            next false unless image['tags']
 
-          @images_to_find = @images_to_find.to_a
+            image_tags = image['tags'].split(', ').to_set
+            @search_params_set.subset?(image_tags) &&
+              (@any_tags.empty? || !@any_tags.disjoint?(image_tags)) &&
+              @tags_to_reject.disjoint?(image_tags)
+          end
         else
           @only_search = true
         end
 
-        @similar_tags_set = @@line_db[@user].pad['cache_system_database', 'cache_system_table'].get(0)['similar_tags']
+        @similar_tags_set = (@@line_db[@user].pad['cache_system_database', 'cache_system_table'].get(0) || {})['similar_tags'] || {}
 
         @@line_db[@user].pad['blog_database', 'blog_statistics_table'].set(1) do |hash|
           #  break if post_index > @@line_db[@user].pad['blog_database', 'blog_statistics_table'].latest_id - 1
@@ -1218,65 +1219,41 @@ class CGMFS
 
         @cache = @@line_db[@user].pad['cache_system_database', 'cache_system_table']
 
-        @cache_hash = @cache.get(0)
-
-        if @cache_hash == {}
-          @recache = true
-          @cache.set(0) do |hash|
-            hash['recache'] = true
-          end
-        end
-
-        if !@cache.get(0)['recache']
-          @cache.set(0) do |hash|
-            hash['recache'] = false
-            @recache = false
-          end
-
-        elsif @cache.get(0)['recache']
-          @recache = true
-        else
-          @recache = false
-        end
+        @cache_hash = @cache.get(0) || {}
+        @recache = @cache_hash.empty? || @cache_hash['recache'] ||
+                   !@cache_hash['tags_set'].is_a?(Array) || !@cache_hash['similar_tags'].is_a?(Hash) ||
+                   @cache_hash['tag_link_version'] != 1
 
         if @recache
-          thread = Thread.new do
-            @images = @gallery.data_arr.compact
-            tag_counts = Hash.new(0)
-            @similar_tags = Hash.new { |hash, tag| hash[tag] = Set.new }
+          tag_counts = Hash.new(0)
+          similar_tags = Hash.new { |hash, tag| hash[tag] = Set.new }
 
-            @images.each do |image|
-              image_tags = image['tags']&.split(', ')&.uniq
-              next if image_tags.nil? || image_tags.empty?
+          @gallery.data_arr.each do |image|
+            image_tags = image && image['tags']&.split(', ')&.uniq
+            next if image_tags.nil? || image_tags.empty?
 
-              image_tags.each do |tag|
-                tag_counts[tag] += 1
-                @similar_tags[tag].merge(image_tags - [tag])
-              end
+            image_tags.each do |tag|
+              tag_counts[tag] += 1
+              similar_tags[tag].merge(image_tags)
             end
-            @similar_tags.each { |tag, tags| @similar_tags[tag] = tags.to_a }
-            @images_set = @images.to_set
-            @images_set = @images_set.reject { |image| image['tags'].nil? }
-
-            @split_tags = tag_counts.keys
-
-            @split_tags.each do |tag|
-              tag_quantity = tag_counts[tag]
-              @tags_set << "<a href='#{domain_name(@r)}/gallery/view/#{@user}/tags/search/?search_tags=#{tag}'>#{tag}(#{tag_quantity})</a>"
-            end
-
-            @cache.set(0) do |hash|
-              hash['tags_set'] = @tags_set
-              hash['split_tags'] = @split_tags
-              hash['recache'] = false
-              hash['similar_tags'] = @similar_tags
-            end
-            @cache.save_everything_to_files!
           end
+          similar_tags.each { |tag, tags| tags.delete(tag) }
+          @similar_tags = similar_tags.transform_values(&:to_a)
+          @split_tags = tag_counts.keys
+          @tags_set = tag_counts.map { |tag, count| gallery_tag_link(user: @user, tag: tag, r: r, label: "#{tag}(#{count})") }
+
+          @cache.set(0) do |hash|
+            hash['tags_set'] = @tags_set
+            hash['split_tags'] = @split_tags
+            hash['recache'] = false
+            hash['similar_tags'] = @similar_tags
+            hash['tag_link_version'] = 1
+          end
+          @cache.save_partition_by_id_to_file!(0)
         else
-          @similar_tags = @cache.get(0)['similar_tags']
-          @split_tags = @cache.get(0)['split_tags']
-          @tags_set = @cache.get(0)['tags_set']
+          @similar_tags = @cache_hash['similar_tags']
+          @split_tags = @cache_hash['split_tags']
+          @tags_set = @cache_hash['tags_set']
         end
 
         @@line_db[@user].pad['blog_database', 'blog_statistics_table'].set(1) do |hash|

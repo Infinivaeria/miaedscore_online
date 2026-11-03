@@ -1,6 +1,5 @@
 def family_logged_in?(r)
   return if session['user']
-  return if session['password']
   return if session['user'] == 'superadmin'
   return if r.path == '/blog/login' # Don't redirect if already at login
 

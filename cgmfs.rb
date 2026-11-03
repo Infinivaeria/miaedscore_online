@@ -40,6 +40,7 @@ LATEST_PA_VERSION = "v3.0.0+" # deprecated
 require_relative "lib/partitioned_array/lib/line_db" # magnum opus of computer science
 
 require_relative 'lib/shortened/shortened_url' # shortened url class
+require_relative 'lib/password_credentials'
 
 require_dir "./lib/dir_requires"
 
@@ -76,6 +77,11 @@ class CGMFS < Roda
   PATHS_INCLUDE_CSRF = { '/api/screens/upload' => true, '/u/shorten' => true, '/api/file/upload' => true,
                          '/api/text/upload' => true }
   PUBLIC_URL_PATH = :static
+  SUPER_PASSWORD = ENV.fetch('CGMFS_SUPER_PASSWORD', 'gUilmon#95458a')
+  SUPERADMIN_PASSWORD = ENV.fetch('CGMFS_SUPERADMIN_PASSWORD', 'gUilmon#95458a')
+  raise 'CGMFS_SUPER_PASSWORD must not be empty' if SUPER_PASSWORD.empty?
+  raise 'CGMFS_SUPERADMIN_PASSWORD must not be empty' if SUPERADMIN_PASSWORD.empty?
+
   plugin :render, escape_html: false, escape: false
   plugin :multi_route
   plugin :all_verbs
@@ -87,7 +93,8 @@ class CGMFS < Roda
   plugin :exception_page
 
   plugin :error_handler
-  plugin :sessions, secret: 'cgmfs3748w5yuieskrhfakgejgKAYUSGDYFHKGD&*R#at3wLKSGFHgfjgklsdfgjkl'
+  plugin :sessions,
+         secret: ENV.fetch('CGMFS_SESSION_SECRET', 'cgmfs3748w5yuieskrhfakgejgKAYUSGDYFHKGD&*R#at3wLKSGFHgfjgklsdfgjkl')
   plugin :route_csrf, check_request_methods: ['POST'], raise: true # , :check_header => false
   # Documentation: https://roda.jeremyevans.net/rdoc/classes/Roda/RodaPlugins/Assets.html
   # https://rubydoc.info/gems/roda-cj/1.0.3/Roda/RodaPlugins/Csrf
@@ -133,26 +140,8 @@ class CGMFS < Roda
 
   @@line_db["superadmin"].pad.new_table!(database_name: "superadmin_database", database_table: "superadmin_table")
   puts "Loading database: superadmin..."
-  puts '...Loading blog_table.'
-  @@line_db["superadmin"].pad.new_table!(database_name: 'blog_database', database_table: 'blog_table')
-  puts "...Loading blog_pinned_table."
-  @@line_db["superadmin"].pad.new_table!(database_name: "blog_database", database_table: "blog_pinned_table")
-  puts "...Loading blog_profile_table."
-  @@line_db["superadmin"].pad.new_table!(database_name: "blog_database", database_table: "blog_profile_table")
-  puts "...Loading blog_statistics_table."
-  @@line_db["superadmin"].pad.new_table!(database_name: "blog_database", database_table: "blog_statistics_table")
-  puts "...Loading gallery_database + gallery_table."
-  @@line_db["superadmin"].pad.new_table!(database_name: "gallery_database", database_table: "gallery_table")
-  puts "...Loading cache system database..."
-  @@line_db["superadmin"].pad.new_table!(database_name: "cache_system_database", database_table: "cache_system_table")
-  puts "... Loading uwu collections system database..."
-  @@line_db["superadmin"].pad.new_table!(database_name: "uwu_collections_database",
-                                         database_table: "uwu_collections_table")
-  puts "... Loading grid collections system database..."
-  @@line_db["superadmin"].pad.new_table!(database_name: "grid_collections_database",
-                                         database_table: "grid_collections_table")
   @@line_db['user_blog_database'].pad['user_name_database', 'user_password_table'].set(0) do |hash|
-    hash["superadmin"] = "gUilmon#95458a"
+    hash["superadmin"] = PasswordCredentials.create(SUPERADMIN_PASSWORD)
   end
   puts "Done."
 
@@ -196,9 +185,11 @@ class CGMFS < Roda
   require_dir './cgmfs/routes'
   puts "loaded routes."
   route do |r|
-    # log("request path: #{r.path} ; request host: #{r.host}")
+    r.get 'health' do
+      response['Cache-Control'] = 'no-store'
+      { 'status' => 'ok' }
+    end
 
-    puts "hash routes: #{r.hash_routes}"
     r.public
     r.assets # for public assets
     r.hash_routes

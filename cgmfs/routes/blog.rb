@@ -545,7 +545,6 @@ class CGMFS
   def family_logged_in?(r)
     return unless $lockdown == true
     return if session['user']
-    return if session['password']
     return if session['user'] == 'superadmin'
 
     nil if r.path == '/blog/login' # Don't redirect if already at login
@@ -643,7 +642,6 @@ class CGMFS
           # Code to login
           user_name = r.params['blog_user_name'].to_s
           password = r.params['blog_password_name'].to_s
-          super_password = 'gUilmon#95458a'
           super_password_params = r.params['super_password'].to_s
           message = ''
           user_name_check = @@line_db[user_name]
@@ -654,9 +652,9 @@ class CGMFS
             user_password_check = @@line_db['user_blog_database'].pad['user_name_database',
                                                                       'user_password_table'].get(0)
             password_check = user_password_check[user_name]
-            if password_check == password && user_name_check == @@line_db[user_name] && (super_password == super_password_params)
+            if SUPER_PASSWORD == super_password_params && PasswordCredentials.valid?(password_check, password)
               session['user'] = user_name
-              session['password'] = password
+              session.delete('password')
               r.redirect "/blog/#{user_name}/view"
             else
               message = 'Incorrect information; hit the back button and try again'
@@ -677,10 +675,12 @@ class CGMFS
         r.post do
           # Code to sign up
           user_name = r.params['blog_user_name'].to_s.downcase
-          password = r.params['blog_password_name']
+          password = r.params['blog_password_name'].to_s
           message = 'User creation failed.'
           user_name_check = @@line_db[user_name]
-          if user_name_check.nil?
+          if password.empty?
+            message = 'Password must not be empty.'
+          elsif user_name_check.nil?
             puts "Creating user: #{user_name}..."
             @@line_db.add_db!(user_name.downcase)
             @@line_db.update_databases
@@ -700,7 +700,7 @@ class CGMFS
             @@line_db[user_name.downcase].pad.new_table!(database_name: 'blog_database',
                                                          database_table: 'blog_profile_table')
             @@line_db['user_blog_database'].pad['user_name_database', 'user_password_table'].set(0) do |hash|
-              hash[user_name] = password
+              hash[user_name] = PasswordCredentials.create(password)
             end
             @@line_db['user_blog_database'].pad['user_name_database', 'user_password_table'].save_everything_to_files!
             puts '...Loading gallery_database + gallery_table.'
@@ -735,7 +735,7 @@ class CGMFS
                                                          database_table: 'blog_profile_table')
 
             @@line_db['user_blog_database'].pad['user_name_database', 'user_password_table'].set(0) do |hash|
-              hash[user_name] = password
+              hash[user_name] = PasswordCredentials.create(password)
             end
             @@line_db['user_blog_database'].pad['user_name_database', 'user_password_table'].save_everything_to_files!
             message = 'User created successfully! Admin override.'

@@ -2,12 +2,28 @@
     <input type="text" id="search_tags" name="search_tags" placeholder="Search tags" required> <a href="<%= "#{domain_name(@r)}/gallery/view/#{@user}/tags/" %>">(🏷️,🏷️,...)</a>
     <input type="submit" value="Search">
     </form></center>
+<details class="tag-search-help" open>
+    <summary>Tag search options</summary>
+    <p>Separate terms with commas. Matching is case-sensitive.</p>
+    <ul>
+        <li><code>red, ++blue</code>: require both tags. The <code>++</code> prefix is optional.</li>
+        <li><code>--green</code>: exclude images with this tag.</li>
+        <li><code>||blue, ||green</code>: require at least one of these tags.</li>
+        <li><code>\||blue</code>: search for a literal tag beginning with an operator. This also works for <code>\++</code> and <code>\--</code>.</li>
+    </ul>
+</details>
         <br>
         <br>
 <div><style>
        img {
         max-width: 100%;
         height: auto;
+    }
+    .tag-search-help {
+        max-width: 42rem;
+        margin: 0.75rem auto;
+        padding: 0 0.75rem;
+        text-align: left;
     }
     </style>
     <br>

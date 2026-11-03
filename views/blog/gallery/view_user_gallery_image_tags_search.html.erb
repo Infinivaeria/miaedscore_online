@@ -8,6 +8,13 @@
         box-sizing: border-box;
     }
 
+    .tag-search-help {
+        max-width: 42rem;
+        margin: 0.75rem auto;
+        padding: 0 0.75rem;
+        text-align: left;
+    }
+
     @media screen and (max-width: 768px) {
         .image {
             width: 100%;
@@ -21,12 +28,22 @@
     <input type="submit" value="Search">
 </form>
 </center>
+<details class="tag-search-help" open>
+    <summary>Tag search options</summary>
+    <p>Separate terms with commas. Matching is case-sensitive.</p>
+    <ul>
+        <li><code>red, ++blue</code>: require both tags. The <code>++</code> prefix is optional.</li>
+        <li><code>--green</code>: exclude images with this tag.</li>
+        <li><code>||blue, ||green</code>: require at least one of these tags.</li>
+        <li><code>\||blue</code>: search for a literal tag beginning with an operator. This also works for <code>\++</code> and <code>\--</code>.</li>
+    </ul>
+</details>
 <% if !@only_search %>
     <br>
     <br>
     <h1>For <%= @user %>'s tags: <%= parse_tags(user: @user, tag_string: @search_params) %></h1> <!-- todo: work on tag version of tags list (this) -->
     
-    <h2><% @search_params.split(', ').each do |tag| %>            
+    <h2><% (@search_params_set | @any_tags).each do |tag| %>            
             <% if @similar_tags_set.dig(tag) %>            
                <%= parse_tags(user: @user, tag_string: @similar_tags_set[tag].join(', ')) %>
             <% end %>
