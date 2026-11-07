@@ -1,0 +1,212 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Hit:3 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Get:4 https://esm.ubuntu.com/apps/ubuntu noble-apps-security InRelease [8371 B]
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1425 kB]
+Get:6 https://esm.ubuntu.com/apps/ubuntu noble-apps-updates InRelease [8220 B]
+Get:7 https://esm.ubuntu.com/infra/ubuntu noble-infra-security InRelease [8235 B]
+Get:8 https://esm.ubuntu.com/infra/ubuntu noble-infra-updates InRelease [8213 B]
+Get:9 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1711 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1840 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [50.7 kB]
+Hit:12 http://security.ubuntu.com/ubuntu noble-security InRelease
+Fetched 5186 kB in 2s (2127 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+6 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following NEW packages will be installed:
+  linux-headers-6.8.0-149 linux-headers-6.8.0-149-generic
+  linux-image-6.8.0-149-generic linux-modules-6.8.0-149-generic
+  linux-tools-6.8.0-149 linux-tools-6.8.0-149-generic
+The following packages will be upgraded:
+  linux-headers-generic linux-headers-virtual linux-image-virtual
+  linux-libc-dev linux-tools-common linux-virtual
+6 upgraded, 6 newly installed, 0 to remove and 0 not upgraded.
+Need to get 79.7 MB of archives.
+After this operation, 192 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-headers-6.8.0-149 all 6.8.0-149.149 [13.8 MB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-headers-6.8.0-149-generic amd64 6.8.0-149.149 [4024 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-modules-6.8.0-149-generic amd64 6.8.0-149.149 [39.4 MB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-image-6.8.0-149-generic amd64 6.8.0-149.149 [14.9 MB]
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-virtual amd64 6.8.0-149.149 [1696 B]
+Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-image-virtual amd64 6.8.0-149.149 [11.5 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-headers-virtual amd64 6.8.0-149.149 [1646 B]
+Get:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-headers-generic amd64 6.8.0-149.149 [11.5 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-libc-dev amd64 6.8.0-149.149 [1699 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-tools-common all 6.8.0-149.149 [538 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-tools-6.8.0-149 amd64 6.8.0-149.149 [5428 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-tools-6.8.0-149-generic amd64 6.8.0-149.149 [1814 B]
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Fetched 79.7 MB in 5s (16.3 MB/s)
+Selecting previously unselected package linux-headers-6.8.0-149.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 134150 files and directories currently installed.)
+Preparing to unpack .../00-linux-headers-6.8.0-149_6.8.0-149.149_all.deb ...
+Unpacking linux-headers-6.8.0-149 (6.8.0-149.149) ...
+Selecting previously unselected package linux-headers-6.8.0-149-generic.
+Preparing to unpack .../01-linux-headers-6.8.0-149-generic_6.8.0-149.149_amd64.deb ...
+Unpacking linux-headers-6.8.0-149-generic (6.8.0-149.149) ...
+Selecting previously unselected package linux-modules-6.8.0-149-generic.
+Preparing to unpack .../02-linux-modules-6.8.0-149-generic_6.8.0-149.149_amd64.deb ...
+Unpacking linux-modules-6.8.0-149-generic (6.8.0-149.149) ...
+Selecting previously unselected package linux-image-6.8.0-149-generic.
+Preparing to unpack .../03-linux-image-6.8.0-149-generic_6.8.0-149.149_amd64.deb ...
+Unpacking linux-image-6.8.0-149-generic (6.8.0-149.149) ...
+Preparing to unpack .../04-linux-virtual_6.8.0-149.149_amd64.deb ...
+Unpacking linux-virtual (6.8.0-149.149) over (6.8.0-147.147) ...
+Preparing to unpack .../05-linux-image-virtual_6.8.0-149.149_amd64.deb ...
+Unpacking linux-image-virtual (6.8.0-149.149) over (6.8.0-147.147) ...
+Preparing to unpack .../06-linux-headers-virtual_6.8.0-149.149_amd64.deb ...
+Unpacking linux-headers-virtual (6.8.0-149.149) over (6.8.0-147.147) ...
+Preparing to unpack .../07-linux-headers-generic_6.8.0-149.149_amd64.deb ...
+Unpacking linux-headers-generic (6.8.0-149.149) over (6.8.0-147.147) ...
+Preparing to unpack .../08-linux-libc-dev_6.8.0-149.149_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (6.8.0-149.149) over (6.8.0-147.147) ...
+Preparing to unpack .../09-linux-tools-common_6.8.0-149.149_all.deb ...
+Unpacking linux-tools-common (6.8.0-149.149) over (6.8.0-147.147) ...
+Selecting previously unselected package linux-tools-6.8.0-149.
+Preparing to unpack .../10-linux-tools-6.8.0-149_6.8.0-149.149_amd64.deb ...
+Unpacking linux-tools-6.8.0-149 (6.8.0-149.149) ...
+Selecting previously unselected package linux-tools-6.8.0-149-generic.
+Preparing to unpack .../11-linux-tools-6.8.0-149-generic_6.8.0-149.149_amd64.deb ...
+Unpacking linux-tools-6.8.0-149-generic (6.8.0-149.149) ...
+Setting up linux-libc-dev:amd64 (6.8.0-149.149) ...
+Setting up linux-headers-6.8.0-149 (6.8.0-149.149) ...
+Setting up linux-modules-6.8.0-149-generic (6.8.0-149.149) ...
+Setting up linux-tools-common (6.8.0-149.149) ...
+Setting up linux-image-6.8.0-149-generic (6.8.0-149.149) ...
+I: /boot/vmlinuz.old is now a symlink to vmlinuz-6.8.0-147-generic
+I: /boot/initrd.img.old is now a symlink to initrd.img-6.8.0-147-generic
+I: /boot/vmlinuz is now a symlink to vmlinuz-6.8.0-149-generic
+I: /boot/initrd.img is now a symlink to initrd.img-6.8.0-149-generic
+Setting up linux-headers-6.8.0-149-generic (6.8.0-149.149) ...
+Setting up linux-headers-generic (6.8.0-149.149) ...
+Setting up linux-tools-6.8.0-149 (6.8.0-149.149) ...
+Setting up linux-image-virtual (6.8.0-149.149) ...
+Setting up linux-tools-6.8.0-149-generic (6.8.0-149.149) ...
+Setting up linux-headers-virtual (6.8.0-149.149) ...
+Setting up linux-virtual (6.8.0-149.149) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for linux-image-6.8.0-149-generic (6.8.0-149.149) ...
+/etc/kernel/postinst.d/initramfs-tools:
+update-initramfs: Generating /boot/initrd.img-6.8.0-149-generic
+/etc/kernel/postinst.d/zz-update-grub:
+Sourcing file `/etc/default/grub'
+Sourcing file `/etc/default/grub.d/50-cloudimg-settings.cfg'
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-6.8.0-149-generic
+Found initrd image: /boot/initrd.img-6.8.0-149-generic
+Found linux image: /boot/vmlinuz-6.8.0-147-generic
+Found initrd image: /boot/initrd.img-6.8.0-147-generic
+Found linux image: /boot/vmlinuz-6.8.0-146-generic
+Found initrd image: /boot/initrd.img-6.8.0-146-generic
+Warning: os-prober will not be executed to detect other bootable partitions.
+Systems on them will not be added to the GRUB boot configuration.
+Check GRUB_DISABLE_OS_PROBER documentation entry.
+Adding boot menu entry for UEFI Firmware Settings ...
+done
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+
+Restarting services...
+
+Service restarts being deferred:
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart systemd-logind.service
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+User sessions running outdated binaries:
+ root @ session #1: code-insiders-3[1377]
+ root @ user manager service: systemd[1142]
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Pending kernel upgrade
+----------------------
+
+Newer kernel available
+
+The currently running kernel version is 6.8.0-147-generic which is not the 
+expected kernel version 6.8.0-149-generic.
+
+Restarting the system to load the new kernel will not be handled automatically, 
+so you should consider rebooting.
+
+warn: downloading with the `complete` profile is deprecated
+help: consider switching to the `default` profile with `rustup set profile default`
+info: syncing channel updates for nightly-x86_64-unknown-linux-gnu
+info: latest update on 2026-11-07 for version 1.101.0-nightly (c980177d8 2026-11-06)
+info: removing previous version of component rust-std for target wasm32-unknown-unknown
+info: removing previous version of component cargo
+info: removing previous version of component clippy
+info: removing previous version of component llvm-tools
+info: removing previous version of component miri
+info: removing previous version of component rust-analysis
+info: removing previous version of component rust-analyzer
+info: removing previous version of component rust-docs
+info: removing previous version of component rust-src
+info: removing previous version of component rust-std
+info: removing previous version of component rustc
+info: removing previous version of component rustc-codegen-cranelift
+info: removing previous version of component rustc-dev
+info: removing previous version of component rustfmt
+info: downloading 14 components
+
+  nightly-x86_64-unknown-linux-gnu updated - rustc 1.101.0-nightly (c980177d8 2026-11-06) (from rustc 1.101.0-nightly (249c1e4e3 2026-11-05))
+
+info: checking for self-update (current version: 1.29.3)
+info: cleaning up downloads & tmp directories
+Latest version already installed. Done.
+Updating installed gems
+Updating minitest
+Successfully installed minitest-6.1.0
+Parsing documentation for minitest-6.1.0
+Installing ri documentation for minitest-6.1.0
+Done installing documentation for minitest after 0 seconds
+Parsing documentation for minitest-6.1.0
+Done installing documentation for minitest after 0 seconds
+Updating sorbet-runtime
+Successfully installed sorbet-runtime-0.6.13645
+Parsing documentation for sorbet-runtime-0.6.13645
+Installing ri documentation for sorbet-runtime-0.6.13645
+Done installing documentation for sorbet-runtime after 0 seconds
+Parsing documentation for sorbet-runtime-0.6.13645
+Done installing documentation for sorbet-runtime after 0 seconds
+Gems updated: minitest sorbet-runtime
+[DEPRECATED] Pass --all to `bundle update` to update everything
+Fetching gem metadata from https://rubygems.org/........
+Resolving dependencies...
+Using sorbet-runtime 0.6.13645 (was 0.6.13640)
+Updating files in vendor/cache
+  * sorbet-runtime-0.6.13645.gem
+Removing outdated .gem files from vendor/cache
+  * sorbet-runtime-0.6.13640.gem
+Bundle updated!
+2 installed gems you directly depend on are looking for funding.
+  Run `bundle fund` for details
+     Locking 0 packages to highest Rust 1.101.0-nightly compatible versions
+   Compiling midscore-wasm-client v0.1.0 (/root/miaedscore/wasm-client)
+    Finished `release` profile [optimized] target(s) in 0.09s
+Wasm HTTPS deployment started in the background (PID 646872).
+Follow progress with: tail -f /root/miaedscore/log/run-wasm-https.log
