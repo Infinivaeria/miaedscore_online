@@ -210,3 +210,1080 @@ Bundle updated!
     Finished `release` profile [optimized] target(s) in 0.09s
 Wasm HTTPS deployment started in the background (PID 646872).
 Follow progress with: tail -f /root/miaedscore/log/run-wasm-https.log
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:4 https://esm.ubuntu.com/apps/ubuntu resolute-apps-updates InRelease [8226 B]
+Get:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [110 kB]
+Get:7 https://esm.ubuntu.com/apps/ubuntu resolute-apps-security InRelease [8374 B]
+Get:8 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [201 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [1056 B]
+Get:10 https://esm.ubuntu.com/infra/ubuntu resolute-infra-updates InRelease [8219 B]
+Get:11 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [46.7 kB]
+Get:12 https://esm.ubuntu.com/infra/ubuntu resolute-infra-security InRelease [8220 B]
+Get:13 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [62.8 kB]
+Fetched 866 kB in 1s (1039 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+All packages are up to date.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 0
+warn: downloading with the `complete` profile is deprecated
+help: consider switching to the `default` profile with `rustup set profile default`
+info: syncing channel updates for nightly-x86_64-unknown-linux-gnu
+info: latest update on 2026-11-08 for version 1.102.0-nightly (f5cedb83a 2026-11-07)
+info: removing previous version of component rust-std for target wasm32-unknown-unknown
+info: removing previous version of component cargo
+info: removing previous version of component clippy
+info: removing previous version of component llvm-tools
+info: removing previous version of component miri
+info: removing previous version of component rust-analysis
+info: removing previous version of component rust-analyzer
+info: removing previous version of component rust-docs
+info: removing previous version of component rust-src
+info: removing previous version of component rust-std
+info: removing previous version of component rustc
+info: removing previous version of component rustc-codegen-cranelift
+info: removing previous version of component rustc-dev
+info: removing previous version of component rustfmt
+info: downloading 14 components
+
+  nightly-x86_64-unknown-linux-gnu updated - rustc 1.102.0-nightly (f5cedb83a 2026-11-07) (from rustc 1.101.0-nightly (c980177d8 2026-11-06))
+
+info: checking for self-update (current version: 1.29.3)
+info: cleaning up downloads & tmp directories
+Latest version already installed. Done.
+Updating installed gems
+Updating sorbet-runtime
+Successfully installed sorbet-runtime-0.6.13646
+Parsing documentation for sorbet-runtime-0.6.13646
+Installing ri documentation for sorbet-runtime-0.6.13646
+Done installing documentation for sorbet-runtime after 0 seconds
+Parsing documentation for sorbet-runtime-0.6.13646
+Done installing documentation for sorbet-runtime after 0 seconds
+Gems updated: sorbet-runtime
+[DEPRECATED] Pass --all to `bundle update` to update everything
+Fetching gem metadata from https://rubygems.org/........
+Resolving dependencies...
+Using sorbet-runtime 0.6.13646 (was 0.6.13645)
+Updating files in vendor/cache
+  * sorbet-runtime-0.6.13646.gem
+Removing outdated .gem files from vendor/cache
+  * sorbet-runtime-0.6.13645.gem
+Bundle updated!
+2 installed gems you directly depend on are looking for funding.
+  Run `bundle fund` for details
+     Locking 0 packages to highest Rust 1.102.0-nightly compatible versions
+   Compiling midscore-wasm-client v0.1.0 (/root/miaedscore/wasm-client)
+    Finished `release` profile [optimized] target(s) in 0.08s
+Wasm HTTPS deployment started in the background (PID 14992).
+Follow progress with: tail -f /root/miaedscore/log/run-wasm-https.log
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:4 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [844 kB]
+Get:5 https://esm.ubuntu.com/apps/ubuntu resolute-apps-updates InRelease [8226 B]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [376 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [118 kB]
+Get:9 https://esm.ubuntu.com/apps/ubuntu resolute-apps-security InRelease [8374 B]
+Get:10 https://esm.ubuntu.com/infra/ubuntu resolute-infra-updates InRelease [8219 B]
+Get:11 https://esm.ubuntu.com/infra/ubuntu resolute-infra-security InRelease [8220 B]
+Get:12 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [656 kB]
+Get:13 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [208 kB]
+Get:14 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [68.9 kB]
+Fetched 2578 kB in 2s (1529 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+All packages are up to date.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 0
+warn: downloading with the `complete` profile is deprecated
+help: consider switching to the `default` profile with `rustup set profile default`
+info: syncing channel updates for nightly-x86_64-unknown-linux-gnu
+info: latest update on 2026-11-09 for version 1.102.0-nightly (5b7b37aef 2026-11-08)
+info: removing previous version of component rust-std for target wasm32-unknown-unknown
+info: removing previous version of component cargo
+info: removing previous version of component clippy
+info: removing previous version of component llvm-tools
+info: removing previous version of component miri
+info: removing previous version of component rust-analysis
+info: removing previous version of component rust-analyzer
+info: removing previous version of component rust-docs
+info: removing previous version of component rust-src
+info: removing previous version of component rust-std
+info: removing previous version of component rustc
+info: removing previous version of component rustc-codegen-cranelift
+info: removing previous version of component rustc-dev
+info: removing previous version of component rustfmt
+info: downloading 14 components
+
+  nightly-x86_64-unknown-linux-gnu updated - rustc 1.102.0-nightly (5b7b37aef 2026-11-08) (from rustc 1.102.0-nightly (f5cedb83a 2026-11-07))
+
+info: checking for self-update (current version: 1.29.3)
+info: cleaning up downloads & tmp directories
+Latest version already installed. Done.
+Updating installed gems
+Nothing to update
+[DEPRECATED] Pass --all to `bundle update` to update everything
+Fetching gem metadata from https://rubygems.org/........
+Resolving dependencies...
+Updating files in vendor/cache
+Bundle updated!
+2 installed gems you directly depend on are looking for funding.
+  Run `bundle fund` for details
+     Locking 0 packages to highest Rust 1.102.0-nightly compatible versions
+   Compiling midscore-wasm-client v0.1.0 (/root/miaedscore/wasm-client)
+    Finished `release` profile [optimized] target(s) in 0.07s
+Wasm HTTPS deployment started in the background (PID 31460).
+Follow progress with: tail -f /root/miaedscore/log/run-wasm-https.log
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Get:1 https://esm.ubuntu.com/apps/ubuntu resolute-apps-updates InRelease [8226 B]
+Get:2 https://esm.ubuntu.com/apps/ubuntu resolute-apps-security InRelease [8374 B]
+Get:3 https://esm.ubuntu.com/infra/ubuntu resolute-infra-updates InRelease [8219 B]
+Hit:4 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:5 https://esm.ubuntu.com/infra/ubuntu resolute-infra-security InRelease [8220 B]
+Hit:6 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:7 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Hit:8 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:9 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [867 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [380 kB]
+Fetched 1417 kB in 3s (488 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+All packages are up to date.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 0
+warn: downloading with the `complete` profile is deprecated
+help: consider switching to the `default` profile with `rustup set profile default`
+info: syncing channel updates for nightly-x86_64-unknown-linux-gnu
+info: latest update on 2026-11-10 for version 1.102.0-nightly (ac8310ba6 2026-11-09)
+info: removing previous version of component rust-std for target wasm32-unknown-unknown
+info: removing previous version of component cargo
+info: removing previous version of component clippy
+info: removing previous version of component llvm-tools
+info: removing previous version of component miri
+info: removing previous version of component rust-analysis
+info: removing previous version of component rust-analyzer
+info: removing previous version of component rust-docs
+info: removing previous version of component rust-src
+info: removing previous version of component rust-std
+info: removing previous version of component rustc
+info: removing previous version of component rustc-codegen-cranelift
+info: removing previous version of component rustc-dev
+info: removing previous version of component rustfmt
+info: downloading 14 components
+
+  nightly-x86_64-unknown-linux-gnu updated - rustc 1.102.0-nightly (ac8310ba6 2026-11-09) (from rustc 1.102.0-nightly (5b7b37aef 2026-11-08))
+
+info: checking for self-update (current version: 1.29.3)
+info: cleaning up downloads & tmp directories
+Latest version already installed. Done.
+Updating installed gems
+Updating rubocop-ast
+Successfully installed rubocop-ast-1.51.0
+Parsing documentation for rubocop-ast-1.51.0
+Installing ri documentation for rubocop-ast-1.51.0
+Done installing documentation for rubocop-ast after 0 seconds
+Parsing documentation for rubocop-ast-1.51.0
+Done installing documentation for rubocop-ast after 0 seconds
+Gems updated: rubocop-ast
+[DEPRECATED] Pass --all to `bundle update` to update everything
+Fetching gem metadata from https://rubygems.org/........
+Resolving dependencies...
+Using rubocop-ast 1.51.0 (was 1.50.0)
+Updating files in vendor/cache
+  * rubocop-ast-1.51.0.gem
+Removing outdated .gem files from vendor/cache
+  * rubocop-ast-1.50.0.gem
+Bundle updated!
+2 installed gems you directly depend on are looking for funding.
+  Run `bundle fund` for details
+     Locking 0 packages to highest Rust 1.102.0-nightly compatible versions
+   Compiling midscore-wasm-client v0.1.0 (/root/miaedscore/wasm-client)
+    Finished `release` profile [optimized] target(s) in 0.23s
+Wasm HTTPS deployment started in the background (PID 59395).
+Follow progress with: tail -f /root/miaedscore/log/run-wasm-https.log
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 https://esm.ubuntu.com/apps/ubuntu resolute-apps-updates InRelease
+Hit:3 https://esm.ubuntu.com/apps/ubuntu resolute-apps-security InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:5 https://esm.ubuntu.com/infra/ubuntu resolute-infra-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:7 https://esm.ubuntu.com/infra/ubuntu resolute-infra-security InRelease
+Hit:8 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+9 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+Upgrading:
+  libperl5.40  perl  perl-base  perl-modules-5.40
+
+Not upgrading yet due to phasing:
+  distro-info                  snapd
+  python3-distro-info          software-properties-common
+  python3-software-properties
+
+Summary:
+  Upgrading: 4, Installing: 0, Removing: 0, Not Upgrading: 5
+4 standard LTS security updates
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+  Download size: 0 B / 10.2 MB
+  Space needed: 2048 B / 143 GB available
+
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 165929 files and directories currently installed.)
+Preparing to unpack .../libperl5.40_5.40.1-7ubuntu0.4_amd64.deb ...
+Unpacking libperl5.40:amd64 (5.40.1-7ubuntu0.4) over (5.40.1-7ubuntu0.3) ...
+Preparing to unpack .../perl_5.40.1-7ubuntu0.4_amd64.deb ...
+Unpacking perl (5.40.1-7ubuntu0.4) over (5.40.1-7ubuntu0.3) ...
+Preparing to unpack .../perl-base_5.40.1-7ubuntu0.4_amd64.deb ...
+Unpacking perl-base (5.40.1-7ubuntu0.4) over (5.40.1-7ubuntu0.3) ...
+Setting up perl-base (5.40.1-7ubuntu0.4) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 165929 files and directories currently installed.)
+Preparing to unpack .../perl-modules-5.40_5.40.1-7ubuntu0.4_all.deb ...
+Unpacking perl-modules-5.40 (5.40.1-7ubuntu0.4) over (5.40.1-7ubuntu0.3) ...
+Setting up perl-modules-5.40 (5.40.1-7ubuntu0.4) ...
+Setting up libperl5.40:amd64 (5.40.1-7ubuntu0.4) ...
+Setting up perl (5.40.1-7ubuntu0.4) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2.4) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+warn: downloading with the `complete` profile is deprecated
+help: consider switching to the `default` profile with `rustup set profile default`
+info: syncing channel updates for nightly-x86_64-unknown-linux-gnu
+info: latest update on 2026-11-11 for version 1.102.0-nightly (9c5648833 2026-11-10)
+info: removing previous version of component rust-std for target wasm32-unknown-unknown
+info: removing previous version of component cargo
+info: removing previous version of component clippy
+info: removing previous version of component llvm-tools
+info: removing previous version of component miri
+info: removing previous version of component rust-analysis
+info: removing previous version of component rust-analyzer
+info: removing previous version of component rust-docs
+info: removing previous version of component rust-src
+info: removing previous version of component rust-std
+info: removing previous version of component rustc
+info: removing previous version of component rustc-codegen-cranelift
+info: removing previous version of component rustc-dev
+info: removing previous version of component rustfmt
+info: downloading 14 components
+
+  nightly-x86_64-unknown-linux-gnu updated - rustc 1.102.0-nightly (9c5648833 2026-11-10) (from rustc 1.102.0-nightly (ac8310ba6 2026-11-09))
+
+info: checking for self-update (current version: 1.29.3)
+info: cleaning up downloads & tmp directories
+Latest version already installed. Done.
+Updating installed gems
+Updating brotli
+Building native extensions. This could take a while...
+Successfully installed brotli-0.9.3
+Parsing documentation for brotli-0.9.3
+Installing ri documentation for brotli-0.9.3
+Done installing documentation for brotli after 0 seconds
+Parsing documentation for brotli-0.9.3
+Done installing documentation for brotli after 0 seconds
+Updating sorbet-runtime
+Successfully installed sorbet-runtime-0.6.13650
+Parsing documentation for sorbet-runtime-0.6.13650
+Installing ri documentation for sorbet-runtime-0.6.13650
+Done installing documentation for sorbet-runtime after 0 seconds
+Parsing documentation for sorbet-runtime-0.6.13650
+Done installing documentation for sorbet-runtime after 0 seconds
+Gems updated: brotli sorbet-runtime
+[DEPRECATED] Pass --all to `bundle update` to update everything
+Fetching gem metadata from https://rubygems.org/........
+Resolving dependencies...
+Using brotli 0.9.3 (was 0.9.2)
+Using sorbet-runtime 0.6.13650 (was 0.6.13646)
+Updating files in vendor/cache
+  * brotli-0.9.3.gem
+  * sorbet-runtime-0.6.13650.gem
+Removing outdated .gem files from vendor/cache
+  * brotli-0.9.2.gem
+  * sorbet-runtime-0.6.13646.gem
+Bundle updated!
+2 installed gems you directly depend on are looking for funding.
+  Run `bundle fund` for details
+     Locking 0 packages to highest Rust 1.102.0-nightly compatible versions
+   Compiling midscore-wasm-client v0.1.0 (/root/miaedscore/wasm-client)
+    Finished `release` profile [optimized] target(s) in 0.08s
+Wasm HTTPS deployment started in the background (PID 77300).
+Follow progress with: tail -f /root/miaedscore/log/run-wasm-https.log
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:3 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [868 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [110 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [389 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [122 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [201 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [1056 B]
+Get:11 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [717 kB]
+Get:12 http://security.ubuntu.com/ubuntu resolute-security/main Translation-en [157 kB]
+Get:13 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [46.7 kB]
+Get:14 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Packages [586 kB]
+Get:15 http://security.ubuntu.com/ubuntu resolute-security/restricted Translation-en [122 kB]
+Get:16 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [220 kB]
+Get:17 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [72.5 kB]
+Get:18 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [62.7 kB]
+Ign:19 https://esm.ubuntu.com/apps/ubuntu resolute-apps-updates InRelease
+Ign:20 https://esm.ubuntu.com/apps/ubuntu resolute-apps-security InRelease
+Ign:21 https://esm.ubuntu.com/infra/ubuntu resolute-infra-updates InRelease
+Ign:22 https://esm.ubuntu.com/infra/ubuntu resolute-infra-security InRelease
+Ign:19 https://esm.ubuntu.com/apps/ubuntu resolute-apps-updates InRelease
+Ign:20 https://esm.ubuntu.com/apps/ubuntu resolute-apps-security InRelease
+Ign:21 https://esm.ubuntu.com/infra/ubuntu resolute-infra-updates InRelease
+Ign:22 https://esm.ubuntu.com/infra/ubuntu resolute-infra-security InRelease
+Ign:19 https://esm.ubuntu.com/apps/ubuntu resolute-apps-updates InRelease
+Ign:20 https://esm.ubuntu.com/apps/ubuntu resolute-apps-security InRelease
+Ign:21 https://esm.ubuntu.com/infra/ubuntu resolute-infra-updates InRelease
+Ign:22 https://esm.ubuntu.com/infra/ubuntu resolute-infra-security InRelease
+Err:19 https://esm.ubuntu.com/apps/ubuntu resolute-apps-updates InRelease
+  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 2620:2d:4000:1::2e 443]
+Err:20 https://esm.ubuntu.com/apps/ubuntu resolute-apps-security InRelease
+  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 2620:2d:4000:1::2e 443]
+Err:21 https://esm.ubuntu.com/infra/ubuntu resolute-infra-updates InRelease
+  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 2620:2d:4000:1::2e 443]
+Err:22 https://esm.ubuntu.com/infra/ubuntu resolute-infra-security InRelease
+  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 2620:2d:4000:1::2e 443]
+Fetched 4087 kB in 8min 2s (8479 B/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+5 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Warning: Failed to fetch https://esm.ubuntu.com/apps/ubuntu/dists/resolute-apps-updates/InRelease  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 2620:2d:4000:1::2e 443]
+Warning: Failed to fetch https://esm.ubuntu.com/apps/ubuntu/dists/resolute-apps-security/InRelease  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 2620:2d:4000:1::2e 443]
+Warning: Failed to fetch https://esm.ubuntu.com/infra/ubuntu/dists/resolute-infra-updates/InRelease  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 2620:2d:4000:1::2e 443]
+Warning: Failed to fetch https://esm.ubuntu.com/infra/ubuntu/dists/resolute-infra-security/InRelease  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 2620:2d:4000:1::2e 443]
+Warning: Some index files failed to download. They have been ignored, or old ones used instead.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+Not upgrading yet due to phasing:
+  distro-info                  snapd
+  python3-distro-info          software-properties-common
+  python3-software-properties
+
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 5
+warn: downloading with the `complete` profile is deprecated
+help: consider switching to the `default` profile with `rustup set profile default`
+info: syncing channel updates for nightly-x86_64-unknown-linux-gnu
+info: latest update on 2026-11-12 for version 1.102.0-nightly (3ef0c22cd 2026-11-11)
+info: removing previous version of component rust-std for target wasm32-unknown-unknown
+info: removing previous version of component cargo
+info: removing previous version of component clippy
+info: removing previous version of component llvm-tools
+info: removing previous version of component miri
+info: removing previous version of component rust-analysis
+info: removing previous version of component rust-analyzer
+info: removing previous version of component rust-docs
+info: removing previous version of component rust-src
+info: removing previous version of component rust-std
+info: removing previous version of component rustc
+info: removing previous version of component rustc-codegen-cranelift
+info: removing previous version of component rustc-dev
+info: removing previous version of component rustfmt
+info: downloading 14 components
+
+  nightly-x86_64-unknown-linux-gnu updated - rustc 1.102.0-nightly (3ef0c22cd 2026-11-11) (from rustc 1.102.0-nightly (9c5648833 2026-11-10))
+
+info: checking for self-update (current version: 1.29.3)
+info: cleaning up downloads & tmp directories
+Latest version already installed. Done.
+Updating installed gems
+Updating sorbet-runtime
+Successfully installed sorbet-runtime-0.6.13672
+Parsing documentation for sorbet-runtime-0.6.13672
+Installing ri documentation for sorbet-runtime-0.6.13672
+Done installing documentation for sorbet-runtime after 0 seconds
+Parsing documentation for sorbet-runtime-0.6.13672
+Done installing documentation for sorbet-runtime after 0 seconds
+Gems updated: sorbet-runtime
+[DEPRECATED] Pass --all to `bundle update` to update everything
+Fetching gem metadata from https://rubygems.org/........
+Resolving dependencies...
+Using sorbet-runtime 0.6.13672 (was 0.6.13650)
+Updating files in vendor/cache
+  * sorbet-runtime-0.6.13672.gem
+Removing outdated .gem files from vendor/cache
+  * sorbet-runtime-0.6.13650.gem
+Bundle updated!
+2 installed gems you directly depend on are looking for funding.
+  Run `bundle fund` for details
+     Locking 0 packages to highest Rust 1.102.0-nightly compatible versions
+   Compiling midscore-wasm-client v0.1.0 (/root/miaedscore/wasm-client)
+    Finished `release` profile [optimized] target(s) in 0.40s
+Wasm HTTPS deployment started in the background (PID 99789).
+Follow progress with: tail -f /root/miaedscore/log/run-wasm-https.log
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Ign:5 https://esm.ubuntu.com/apps/ubuntu resolute-apps-updates InRelease
+Ign:6 https://esm.ubuntu.com/apps/ubuntu resolute-apps-security InRelease
+Ign:7 https://esm.ubuntu.com/infra/ubuntu resolute-infra-updates InRelease
+Ign:8 https://esm.ubuntu.com/infra/ubuntu resolute-infra-security InRelease
+Ign:5 https://esm.ubuntu.com/apps/ubuntu resolute-apps-updates InRelease
+Ign:6 https://esm.ubuntu.com/apps/ubuntu resolute-apps-security InRelease
+Ign:7 https://esm.ubuntu.com/infra/ubuntu resolute-infra-updates InRelease
+Ign:8 https://esm.ubuntu.com/infra/ubuntu resolute-infra-security InRelease
+Ign:5 https://esm.ubuntu.com/apps/ubuntu resolute-apps-updates InRelease
+Ign:6 https://esm.ubuntu.com/apps/ubuntu resolute-apps-security InRelease
+Ign:7 https://esm.ubuntu.com/infra/ubuntu resolute-infra-updates InRelease
+Ign:8 https://esm.ubuntu.com/infra/ubuntu resolute-infra-security InRelease
+Err:5 https://esm.ubuntu.com/apps/ubuntu resolute-apps-updates InRelease
+  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 2620:2d:4000:1::2f 443]
+Err:6 https://esm.ubuntu.com/apps/ubuntu resolute-apps-security InRelease
+  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 2620:2d:4000:1::2f 443]
+Err:7 https://esm.ubuntu.com/infra/ubuntu resolute-infra-updates InRelease
+  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 2620:2d:4000:1::2f 443]
+Err:8 https://esm.ubuntu.com/infra/ubuntu resolute-infra-security InRelease
+  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 2620:2d:4000:1::2f 443]
+Reading package lists...
+Building dependency tree...
+Reading state information...
+12 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Warning: Failed to fetch https://esm.ubuntu.com/apps/ubuntu/dists/resolute-apps-updates/InRelease  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 2620:2d:4000:1::2f 443]
+Warning: Failed to fetch https://esm.ubuntu.com/apps/ubuntu/dists/resolute-apps-security/InRelease  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 2620:2d:4000:1::2f 443]
+Warning: Failed to fetch https://esm.ubuntu.com/infra/ubuntu/dists/resolute-infra-updates/InRelease  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 2620:2d:4000:1::2f 443]
+Warning: Failed to fetch https://esm.ubuntu.com/infra/ubuntu/dists/resolute-infra-security/InRelease  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 2620:2d:4000:1::2f 443]
+Warning: Some index files failed to download. They have been ignored, or old ones used instead.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+Upgrading:
+  libc-bin      libc-gconv-modules-extra  libc6-dev   locales
+  libc-dev-bin  libc6                     libc6-i386
+
+Not upgrading yet due to phasing:
+  distro-info                  snapd
+  python3-distro-info          software-properties-common
+  python3-software-properties
+
+Summary:
+  Upgrading: 7, Installing: 0, Removing: 0, Not Upgrading: 5
+7 standard LTS security updates
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Preconfiguring packages ...
+  Download size: 0 B / 13.6 MB
+  Space needed: 7168 B / 143 GB available
+
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 165929 files and directories currently installed.)
+Preparing to unpack .../libc-dev-bin_2.43-2ubuntu2.7_amd64.deb ...
+Unpacking libc-dev-bin (2.43-2ubuntu2.7) over (2.43-2ubuntu2.4) ...
+Preparing to unpack .../libc6-dev_2.43-2ubuntu2.7_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.43-2ubuntu2.7) over (2.43-2ubuntu2.4) ...
+Preparing to unpack .../libc6-i386_2.43-2ubuntu2.7_amd64.deb ...
+Unpacking libc6-i386 (2.43-2ubuntu2.7) over (2.43-2ubuntu2.4) ...
+Preparing to unpack .../libc-gconv-modules-extra_2.43-2ubuntu2.7_amd64.deb ...
+Unpacking libc-gconv-modules-extra:amd64 (2.43-2ubuntu2.7) over (2.43-2ubuntu2.4) ...
+Setting up libc-gconv-modules-extra:amd64 (2.43-2ubuntu2.7) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 165929 files and directories currently installed.)
+Preparing to unpack .../libc6_2.43-2ubuntu2.7_amd64.deb ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Unpacking libc6:amd64 (2.43-2ubuntu2.7) over (2.43-2ubuntu2.4) ...
+Setting up libc6:amd64 (2.43-2ubuntu2.7) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 165929 files and directories currently installed.)
+Preparing to unpack .../libc-bin_2.43-2ubuntu2.7_amd64.deb ...
+Unpacking libc-bin (2.43-2ubuntu2.7) over (2.43-2ubuntu2.4) ...
+Setting up libc-bin (2.43-2ubuntu2.7) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 165929 files and directories currently installed.)
+Preparing to unpack .../locales_2.43-2ubuntu2.7_all.deb ...
+Unpacking locales (2.43-2ubuntu2.7) over (2.43-2ubuntu2.4) ...
+Setting up locales (2.43-2ubuntu2.7) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Generating locales (this might take a while)...
+  en_US.UTF-8... done
+Generation complete.
+Setting up libc6-i386 (2.43-2ubuntu2.7) ...
+Setting up libc-dev-bin (2.43-2ubuntu2.7) ...
+Setting up libc6-dev:amd64 (2.43-2ubuntu2.7) ...
+Processing triggers for systemd (259.9-0ubuntu0.1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for base-files (14ubuntu6.3) ...
+Processing triggers for libc-bin (2.43-2ubuntu2.7) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+
+Running kernel seems to be up-to-date.
+
+Restarting services...
+ systemctl restart fwupd.service multipathd.service packagekit.service polkit.service rsyslog.service ssh.service systemd-journald.service systemd-networkd.service systemd-resolved.service systemd-timesyncd.service systemd-udevd.service udisks2.service upower.service
+
+Service restarts being deferred:
+ systemctl restart ModemManager.service
+ systemctl restart cron.service
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart getty@tty1.service
+ systemctl restart serial-getty@ttyS0.service
+ systemctl restart systemd-logind.service
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+User sessions running outdated binaries:
+ root @ user manager: (sd-pam)[1267]
+ root @ user service: dbus.service[1411]
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+warn: downloading with the `complete` profile is deprecated
+help: consider switching to the `default` profile with `rustup set profile default`
+info: syncing channel updates for nightly-x86_64-unknown-linux-gnu
+info: latest update on 2026-11-13 for version 1.102.0-nightly (8eb778d04 2026-11-12)
+info: removing previous version of component rust-std for target wasm32-unknown-unknown
+info: removing previous version of component cargo
+info: removing previous version of component clippy
+info: removing previous version of component llvm-tools
+info: removing previous version of component miri
+info: removing previous version of component rust-analysis
+info: removing previous version of component rust-analyzer
+info: removing previous version of component rust-docs
+info: removing previous version of component rust-src
+info: removing previous version of component rust-std
+info: removing previous version of component rustc
+info: removing previous version of component rustc-codegen-cranelift
+info: removing previous version of component rustc-dev
+info: removing previous version of component rustfmt
+info: downloading 14 components
+
+  nightly-x86_64-unknown-linux-gnu updated - rustc 1.102.0-nightly (8eb778d04 2026-11-12) (from rustc 1.102.0-nightly (3ef0c22cd 2026-11-11))
+
+info: checking for self-update (current version: 1.29.3)
+info: cleaning up downloads & tmp directories
+Latest version already installed. Done.
+Updating installed gems
+Updating puma
+Building native extensions. This could take a while...
+Successfully installed puma-8.0.3
+Parsing documentation for puma-8.0.3
+Installing ri documentation for puma-8.0.3
+Done installing documentation for puma after 0 seconds
+Parsing documentation for puma-8.0.3
+Done installing documentation for puma after 0 seconds
+Updating sorbet-runtime
+Successfully installed sorbet-runtime-0.6.13680
+Parsing documentation for sorbet-runtime-0.6.13680
+Installing ri documentation for sorbet-runtime-0.6.13680
+Done installing documentation for sorbet-runtime after 0 seconds
+Parsing documentation for sorbet-runtime-0.6.13680
+Done installing documentation for sorbet-runtime after 0 seconds
+Gems updated: puma sorbet-runtime
+[DEPRECATED] Pass --all to `bundle update` to update everything
+Fetching gem metadata from https://rubygems.org/........
+Resolving dependencies...
+Using sorbet-runtime 0.6.13680 (was 0.6.13672)
+Using puma 8.0.3 (was 8.0.2)
+Updating files in vendor/cache
+  * sorbet-runtime-0.6.13680.gem
+  * puma-8.0.3.gem
+Removing outdated .gem files from vendor/cache
+  * puma-8.0.2.gem
+  * sorbet-runtime-0.6.13672.gem
+Bundle updated!
+2 installed gems you directly depend on are looking for funding.
+  Run `bundle fund` for details
+     Locking 0 packages to highest Rust 1.102.0-nightly compatible versions
+   Compiling midscore-wasm-client v0.1.0 (/root/miaedscore/wasm-client)
+    Finished `release` profile [optimized] target(s) in 0.40s
+Wasm HTTPS deployment started in the background (PID 126448).
+Follow progress with: tail -f /root/miaedscore/log/run-wasm-https.log
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Get:1 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [46.7 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [62.8 kB]
+Get:6 https://esm.ubuntu.com/apps/ubuntu resolute-apps-updates InRelease [8226 B]
+Get:7 https://esm.ubuntu.com/apps/ubuntu resolute-apps-security InRelease [8374 B]
+Get:8 https://esm.ubuntu.com/infra/ubuntu resolute-infra-updates InRelease [8219 B]
+Get:9 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+Get:10 https://esm.ubuntu.com/infra/ubuntu resolute-infra-security InRelease [8250 B]
+Get:11 https://esm.ubuntu.com/infra/ubuntu resolute-infra-security/main amd64 Packages [1007 B]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [110 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [201 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [1056 B]
+Fetched 867 kB in 1s (703 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+5 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+Not upgrading yet due to phasing:
+  distro-info                  snapd
+  python3-distro-info          software-properties-common
+  python3-software-properties
+
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 5
+warn: downloading with the `complete` profile is deprecated
+help: consider switching to the `default` profile with `rustup set profile default`
+info: syncing channel updates for nightly-x86_64-unknown-linux-gnu
+info: latest update on 2026-11-14 for version 1.102.0-nightly (5f4effd57 2026-11-13)
+info: removing previous version of component rust-std for target wasm32-unknown-unknown
+info: removing previous version of component cargo
+info: removing previous version of component clippy
+info: removing previous version of component llvm-tools
+info: removing previous version of component miri
+info: removing previous version of component rust-analysis
+info: removing previous version of component rust-analyzer
+info: removing previous version of component rust-docs
+info: removing previous version of component rust-src
+info: removing previous version of component rust-std
+info: removing previous version of component rustc
+info: removing previous version of component rustc-codegen-cranelift
+info: removing previous version of component rustc-dev
+info: removing previous version of component rustfmt
+info: downloading 14 components
+
+  nightly-x86_64-unknown-linux-gnu updated - rustc 1.102.0-nightly (5f4effd57 2026-11-13) (from rustc 1.102.0-nightly (8eb778d04 2026-11-12))
+
+info: checking for self-update (current version: 1.29.3)
+info: cleaning up downloads & tmp directories
+Latest version already installed. Done.
+Updating installed gems
+Updating ipaddr
+Successfully installed ipaddr-1.3.1
+Parsing documentation for ipaddr-1.3.1
+Installing ri documentation for ipaddr-1.3.1
+Done installing documentation for ipaddr after 0 seconds
+Parsing documentation for ipaddr-1.3.1
+Done installing documentation for ipaddr after 0 seconds
+Updating roda
+Successfully installed roda-3.110.0
+Parsing documentation for roda-3.110.0
+Installing ri documentation for roda-3.110.0
+Done installing documentation for roda after 0 seconds
+Parsing documentation for roda-3.110.0
+Done installing documentation for roda after 0 seconds
+Updating sorbet-runtime
+Successfully installed sorbet-runtime-0.6.13681
+Parsing documentation for sorbet-runtime-0.6.13681
+Installing ri documentation for sorbet-runtime-0.6.13681
+Done installing documentation for sorbet-runtime after 0 seconds
+Parsing documentation for sorbet-runtime-0.6.13681
+Done installing documentation for sorbet-runtime after 0 seconds
+Gems updated: ipaddr roda sorbet-runtime
+[DEPRECATED] Pass --all to `bundle update` to update everything
+Fetching gem metadata from https://rubygems.org/........
+Resolving dependencies...
+Using sorbet-runtime 0.6.13681 (was 0.6.13680)
+Using roda 3.110.0 (was 3.109.0)
+Updating files in vendor/cache
+  * sorbet-runtime-0.6.13681.gem
+  * roda-3.110.0.gem
+Removing outdated .gem files from vendor/cache
+  * roda-3.109.0.gem
+  * sorbet-runtime-0.6.13680.gem
+Bundle updated!
+2 installed gems you directly depend on are looking for funding.
+  Run `bundle fund` for details
+     Locking 0 packages to highest Rust 1.102.0-nightly compatible versions
+   Compiling midscore-wasm-client v0.1.0 (/root/miaedscore/wasm-client)
+    Finished `release` profile [optimized] target(s) in 0.22s
+Wasm HTTPS deployment started in the background (PID 143007).
+Follow progress with: tail -f /root/miaedscore/log/run-wasm-https.log
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:5 https://esm.ubuntu.com/apps/ubuntu resolute-apps-updates InRelease [8226 B]
+Get:6 https://esm.ubuntu.com/apps/ubuntu resolute-apps-security InRelease [8374 B]
+Get:7 https://esm.ubuntu.com/infra/ubuntu resolute-infra-updates InRelease [8219 B]
+Get:8 https://esm.ubuntu.com/infra/ubuntu resolute-infra-security InRelease [8250 B]
+Fetched 33.1 kB in 1s (40.7 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+5 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+Not upgrading yet due to phasing:
+  distro-info                  snapd
+  python3-distro-info          software-properties-common
+  python3-software-properties
+
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 5
+warn: downloading with the `complete` profile is deprecated
+help: consider switching to the `default` profile with `rustup set profile default`
+info: syncing channel updates for nightly-x86_64-unknown-linux-gnu
+info: latest update on 2026-11-15 for version 1.102.0-nightly (5f4effd57 2026-11-13)
+info: removing previous version of component rust-std for target wasm32-unknown-unknown
+info: removing previous version of component cargo
+info: removing previous version of component clippy
+info: removing previous version of component llvm-tools
+info: removing previous version of component miri
+info: removing previous version of component rust-analysis
+info: removing previous version of component rust-analyzer
+info: removing previous version of component rust-docs
+info: removing previous version of component rust-src
+info: removing previous version of component rust-std
+info: removing previous version of component rustc
+info: removing previous version of component rustc-codegen-cranelift
+info: removing previous version of component rustc-dev
+info: removing previous version of component rustfmt
+info: downloading 14 components
+
+  nightly-x86_64-unknown-linux-gnu updated - rustc 1.102.0-nightly (5f4effd57 2026-11-13) (from rustc 1.102.0-nightly (5f4effd57 2026-11-13))
+
+info: checking for self-update (current version: 1.29.3)
+info: cleaning up downloads & tmp directories
+Latest version already installed. Done.
+Updating installed gems
+Updating puma
+Building native extensions. This could take a while...
+Successfully installed puma-8.1.1
+Parsing documentation for puma-8.1.1
+Installing ri documentation for puma-8.1.1
+Done installing documentation for puma after 0 seconds
+Parsing documentation for puma-8.1.1
+Done installing documentation for puma after 0 seconds
+Gems updated: puma
+[DEPRECATED] Pass --all to `bundle update` to update everything
+Fetching gem metadata from https://rubygems.org/........
+Resolving dependencies...
+Using puma 8.1.1 (was 8.0.3)
+Updating files in vendor/cache
+  * puma-8.1.1.gem
+Removing outdated .gem files from vendor/cache
+  * puma-8.0.3.gem
+Bundle updated!
+2 installed gems you directly depend on are looking for funding.
+  Run `bundle fund` for details
+     Locking 0 packages to highest Rust 1.102.0-nightly compatible versions
+    Finished `release` profile [optimized] target(s) in 0.03s
+Wasm HTTPS deployment started in the background (PID 160701).
+Follow progress with: tail -f /root/miaedscore/log/run-wasm-https.log
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Get:2 https://esm.ubuntu.com/apps/ubuntu resolute-apps-updates InRelease [8226 B]
+Get:3 https://esm.ubuntu.com/apps/ubuntu resolute-apps-security InRelease [8374 B]
+Hit:4 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:5 https://esm.ubuntu.com/infra/ubuntu resolute-infra-updates InRelease [8219 B]
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Get:7 https://esm.ubuntu.com/infra/ubuntu resolute-infra-security InRelease [8250 B]
+Hit:8 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Fetched 33.1 kB in 1s (33.5 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+5 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+Not upgrading yet due to phasing:
+  distro-info                  snapd
+  python3-distro-info          software-properties-common
+  python3-software-properties
+
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 5
+warn: downloading with the `complete` profile is deprecated
+help: consider switching to the `default` profile with `rustup set profile default`
+info: syncing channel updates for nightly-x86_64-unknown-linux-gnu
+info: latest update on 2026-11-16 for version 1.102.0-nightly (5f4effd57 2026-11-13)
+info: removing previous version of component rust-std for target wasm32-unknown-unknown
+info: removing previous version of component cargo
+info: removing previous version of component clippy
+info: removing previous version of component llvm-tools
+info: removing previous version of component miri
+info: removing previous version of component rust-analysis
+info: removing previous version of component rust-analyzer
+info: removing previous version of component rust-docs
+info: removing previous version of component rust-src
+info: removing previous version of component rust-std
+info: removing previous version of component rustc
+info: removing previous version of component rustc-codegen-cranelift
+info: removing previous version of component rustc-dev
+info: removing previous version of component rustfmt
+info: downloading 14 components
+
+  nightly-x86_64-unknown-linux-gnu updated - rustc 1.102.0-nightly (5f4effd57 2026-11-13) (from rustc 1.102.0-nightly (5f4effd57 2026-11-13))
+
+info: checking for self-update (current version: 1.29.3)
+info: cleaning up downloads & tmp directories
+Successfully installed rubygems-update-4.1.0
+Parsing documentation for rubygems-update-4.1.0
+Installing ri documentation for rubygems-update-4.1.0
+Done installing documentation for rubygems-update after 0 seconds
+Parsing documentation for rubygems-update-4.1.0
+Done installing documentation for rubygems-update after 0 seconds
+Installing RubyGems 4.1.0
+  Successfully built RubyGem
+  Name: bundler
+  Version: 4.1.0
+  File: bundler-4.1.0.gem
+Bundler 4.1.0 installed
+RubyGems 4.1.0 installed
+Regenerating binstubs
+Regenerating plugins
+Parsing documentation for rubygems-4.1.0
+Installing ri documentation for rubygems-4.1.0
+
+See https://github.com/ruby/rubygems/blob/v4.1.0/CHANGELOG.md for the changes since 4.0.24.
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+	/root/.rbenv/versions/4.0.9/bin/gem
+	/root/.rbenv/versions/4.0.9/bin/bundle
+	/root/.rbenv/versions/4.0.9/bin/bundler
+
+Ruby Interactive (ri) documentation was installed. ri is kind of like man 
+pages for Ruby libraries. You may access it like this:
+  ri Classname
+  ri Classname.class_method
+  ri Classname#instance_method
+If you do not wish to install this documentation in the future, use the
+--no-document flag, or set it as the default in your ~/.gemrc file. See
+'gem help env' for details.
+
+RubyGems system software updated
+Updating installed gems
+Updating reverse_markdown
+Successfully installed reverse_markdown-3.1.0
+Parsing documentation for reverse_markdown-3.1.0
+Installing ri documentation for reverse_markdown-3.1.0
+Done installing documentation for reverse_markdown after 0 seconds
+Parsing documentation for reverse_markdown-3.1.0
+Done installing documentation for reverse_markdown after 0 seconds
+Gems updated: reverse_markdown
+[DEPRECATED] Pass --all to `bundle update` to update everything
+Fetching gem metadata from https://rubygems.org/........
+Resolving dependencies...
+Using reverse_markdown 3.1.0 (was 3.0.2)
+Updating files in vendor/cache
+  * ast-2.4.3.gem
+  * fiber-annotation-0.2.0.gem
+  * fiber-storage-1.0.1.gem
+  * fiber-local-1.1.0.gem
+  * json-3.1.0.gem
+  * console-1.38.0.gem
+  * io-event-1.22.3.gem
+  * async-2.46.0.gem
+  * backport-1.2.0.gem
+  * base64-0.3.0.gem
+  * benchmark-0.5.0.gem
+  * bigdecimal-4.1.3.gem
+  * brotli-0.9.3.gem
+  * highline-3.0.1.gem
+  * commander-5.0.0.gem
+  * concurrent-ruby-1.3.8.gem
+  * date-3.6.0.gem
+  * diff-lcs-1.6.2.gem
+  * digest-3.3.0.gem
+  * erb-6.0.7.gem
+  * fastimage-2.4.3.gem
+  * ffi-1.17.4-x86_64-linux-gnu.gem
+  * free-image-0.8.1.gem
+  * io-console-0.9.5.gem
+  * jaro_winkler-1.7.0.gem
+  * rexml-3.4.4.gem
+  * kramdown-2.5.2.gem
+  * kramdown-parser-gfm-1.1.0.gem
+  * language_server-protocol-3.17.0.6.gem
+  * lint_roller-1.1.0.gem
+  * logger-1.7.0.gem
+  * timeout-0.6.1.gem
+  * net-protocol-0.4.0.gem
+  * uri-1.1.2.gem
+  * net-http-0.10.0.gem
+  * nio4r-2.7.5.gem
+  * racc-1.8.1.gem
+  * nokogiri-1.19.7-x86_64-linux-gnu.gem
+  * observer-0.1.2.gem
+  * oj-3.17.8.gem
+  * open3-0.2.1.gem
+  * openssl-4.0.2.gem
+  * ostruct-0.6.3.gem
+  * parallel-2.3.0.gem
+  * parser-3.3.13.0.gem
+  * rainbow-3.1.1.gem
+  * sorbet-runtime-0.6.13681.gem
+  * parlour-9.1.2.gem
+  * prism-1.9.0.gem
+  * stringio-3.2.0.gem
+  * psych-5.5.0.gem
+  * puma-8.1.1.gem
+  * rack-3.2.8.gem
+  * rack-brotli-2.0.0.gem
+  * tsort-0.2.0.gem
+  * rbs-4.2.0.gem
+  * rdoc-8.1.0.gem
+  * redcarpet-3.6.1.gem
+  * regexp_parser-2.13.1.gem
+  * reverse_markdown-3.1.0.gem
+  * roda-3.110.0.gem
+  * rubocop-ast-1.51.0.gem
+  * ruby-progressbar-1.13.0.gem
+  * unicode-emoji-4.3.0.gem
+  * unicode-display_width-3.3.0.gem
+  * rubocop-1.92.2.gem
+  * ruby-lsp-0.26.11.gem
+  * yard-0.9.45.gem
+  * sord-7.1.0.gem
+  * thor-1.5.0.gem
+  * tilt-2.9.0.gem
+  * yard-activesupport-concern-0.0.1.gem
+  * yard-solargraph-0.1.0.gem
+  * solargraph-0.60.1.gem
+  * tzinfo-2.0.6.gem
+  * webrick-1.9.2.gem
+  * yuicompressor-1.3.3.gem
+  * zlib-3.2.4.gem
+Removing outdated .gem files from vendor/cache
+  * reverse_markdown-3.0.2.gem
+Bundle updated!
+2 installed gems you directly depend on are looking for funding.
+  Run `bundle fund` for details
+     Locking 0 packages to highest Rust 1.102.0-nightly compatible versions
+    Finished `release` profile [optimized] target(s) in 0.02s
+Wasm HTTPS deployment started in the background (PID 182531).
+Follow progress with: tail -f /root/miaedscore/log/run-wasm-https.log

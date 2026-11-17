@@ -9,7 +9,7 @@ Run these commands from the repository root:
 ```sh
 bundle install
 rustup target add wasm32-unknown-unknown
-chmod +x bin/run-wasm-https bin/start-wasm-https-background
+chmod +x bin/run-wasm-https bin/start-wasm-https-background.sh
 ```
 
 ## Start HTTPS In The Background
@@ -18,10 +18,12 @@ From an SSH shell, run this command every time the public service needs to be st
 
 ```sh
 cd /root/miaedscore
-bin/start-wasm-https-background
+bin/start-wasm-https-background.sh
 ```
 
-The background wrapper runs `bin/run-wasm-https` detached from the SSH session and writes progress to `log/run-wasm-https.log`. The deployment rebuilds the module, deploys it to `public/assets/midscore_moon.wasm`, stops the Puma instance recorded in `config/puma.state` when it is running, and starts Puma detached from the SSH session. Existing Roda routes and templates remain unchanged. The application loads its databases at boot, so allow about 30 seconds before sending requests.
+The background wrapper runs `bin/run-wasm-https` detached from the SSH session and writes progress to `log/run-wasm-https.log`. The deployment rebuilds the module, deploys it to `public/assets/midscore_moon.wasm`, stops the Puma instance recorded in `config/puma.state` when it is running, and starts Puma detached from the SSH session. It waits for the old process to exit and verifies the new process and local HTTPS `/moon` response. Concurrent deployments are rejected. Existing Roda routes and templates remain unchanged.
+
+The scheduled `update.sh` runs from the repository root, stops on update or build errors, and runs the deployment synchronously. Its progress and final exit status are written to `update-cron.log`; Puma's own output remains in `log/stdout` and `log/stderr`.
 
 The command must run as `root` because port `443` is privileged. SSH continues to use port `22`; HTTPS cannot run on port `22` at the same time. Puma writes logs to `log/stdout` and `log/stderr`.
 

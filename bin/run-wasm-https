@@ -7,6 +7,13 @@ wasm="$root/wasm-client/target/$target/release/midscore_wasm_client.wasm"
 key=/etc/letsencrypt/live/miaedscore.online/privkey.pem
 cert=/etc/letsencrypt/live/miaedscore.online/fullchain.pem
 
+mkdir -p "$root/tmp"
+exec 9>"$root/tmp/run-wasm-https.lock"
+if ! flock -n 9; then
+  printf '%s\n' 'Another Wasm HTTPS deployment is already running.' >&2
+  exit 1
+fi
+
 if [ "$(id -u)" -ne 0 ]; then
   printf '%s\n' 'HTTPS on port 443 requires root or the CAP_NET_BIND_SERVICE capability.' >&2
   exit 1
@@ -28,8 +35,36 @@ mkdir -p public/assets
 cp "$wasm" public/assets/midscore_moon.wasm
 
 if [ -s config/puma.pid ] && kill -0 "$(cat config/puma.pid)" 2>/dev/null; then
+  old_pid=$(cat config/puma.pid)
   bundle exec pumactl -S config/puma.state stop
+  attempts=0
+  while kill -0 "$old_pid" 2>/dev/null; do
+    if [ "$attempts" -ge 60 ]; then
+      printf '%s\n' "Puma (PID $old_pid) did not stop within 60 seconds." >&2
+      exit 1
+    fi
+    sleep 1
+    attempts=$((attempts + 1))
+  done
 fi
 
-nohup bundle exec puma -C config/puma.rb </dev/null >/dev/null 2>&1 &
-printf '%s\n' 'Puma is starting in the background at https://miaedscore.online/.'
+nohup bundle exec puma -C config/puma.rb 9>&- </dev/null >/dev/null 2>&1 &
+puma_pid=$!
+attempts=0
+while [ "$attempts" -lt 90 ]; do
+  if ! kill -0 "$puma_pid" 2>/dev/null; then
+    printf '%s\n' "Puma (PID $puma_pid) exited during startup; check $root/log/stderr." >&2
+    exit 1
+  fi
+  if [ -s config/puma.pid ] && [ "$(cat config/puma.pid)" = "$puma_pid" ] &&
+    curl --fail --silent --noproxy '*' --resolve miaedscore.online:443:127.0.0.1 \
+      --max-time 2 https://miaedscore.online/moon >/dev/null 2>&1; then
+    printf '%s\n' "Puma is serving https://miaedscore.online/ (PID $puma_pid)."
+    exit 0
+  fi
+  sleep 1
+  attempts=$((attempts + 1))
+done
+
+printf '%s\n' "Puma (PID $puma_pid) did not become ready; check $root/log/stderr." >&2
+exit 1
