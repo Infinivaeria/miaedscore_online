@@ -78,16 +78,8 @@ threads 0, 16
 
 
 
-# ...existing code...
-
-# Update with the actual paths to your key and certificate
-ssl_bind '0.0.0.0', '443', {
-  key: '/etc/letsencrypt/live/miaedscore.online/privkey.pem',
-  cert: '/etc/letsencrypt/live/miaedscore.online/fullchain.pem',
-  verify_mode: 'none'
-}
-
-# ...existing code...
+# TLS and HTTP/2/HTTP/3 are handled by Caddy.
+bind 'tcp://127.0.0.1:9292'
 
 # bind 'unix:///var/run/puma.sock'
 # bind 'unix:///var/run/puma.sock?umask=0111'

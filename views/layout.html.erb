@@ -14,7 +14,7 @@
 <head>
     <meta charset="utf-8" />
     <title><%= h(@title) %></title>
-    <link rel="stylesheet" href="<%= domain_name(@r) %>/style.css" type="text/css" />
+    <%= assets(:css) %>
     <link rel="shortcut icon" type="image/x-icon" href="<%= domain_name(@r) %>/favicon.ico">
     <!-- the embed cards don't embed images on bluesky; probably admin incompetance or a setting somewhere, but everything was tried at one time -->
     <meta property="og:site_name" content="miaedscore.online" />

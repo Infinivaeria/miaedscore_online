@@ -4,8 +4,7 @@ set -eu
 root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 target=wasm32-unknown-unknown
 wasm="$root/wasm-client/target/$target/release/midscore_wasm_client.wasm"
-key=/etc/letsencrypt/live/miaedscore.online/privkey.pem
-cert=/etc/letsencrypt/live/miaedscore.online/fullchain.pem
+caddyfile=/etc/caddy/Caddyfile
 
 mkdir -p "$root/tmp"
 exec 9>"$root/tmp/run-wasm-https.lock"
@@ -15,7 +14,12 @@ if ! flock -n 9; then
 fi
 
 if [ "$(id -u)" -ne 0 ]; then
-  printf '%s\n' 'HTTPS on port 443 requires root or the CAP_NET_BIND_SERVICE capability.' >&2
+  printf '%s\n' 'Deployment requires root to manage Puma and the Caddy service.' >&2
+  exit 1
+fi
+
+if ! command -v caddy >/dev/null 2>&1 || ! systemctl cat caddy >/dev/null 2>&1; then
+  printf '%s\n' 'Install Caddy with its systemd service before deploying.' >&2
   exit 1
 fi
 
@@ -24,12 +28,11 @@ if ! rustup target list --installed | grep -qx "$target"; then
   exit 1
 fi
 
-if [ ! -r "$key" ] || [ ! -r "$cert" ]; then
-  printf '%s\n' "TLS certificate files are unreadable: $key or $cert" >&2
-  exit 1
-fi
-
 cd "$root"
+caddy validate --config "$root/Caddyfile" --adapter caddyfile
+install -D -m 0644 "$root/Caddyfile" "$caddyfile"
+caddy validate --config "$caddyfile" --adapter caddyfile
+
 cargo build --manifest-path wasm-client/Cargo.toml --target "$target" --release
 mkdir -p public/assets
 cp "$wasm" public/assets/midscore_moon.wasm
@@ -48,6 +51,8 @@ if [ -s config/puma.pid ] && kill -0 "$(cat config/puma.pid)" 2>/dev/null; then
   done
 fi
 
+systemctl enable caddy
+
 nohup bundle exec puma -C config/puma.rb 9>&- </dev/null >/dev/null 2>&1 &
 puma_pid=$!
 attempts=0
@@ -57,14 +62,47 @@ while [ "$attempts" -lt 90 ]; do
     exit 1
   fi
   if [ -s config/puma.pid ] && [ "$(cat config/puma.pid)" = "$puma_pid" ] &&
-    curl --fail --silent --noproxy '*' --resolve miaedscore.online:443:127.0.0.1 \
-      --max-time 2 https://miaedscore.online/moon >/dev/null 2>&1; then
-    printf '%s\n' "Puma is serving https://miaedscore.online/ (PID $puma_pid)."
-    exit 0
+    curl --fail --silent --noproxy '*' --max-time 2 \
+      http://127.0.0.1:9292/moon >/dev/null 2>&1; then
+    break
   fi
   sleep 1
   attempts=$((attempts + 1))
 done
 
-printf '%s\n' "Puma (PID $puma_pid) did not become ready; check $root/log/stderr." >&2
+if [ "$attempts" -ge 90 ]; then
+  printf '%s\n' "Puma (PID $puma_pid) did not become ready; check $root/log/stderr." >&2
+  exit 1
+fi
+
+if systemctl is-active --quiet caddy; then
+  systemctl reload caddy
+else
+  systemctl start caddy
+fi
+
+attempts=0
+while [ "$attempts" -lt 90 ]; do
+  wasm_response=$(curl --fail --silent --noproxy '*' --resolve miaedscore.online:443:127.0.0.1 \
+    --http2 --max-time 3 --output /dev/null --write-out '%{http_version} %{content_type}' \
+    https://miaedscore.online/assets/midscore_moon.wasm 2>/dev/null) || wasm_response=''
+  if [ "$wasm_response" = '2 application/wasm' ] &&
+    curl --fail --silent --noproxy '*' --resolve miaedscore.online:443:127.0.0.1 \
+      --max-time 3 https://miaedscore.online/moon >/dev/null 2>&1; then
+    alt_svc=$(curl --fail --silent --noproxy '*' --resolve miaedscore.online:443:127.0.0.1 \
+      --http2 --max-time 3 --dump-header - --output /dev/null \
+      https://miaedscore.online/assets/midscore_moon.wasm 2>/dev/null |
+      grep -i '^alt-svc:' | tail -n 1) || alt_svc=''
+    if printf '%s\n' "$alt_svc" | grep -qi 'h3=' &&
+      ss -H -lun 'sport = :443' | grep -q .; then
+      printf '%s\n' "Caddy serves the WASM asset over HTTP/2 and advertises HTTP/3; UDP 443 is listening (Puma PID $puma_pid)."
+      printf '%s\n' 'The hosting/network firewall must also allow inbound UDP port 443.'
+      exit 0
+    fi
+  fi
+  sleep 1
+  attempts=$((attempts + 1))
+done
+
+printf '%s\n' 'Caddy did not serve the WASM asset over HTTP/2; check: systemctl status caddy' >&2
 exit 1
