@@ -3010,3 +3010,798 @@ Command stop sent success
 Caddy serves the WASM asset over HTTP/2 and advertises HTTP/3; UDP 443 is listening (Puma PID 433196).
 The hosting/network firewall must also allow inbound UDP port 443.
 [2026-11-24T08:01:02+00:00] Update finished with status 0
+[2026-11-25T08:00:01+00:00] Starting update in /root/miaedscore
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 https://dl.cloudsmith.io/public/caddy/stable/deb/debian any-version InRelease [14.8 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:6 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [915 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [397 kB]
+Get:8 https://esm.ubuntu.com/apps/ubuntu resolute-apps-updates InRelease [8226 B]
+Get:9 https://esm.ubuntu.com/apps/ubuntu resolute-apps-security InRelease [8374 B]
+Get:10 https://esm.ubuntu.com/infra/ubuntu resolute-infra-updates InRelease [8219 B]
+Get:11 https://esm.ubuntu.com/infra/ubuntu resolute-infra-security InRelease [8250 B]
+Fetched 1635 kB in 1s (2066 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+3 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages were automatically installed and are no longer required:
+  libflashrom1  libjson-glib-1.0-0       libpython3.12-minimal
+  libftdi1-2    libjson-glib-1.0-common  libpython3.12-stdlib
+  libjcat1      libnss3-tools            libpython3.12t64
+Use 'apt autoremove' to remove them.
+
+Not upgrading yet due to phasing:
+  libsqlite3-0  libsqlite3-dev  sqlite3
+
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 3
+warn: downloading with the `complete` profile is deprecated
+help: consider switching to the `default` profile with `rustup set profile default`
+info: syncing channel updates for nightly-x86_64-unknown-linux-gnu
+info: latest update on 2026-11-25 for version 1.102.0-nightly (739adecd4 2026-11-24)
+info: removing previous version of component rust-std for target wasm32-unknown-unknown
+info: removing previous version of component cargo
+info: removing previous version of component clippy
+info: removing previous version of component llvm-tools
+info: removing previous version of component miri
+info: removing previous version of component rust-analysis
+info: removing previous version of component rust-analyzer
+info: removing previous version of component rust-docs
+info: removing previous version of component rust-src
+info: removing previous version of component rust-std
+info: removing previous version of component rustc
+info: removing previous version of component rustc-codegen-cranelift
+info: removing previous version of component rustc-dev
+info: removing previous version of component rustfmt
+info: downloading 14 components
+
+  nightly-x86_64-unknown-linux-gnu updated - rustc 1.102.0-nightly (739adecd4 2026-11-24) (from rustc 1.102.0-nightly (20fe935d5 2026-11-23))
+
+info: checking for self-update (current version: 1.29.3)
+info: cleaning up downloads & tmp directories
+Successfully installed rubygems-update-4.1.1
+Parsing documentation for rubygems-update-4.1.1
+Installing ri documentation for rubygems-update-4.1.1
+Done installing documentation for rubygems-update after 0 seconds
+Parsing documentation for rubygems-update-4.1.1
+Done installing documentation for rubygems-update after 0 seconds
+Installing RubyGems 4.1.1
+  Successfully built RubyGem
+  Name: bundler
+  Version: 4.1.1
+  File: bundler-4.1.1.gem
+Bundler 4.1.1 installed
+RubyGems 4.1.1 installed
+Regenerating binstubs
+Regenerating plugins
+Parsing documentation for rubygems-4.1.1
+Installing ri documentation for rubygems-4.1.1
+
+See https://github.com/ruby/rubygems/blob/v4.1.1/CHANGELOG.md for the changes since 4.1.0.
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+	/root/.rbenv/versions/4.0.10/bin/gem
+	/root/.rbenv/versions/4.0.10/bin/bundle
+	/root/.rbenv/versions/4.0.10/bin/bundler
+
+Ruby Interactive (ri) documentation was installed. ri is kind of like man 
+pages for Ruby libraries. You may access it like this:
+  ri Classname
+  ri Classname.class_method
+  ri Classname#instance_method
+If you do not wish to install this documentation in the future, use the
+--no-document flag, or set it as the default in your ~/.gemrc file. See
+'gem help env' for details.
+
+RubyGems system software updated
+Updating installed gems
+Updating commander
+Successfully installed highline-3.1.2
+Successfully installed commander-6.0.0
+Parsing documentation for highline-3.1.2
+Installing ri documentation for highline-3.1.2
+Parsing documentation for commander-6.0.0
+Installing ri documentation for commander-6.0.0
+Done installing documentation for highline, commander after 0 seconds
+Parsing documentation for commander-6.0.0
+Parsing documentation for highline-3.1.2
+Done installing documentation for commander, highline after 0 seconds
+Updating diff-lcs
+Successfully installed diff-lcs-2.0.0
+Parsing documentation for diff-lcs-2.0.0
+Installing ri documentation for diff-lcs-2.0.0
+Done installing documentation for diff-lcs after 0 seconds
+Parsing documentation for diff-lcs-2.0.0
+Done installing documentation for diff-lcs after 0 seconds
+Updating jaro_winkler
+Building native extensions. This could take a while...
+Successfully installed jaro_winkler-1.7.1
+Parsing documentation for jaro_winkler-1.7.1
+Installing ri documentation for jaro_winkler-1.7.1
+Done installing documentation for jaro_winkler after 0 seconds
+Parsing documentation for jaro_winkler-1.7.1
+Done installing documentation for jaro_winkler after 0 seconds
+Updating puma
+Building native extensions. This could take a while...
+Successfully installed puma-8.1.3
+Parsing documentation for puma-8.1.3
+Installing ri documentation for puma-8.1.3
+Done installing documentation for puma after 0 seconds
+Parsing documentation for puma-8.1.3
+Done installing documentation for puma after 0 seconds
+Updating solargraph
+Successfully installed solargraph-0.62.2
+Parsing documentation for solargraph-0.62.2
+Installing ri documentation for solargraph-0.62.2
+Done installing documentation for solargraph after 0 seconds
+Parsing documentation for solargraph-0.62.2
+Done installing documentation for solargraph after 0 seconds
+Updating sorbet-runtime
+Successfully installed sorbet-runtime-0.6.13728
+Parsing documentation for sorbet-runtime-0.6.13728
+Installing ri documentation for sorbet-runtime-0.6.13728
+Done installing documentation for sorbet-runtime after 0 seconds
+Parsing documentation for sorbet-runtime-0.6.13728
+Done installing documentation for sorbet-runtime after 0 seconds
+Gems updated: commander highline diff-lcs jaro_winkler puma solargraph sorbet-runtime
+[DEPRECATED] Pass --all to `bundle update` to update everything
+Fetching gem metadata from https://rubygems.org/........
+Resolving dependencies...
+Using jaro_winkler 1.7.1 (was 1.7.0)
+Using puma 8.1.3 (was 8.1.2)
+Using sorbet-runtime 0.6.13728 (was 0.6.13724)
+Updating files in vendor/cache
+  * ast-2.4.3.gem
+  * fiber-annotation-0.2.0.gem
+  * fiber-storage-1.0.1.gem
+  * fiber-local-1.1.0.gem
+  * json-3.2.0.gem
+  * console-1.38.0.gem
+  * io-event-1.22.3.gem
+  * async-2.46.0.gem
+  * backport-1.2.0.gem
+  * base64-0.3.0.gem
+  * benchmark-0.5.0.gem
+  * bigdecimal-4.1.3.gem
+  * brotli-0.9.3.gem
+  * highline-3.0.1.gem
+  * commander-5.0.0.gem
+  * concurrent-ruby-1.3.8.gem
+  * date-3.6.0.gem
+  * diff-lcs-1.6.2.gem
+  * digest-3.3.0.gem
+  * erb-6.0.7.gem
+  * fastimage-2.4.3.gem
+  * ffi-1.17.4-x86_64-linux-gnu.gem
+  * free-image-0.8.1.gem
+  * io-console-0.9.5.gem
+  * jaro_winkler-1.7.1.gem
+  * rexml-3.4.4.gem
+  * kramdown-2.6.1.gem
+  * kramdown-parser-gfm-1.1.0.gem
+  * language_server-protocol-3.17.0.6.gem
+  * lint_roller-1.1.0.gem
+  * logger-1.7.0.gem
+  * timeout-0.6.1.gem
+  * net-protocol-0.4.0.gem
+  * uri-1.1.2.gem
+  * net-http-0.10.0.gem
+  * nio4r-2.7.5.gem
+  * racc-1.8.1.gem
+  * nokogiri-1.19.7-x86_64-linux-gnu.gem
+  * observer-0.1.2.gem
+  * oj-3.17.8.gem
+  * open3-0.2.1.gem
+  * openssl-4.0.2.gem
+  * ostruct-0.6.3.gem
+  * parallel-2.3.0.gem
+  * parser-3.3.14.0.gem
+  * rainbow-3.1.1.gem
+  * sorbet-runtime-0.6.13728.gem
+  * parlour-9.1.2.gem
+  * prism-1.9.0.gem
+  * stringio-3.2.0.gem
+  * psych-5.5.0.gem
+  * puma-8.1.3.gem
+  * rack-3.2.9.gem
+  * rack-brotli-2.0.0.gem
+  * tsort-0.2.0.gem
+  * rbs-4.2.0.gem
+  * rdoc-8.1.0.gem
+  * redcarpet-3.6.1.gem
+  * regexp_parser-2.13.4.gem
+  * reverse_markdown-3.1.0.gem
+  * roda-3.110.0.gem
+  * rubocop-ast-1.53.0.gem
+  * ruby-progressbar-1.13.0.gem
+  * unicode-emoji-4.3.0.gem
+  * unicode-display_width-3.3.0.gem
+  * rubocop-1.92.3.gem
+  * ruby-lsp-0.26.11.gem
+  * yard-0.9.45.gem
+  * sord-7.1.0.gem
+  * thor-1.5.0.gem
+  * tilt-2.9.0.gem
+  * yard-activesupport-concern-0.0.1.gem
+  * yard-solargraph-0.1.0.gem
+  * solargraph-0.60.1.gem
+  * tzinfo-2.0.6.gem
+  * webrick-1.9.2.gem
+  * yuicompressor-1.3.3.gem
+  * zlib-3.2.4.gem
+Removing outdated .gem files from vendor/cache
+  * jaro_winkler-1.7.0.gem
+  * json-3.1.0.gem
+  * puma-8.1.2.gem
+  * sorbet-runtime-0.6.13724.gem
+Bundle updated!
+2 installed gems you directly depend on are looking for funding.
+  Run `bundle fund` for details
+     Locking 0 packages to highest Rust 1.102.0-nightly compatible versions
+   Compiling midscore-wasm-client v0.1.0 (/root/miaedscore/wasm-client)
+    Finished `release` profile [optimized] target(s) in 0.13s
+{"level":"info","ts":1795593654.4179637,"msg":"using config from file","file":"/root/miaedscore/Caddyfile"}
+{"level":"info","ts":1795593654.4184127,"msg":"adapted config to JSON","adapter":"caddyfile"}
+{"level":"info","ts":1795593654.4186347,"logger":"http.auto_https","msg":"server is listening only on the HTTPS port but has no TLS connection policies; adding one to enable TLS","server_name":"srv0","https_port":443}
+{"level":"info","ts":1795593654.418652,"logger":"http.auto_https","msg":"enabling automatic HTTP->HTTPS redirects","server_name":"srv0"}
+{"level":"info","ts":1795593654.4186447,"logger":"tls.cache.maintenance","msg":"started background certificate maintenance","cache":"0x1978dc099800"}
+{"level":"info","ts":1795593654.4187498,"logger":"tls.cache.maintenance","msg":"stopped background certificate maintenance","cache":"0x1978dc099800"}
+{"level":"info","ts":1795593654.4187572,"logger":"http","msg":"servers shutting down with eternal grace period"}
+Valid configuration
+{"level":"info","ts":1795593654.4440918,"msg":"using config from file","file":"/etc/caddy/Caddyfile"}
+{"level":"info","ts":1795593654.444468,"msg":"adapted config to JSON","adapter":"caddyfile"}
+{"level":"info","ts":1795593654.4446952,"logger":"http.auto_https","msg":"server is listening only on the HTTPS port but has no TLS connection policies; adding one to enable TLS","server_name":"srv0","https_port":443}
+{"level":"info","ts":1795593654.4447093,"logger":"http.auto_https","msg":"enabling automatic HTTP->HTTPS redirects","server_name":"srv0"}
+{"level":"info","ts":1795593654.444721,"logger":"tls.cache.maintenance","msg":"started background certificate maintenance","cache":"0x22010ca5fa00"}
+{"level":"info","ts":1795593654.4447913,"logger":"tls.cache.maintenance","msg":"stopped background certificate maintenance","cache":"0x22010ca5fa00"}
+{"level":"info","ts":1795593654.4447985,"logger":"http","msg":"servers shutting down with eternal grace period"}
+Valid configuration
+   Compiling midscore-wasm-client v0.1.0 (/root/miaedscore/wasm-client)
+    Finished `release` profile [optimized] target(s) in 0.07s
+Command stop sent success
+Caddy serves the WASM asset over HTTP/2 and advertises HTTP/3; UDP 443 is listening (Puma PID 491271).
+The hosting/network firewall must also allow inbound UDP port 443.
+[2026-11-25T08:01:06+00:00] Update finished with status 0
+[2026-11-26T08:00:01+00:00] Starting update in /root/miaedscore
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Get:1 https://dl.cloudsmith.io/public/caddy/stable/deb/debian any-version InRelease [14.8 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [916 kB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [753 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute-updates/main Translation-en [202 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [110 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [397 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [126 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [208 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [1056 B]
+Get:14 https://esm.ubuntu.com/apps/ubuntu resolute-apps-updates InRelease [8226 B]
+Get:15 http://security.ubuntu.com/ubuntu resolute-security/main Translation-en [163 kB]
+Get:16 https://esm.ubuntu.com/apps/ubuntu resolute-apps-security InRelease [8374 B]
+Get:17 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [46.7 kB]
+Get:18 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [224 kB]
+Get:19 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [73.3 kB]
+Get:20 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [62.8 kB]
+Get:21 https://esm.ubuntu.com/infra/ubuntu resolute-infra-updates InRelease [8219 B]
+Get:22 https://esm.ubuntu.com/infra/ubuntu resolute-infra-security InRelease [8250 B]
+Get:23 https://esm.ubuntu.com/apps/ubuntu resolute-apps-security/main amd64 Packages [228 kB]
+Fetched 3970 kB in 2s (1806 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+10 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages were automatically installed and are no longer required:
+  libflashrom1  libjson-glib-1.0-0       libpython3.12-minimal
+  libftdi1-2    libjson-glib-1.0-common  libpython3.12-stdlib
+  libjcat1      libnss3-tools            libpython3.12t64
+Use 'apt autoremove' to remove them.
+
+Upgrading:
+  krb5-locales  libgssapi-krb5-2  libkrb5-3        libpcap0.8t64
+  libexpat1     libk5crypto3      libkrb5support0
+
+Not upgrading yet due to phasing:
+  libsqlite3-0  libsqlite3-dev  sqlite3
+
+Summary:
+  Upgrading: 7, Installing: 0, Removing: 0, Not Upgrading: 3
+7 standard LTS security updates
+  Download size: 904 kB
+  Space needed: 15.4 kB / 142 GB available
+
+Get:1 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libexpat1 amd64 2.7.4-1ubuntu0.3 [103 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 krb5-locales all 1.22.1-2ubuntu4.3 [14.9 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libgssapi-krb5-2 amd64 1.22.1-2ubuntu4.3 [147 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libkrb5-3 amd64 1.22.1-2ubuntu4.3 [361 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libkrb5support0 amd64 1.22.1-2ubuntu4.3 [34.8 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libk5crypto3 amd64 1.22.1-2ubuntu4.3 [82.0 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpcap0.8t64 amd64 1.10.6-1ubuntu1.2 [161 kB]
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Fetched 904 kB in 1s (760 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 175363 files and directories currently installed.)
+Preparing to unpack .../0-libexpat1_2.7.4-1ubuntu0.3_amd64.deb ...
+Unpacking libexpat1:amd64 (2.7.4-1ubuntu0.3) over (2.7.4-1ubuntu0.2) ...
+Preparing to unpack .../1-krb5-locales_1.22.1-2ubuntu4.3_all.deb ...
+Unpacking krb5-locales (1.22.1-2ubuntu4.3) over (1.22.1-2ubuntu4.1) ...
+Preparing to unpack .../2-libgssapi-krb5-2_1.22.1-2ubuntu4.3_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.22.1-2ubuntu4.3) over (1.22.1-2ubuntu4.1) ...
+Preparing to unpack .../3-libkrb5-3_1.22.1-2ubuntu4.3_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.22.1-2ubuntu4.3) over (1.22.1-2ubuntu4.1) ...
+Preparing to unpack .../4-libkrb5support0_1.22.1-2ubuntu4.3_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.22.1-2ubuntu4.3) over (1.22.1-2ubuntu4.1) ...
+Preparing to unpack .../5-libk5crypto3_1.22.1-2ubuntu4.3_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.22.1-2ubuntu4.3) over (1.22.1-2ubuntu4.1) ...
+Preparing to unpack .../6-libpcap0.8t64_1.10.6-1ubuntu1.2_amd64.deb ...
+Unpacking libpcap0.8t64:amd64 (1.10.6-1ubuntu1.2) over (1.10.6-1ubuntu1.1) ...
+Setting up libexpat1:amd64 (2.7.4-1ubuntu0.3) ...
+Setting up krb5-locales (1.22.1-2ubuntu4.3) ...
+Setting up libkrb5support0:amd64 (1.22.1-2ubuntu4.3) ...
+Setting up libk5crypto3:amd64 (1.22.1-2ubuntu4.3) ...
+Setting up libpcap0.8t64:amd64 (1.10.6-1ubuntu1.2) ...
+Setting up libkrb5-3:amd64 (1.22.1-2ubuntu4.3) ...
+Setting up libgssapi-krb5-2:amd64 (1.22.1-2ubuntu4.3) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2.7) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+
+Restarting services...
+ systemctl restart fwupd.service packagekit.service polkit.service ssh.service
+
+Service restarts being deferred:
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart getty@tty1.service
+ systemctl restart serial-getty@ttyS0.service
+ systemctl restart systemd-logind.service
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+User sessions running outdated binaries:
+ root @ user manager: (sd-pam)[1267]
+ root @ user service: dbus.service[1411]
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+warn: downloading with the `complete` profile is deprecated
+help: consider switching to the `default` profile with `rustup set profile default`
+info: syncing channel updates for nightly-x86_64-unknown-linux-gnu
+info: latest update on 2026-11-26 for version 1.102.0-nightly (6c709eb42 2026-11-25)
+info: removing previous version of component rust-std for target wasm32-unknown-unknown
+info: removing previous version of component cargo
+info: removing previous version of component clippy
+info: removing previous version of component llvm-tools
+info: removing previous version of component miri
+info: removing previous version of component rust-analysis
+info: removing previous version of component rust-analyzer
+info: removing previous version of component rust-docs
+info: removing previous version of component rust-src
+info: removing previous version of component rust-std
+info: removing previous version of component rustc
+info: removing previous version of component rustc-codegen-cranelift
+info: removing previous version of component rustc-dev
+info: removing previous version of component rustfmt
+info: downloading 14 components
+
+  nightly-x86_64-unknown-linux-gnu updated - rustc 1.102.0-nightly (6c709eb42 2026-11-25) (from rustc 1.102.0-nightly (739adecd4 2026-11-24))
+
+info: checking for self-update (current version: 1.29.3)
+info: cleaning up downloads & tmp directories
+Latest version already installed. Done.
+Updating installed gems
+Updating open3
+Successfully installed open3-0.3.1
+Parsing documentation for open3-0.3.1
+Installing ri documentation for open3-0.3.1
+Done installing documentation for open3 after 0 seconds
+Parsing documentation for open3-0.3.1
+Done installing documentation for open3 after 0 seconds
+Updating rubocop
+Successfully installed rubocop-ast-1.54.0
+Successfully installed rubocop-1.93.0
+Parsing documentation for rubocop-ast-1.54.0
+Installing ri documentation for rubocop-ast-1.54.0
+Parsing documentation for rubocop-1.93.0
+Installing ri documentation for rubocop-1.93.0
+Done installing documentation for rubocop-ast, rubocop after 3 seconds
+Parsing documentation for rubocop-1.93.0
+Parsing documentation for rubocop-ast-1.54.0
+Done installing documentation for rubocop, rubocop-ast after 1 seconds
+Updating sorbet-runtime
+Successfully installed sorbet-runtime-0.6.13729
+Parsing documentation for sorbet-runtime-0.6.13729
+Installing ri documentation for sorbet-runtime-0.6.13729
+Done installing documentation for sorbet-runtime after 0 seconds
+Parsing documentation for sorbet-runtime-0.6.13729
+Done installing documentation for sorbet-runtime after 0 seconds
+Gems updated: open3 rubocop rubocop-ast sorbet-runtime
+[DEPRECATED] Pass --all to `bundle update` to update everything
+Fetching gem metadata from https://rubygems.org/........
+Resolving dependencies...
+Using sorbet-runtime 0.6.13729 (was 0.6.13728)
+Using rubocop-ast 1.54.0 (was 1.53.0)
+Using rubocop 1.93.0 (was 1.92.3)
+Updating files in vendor/cache
+  * ast-2.4.3.gem
+  * fiber-annotation-0.2.0.gem
+  * fiber-storage-1.0.1.gem
+  * fiber-local-1.1.0.gem
+  * json-3.2.0.gem
+  * console-1.38.0.gem
+  * io-event-1.22.3.gem
+  * async-2.46.0.gem
+  * backport-1.2.0.gem
+  * base64-0.3.0.gem
+  * benchmark-0.5.0.gem
+  * bigdecimal-4.1.3.gem
+  * brotli-0.9.3.gem
+  * highline-3.0.1.gem
+  * commander-5.0.0.gem
+  * concurrent-ruby-1.3.8.gem
+  * date-3.6.0.gem
+  * diff-lcs-1.6.2.gem
+  * digest-3.3.0.gem
+  * erb-6.0.7.gem
+  * fastimage-2.4.3.gem
+  * ffi-1.17.4-x86_64-linux-gnu.gem
+  * free-image-0.8.1.gem
+  * io-console-0.9.5.gem
+  * jaro_winkler-1.7.1.gem
+  * rexml-3.4.4.gem
+  * kramdown-2.6.1.gem
+  * kramdown-parser-gfm-1.1.0.gem
+  * language_server-protocol-3.17.0.6.gem
+  * lint_roller-1.1.0.gem
+  * logger-1.7.0.gem
+  * timeout-0.6.1.gem
+  * net-protocol-0.4.0.gem
+  * uri-1.1.2.gem
+  * net-http-0.10.0.gem
+  * nio4r-2.7.5.gem
+  * racc-1.8.1.gem
+  * nokogiri-1.19.7-x86_64-linux-gnu.gem
+  * observer-0.1.2.gem
+  * oj-3.17.8.gem
+  * open3-0.2.1.gem
+  * openssl-4.0.2.gem
+  * ostruct-0.6.3.gem
+  * parallel-2.3.0.gem
+  * parser-3.3.14.0.gem
+  * rainbow-3.1.1.gem
+  * sorbet-runtime-0.6.13729.gem
+  * parlour-9.1.2.gem
+  * prism-1.9.0.gem
+  * stringio-3.2.0.gem
+  * psych-5.5.0.gem
+  * puma-8.1.3.gem
+  * rack-3.2.9.gem
+  * rack-brotli-2.0.0.gem
+  * tsort-0.2.0.gem
+  * rbs-4.2.0.gem
+  * rdoc-8.1.0.gem
+  * redcarpet-3.6.1.gem
+  * regexp_parser-2.13.4.gem
+  * reverse_markdown-3.1.0.gem
+  * roda-3.110.0.gem
+  * rubocop-ast-1.54.0.gem
+  * ruby-progressbar-1.13.0.gem
+  * unicode-emoji-4.3.0.gem
+  * unicode-display_width-3.3.0.gem
+  * rubocop-1.93.0.gem
+  * ruby-lsp-0.26.11.gem
+  * yard-0.9.45.gem
+  * sord-7.1.0.gem
+  * thor-1.5.0.gem
+  * tilt-2.9.0.gem
+  * yard-activesupport-concern-0.0.1.gem
+  * yard-solargraph-0.1.0.gem
+  * solargraph-0.60.1.gem
+  * tzinfo-2.0.6.gem
+  * webrick-1.9.2.gem
+  * yuicompressor-1.3.3.gem
+  * zlib-3.2.4.gem
+Removing outdated .gem files from vendor/cache
+  * rubocop-1.92.3.gem
+  * rubocop-ast-1.53.0.gem
+  * sorbet-runtime-0.6.13728.gem
+Bundle updated!
+2 installed gems you directly depend on are looking for funding.
+  Run `bundle fund` for details
+     Locking 0 packages to highest Rust 1.102.0-nightly compatible versions
+   Compiling midscore-wasm-client v0.1.0 (/root/miaedscore/wasm-client)
+    Finished `release` profile [optimized] target(s) in 0.31s
+{"level":"info","ts":1795680055.157762,"msg":"using config from file","file":"/root/miaedscore/Caddyfile"}
+{"level":"info","ts":1795680055.1585429,"msg":"adapted config to JSON","adapter":"caddyfile"}
+{"level":"info","ts":1795680055.1588223,"logger":"http.auto_https","msg":"server is listening only on the HTTPS port but has no TLS connection policies; adding one to enable TLS","server_name":"srv0","https_port":443}
+{"level":"info","ts":1795680055.158839,"logger":"http.auto_https","msg":"enabling automatic HTTP->HTTPS redirects","server_name":"srv0"}
+{"level":"info","ts":1795680055.1589084,"logger":"tls.cache.maintenance","msg":"started background certificate maintenance","cache":"0x1c9d002d2980"}
+{"level":"info","ts":1795680055.1589463,"logger":"tls.cache.maintenance","msg":"stopped background certificate maintenance","cache":"0x1c9d002d2980"}
+{"level":"info","ts":1795680055.1589549,"logger":"http","msg":"servers shutting down with eternal grace period"}
+Valid configuration
+{"level":"info","ts":1795680055.1837952,"msg":"using config from file","file":"/etc/caddy/Caddyfile"}
+{"level":"info","ts":1795680055.1842024,"msg":"adapted config to JSON","adapter":"caddyfile"}
+{"level":"info","ts":1795680055.1844168,"logger":"http.auto_https","msg":"server is listening only on the HTTPS port but has no TLS connection policies; adding one to enable TLS","server_name":"srv0","https_port":443}
+{"level":"info","ts":1795680055.18443,"logger":"http.auto_https","msg":"enabling automatic HTTP->HTTPS redirects","server_name":"srv0"}
+{"level":"info","ts":1795680055.1845493,"logger":"http","msg":"servers shutting down with eternal grace period"}
+{"level":"info","ts":1795680055.1845312,"logger":"tls.cache.maintenance","msg":"started background certificate maintenance","cache":"0x91c11de7180"}
+{"level":"info","ts":1795680055.1845832,"logger":"tls.cache.maintenance","msg":"stopped background certificate maintenance","cache":"0x91c11de7180"}
+Valid configuration
+   Compiling midscore-wasm-client v0.1.0 (/root/miaedscore/wasm-client)
+    Finished `release` profile [optimized] target(s) in 0.07s
+Command stop sent success
+Caddy serves the WASM asset over HTTP/2 and advertises HTTP/3; UDP 443 is listening (Puma PID 517325).
+The hosting/network firewall must also allow inbound UDP port 443.
+[2026-11-26T08:01:07+00:00] Update finished with status 0
+[2026-11-27T08:00:01+00:00] Starting update in /root/miaedscore
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 https://dl.cloudsmith.io/public/caddy/stable/deb/debian any-version InRelease [14.8 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:5 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [927 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [401 kB]
+Get:7 https://esm.ubuntu.com/apps/ubuntu resolute-apps-updates InRelease [8226 B]
+Get:8 https://esm.ubuntu.com/apps/ubuntu resolute-apps-security InRelease [8374 B]
+Get:9 https://esm.ubuntu.com/infra/ubuntu resolute-infra-updates InRelease [8219 B]
+Get:10 https://esm.ubuntu.com/infra/ubuntu resolute-infra-security InRelease [8250 B]
+Hit:11 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Fetched 1513 kB in 2s (610 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+3 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages were automatically installed and are no longer required:
+  libflashrom1  libjson-glib-1.0-0       libpython3.12-minimal
+  libftdi1-2    libjson-glib-1.0-common  libpython3.12-stdlib
+  libjcat1      libnss3-tools            libpython3.12t64
+Use 'apt autoremove' to remove them.
+
+Upgrading:
+  libsqlite3-0  libsqlite3-dev  sqlite3
+
+Summary:
+  Upgrading: 3, Installing: 0, Removing: 0, Not Upgrading: 0
+  Download size: 1801 kB
+  Space needed: 0 B / 141 GB available
+
+Get:1 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libsqlite3-dev amd64 3.46.1-9ubuntu0.4 [932 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 sqlite3 amd64 3.46.1-9ubuntu0.4 [149 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libsqlite3-0 amd64 3.46.1-9ubuntu0.4 [720 kB]
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Fetched 1801 kB in 1s (1843 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 175363 files and directories currently installed.)
+Preparing to unpack .../libsqlite3-dev_3.46.1-9ubuntu0.4_amd64.deb ...
+Unpacking libsqlite3-dev:amd64 (3.46.1-9ubuntu0.4) over (3.46.1-9ubuntu0.3) ...
+Preparing to unpack .../sqlite3_3.46.1-9ubuntu0.4_amd64.deb ...
+Unpacking sqlite3 (3.46.1-9ubuntu0.4) over (3.46.1-9ubuntu0.3) ...
+Preparing to unpack .../libsqlite3-0_3.46.1-9ubuntu0.4_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.46.1-9ubuntu0.4) over (3.46.1-9ubuntu0.3) ...
+Setting up libsqlite3-0:amd64 (3.46.1-9ubuntu0.4) ...
+Setting up libsqlite3-dev:amd64 (3.46.1-9ubuntu0.4) ...
+Setting up sqlite3 (3.46.1-9ubuntu0.4) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2.7) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+
+Restarting services...
+ systemctl restart packagekit.service
+
+Service restarts being deferred:
+ systemctl restart cron.service
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart getty@tty1.service
+ systemctl restart serial-getty@ttyS0.service
+ systemctl restart systemd-logind.service
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+User sessions running outdated binaries:
+ root @ user manager: (sd-pam)[1267]
+ root @ user service: dbus.service[1411]
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+warn: downloading with the `complete` profile is deprecated
+help: consider switching to the `default` profile with `rustup set profile default`
+
+  nightly-x86_64-unknown-linux-gnu unchanged - rustc 1.102.0-nightly (6c709eb42 2026-11-25)
+
+info: checking for self-update (current version: 1.29.3)
+info: cleaning up downloads & tmp directories
+Latest version already installed. Done.
+Updating installed gems
+Updating yard
+Successfully installed yard-0.9.46
+Parsing documentation for yard-0.9.46
+Installing ri documentation for yard-0.9.46
+Done installing documentation for yard after 1 seconds
+Building YARD (yri) index for yard-0.9.46...
+Parsing documentation for yard-0.9.46
+Done installing documentation for yard after 0 seconds
+Updating zlib
+Building native extensions. This could take a while...
+Successfully installed zlib-3.3.0
+Parsing documentation for zlib-3.3.0
+Installing ri documentation for zlib-3.3.0
+Done installing documentation for zlib after 0 seconds
+Parsing documentation for zlib-3.3.0
+Done installing documentation for zlib after 0 seconds
+Gems updated: yard zlib
+[DEPRECATED] Pass --all to `bundle update` to update everything
+Fetching gem metadata from https://rubygems.org/........
+Resolving dependencies...
+Using yard 0.9.46 (was 0.9.45)
+Using zlib 3.3.0 (was 3.2.4)
+Updating files in vendor/cache
+  * ast-2.4.3.gem
+  * fiber-annotation-0.2.0.gem
+  * fiber-storage-1.0.1.gem
+  * fiber-local-1.1.0.gem
+  * json-3.2.0.gem
+  * console-1.38.0.gem
+  * io-event-1.22.3.gem
+  * async-2.46.0.gem
+  * backport-1.2.0.gem
+  * base64-0.3.0.gem
+  * benchmark-0.5.0.gem
+  * bigdecimal-4.1.3.gem
+  * brotli-0.9.3.gem
+  * highline-3.0.1.gem
+  * commander-5.0.0.gem
+  * concurrent-ruby-1.3.8.gem
+  * date-3.6.0.gem
+  * diff-lcs-1.6.2.gem
+  * digest-3.3.0.gem
+  * erb-6.0.7.gem
+  * fastimage-2.4.3.gem
+  * ffi-1.17.4-x86_64-linux-gnu.gem
+  * free-image-0.8.1.gem
+  * io-console-0.9.5.gem
+  * jaro_winkler-1.7.1.gem
+  * rexml-3.4.4.gem
+  * kramdown-2.6.1.gem
+  * kramdown-parser-gfm-1.1.0.gem
+  * language_server-protocol-3.17.0.6.gem
+  * lint_roller-1.1.0.gem
+  * logger-1.7.0.gem
+  * timeout-0.6.1.gem
+  * net-protocol-0.4.0.gem
+  * uri-1.1.2.gem
+  * net-http-0.10.0.gem
+  * nio4r-2.7.5.gem
+  * racc-1.8.1.gem
+  * nokogiri-1.19.7-x86_64-linux-gnu.gem
+  * observer-0.1.2.gem
+  * oj-3.17.8.gem
+  * open3-0.2.1.gem
+  * openssl-4.0.2.gem
+  * ostruct-0.6.3.gem
+  * parallel-2.3.0.gem
+  * parser-3.3.14.0.gem
+  * rainbow-3.1.1.gem
+  * sorbet-runtime-0.6.13729.gem
+  * parlour-9.1.2.gem
+  * prism-1.9.0.gem
+  * stringio-3.2.0.gem
+  * psych-5.5.0.gem
+  * puma-8.1.3.gem
+  * rack-3.2.9.gem
+  * rack-brotli-2.0.0.gem
+  * tsort-0.2.0.gem
+  * rbs-4.2.0.gem
+  * rdoc-8.1.0.gem
+  * redcarpet-3.6.1.gem
+  * regexp_parser-2.13.4.gem
+  * reverse_markdown-3.1.0.gem
+  * roda-3.110.0.gem
+  * rubocop-ast-1.54.0.gem
+  * ruby-progressbar-1.13.0.gem
+  * unicode-emoji-4.3.0.gem
+  * unicode-display_width-3.3.0.gem
+  * rubocop-1.93.0.gem
+  * ruby-lsp-0.26.11.gem
+  * yard-0.9.46.gem
+  * sord-7.1.0.gem
+  * thor-1.5.0.gem
+  * tilt-2.9.0.gem
+  * yard-activesupport-concern-0.0.1.gem
+  * yard-solargraph-0.1.0.gem
+  * solargraph-0.60.1.gem
+  * tzinfo-2.0.6.gem
+  * webrick-1.9.2.gem
+  * yuicompressor-1.3.3.gem
+  * zlib-3.3.0.gem
+Removing outdated .gem files from vendor/cache
+  * yard-0.9.45.gem
+  * zlib-3.2.4.gem
+Bundle updated!
+2 installed gems you directly depend on are looking for funding.
+  Run `bundle fund` for details
+     Locking 0 packages to highest Rust 1.102.0-nightly compatible versions
+    Finished `release` profile [optimized] target(s) in 0.00s
+{"level":"info","ts":1795766431.001959,"msg":"using config from file","file":"/root/miaedscore/Caddyfile"}
+{"level":"info","ts":1795766431.0025415,"msg":"adapted config to JSON","adapter":"caddyfile"}
+{"level":"info","ts":1795766431.0028112,"logger":"http.auto_https","msg":"server is listening only on the HTTPS port but has no TLS connection policies; adding one to enable TLS","server_name":"srv0","https_port":443}
+{"level":"info","ts":1795766431.0028272,"logger":"http.auto_https","msg":"enabling automatic HTTP->HTTPS redirects","server_name":"srv0"}
+{"level":"info","ts":1795766431.002934,"logger":"http","msg":"servers shutting down with eternal grace period"}
+{"level":"info","ts":1795766431.0029411,"logger":"tls.cache.maintenance","msg":"started background certificate maintenance","cache":"0x273c291e3980"}
+{"level":"info","ts":1795766431.0029962,"logger":"tls.cache.maintenance","msg":"stopped background certificate maintenance","cache":"0x273c291e3980"}
+Valid configuration
+{"level":"info","ts":1795766431.0304124,"msg":"using config from file","file":"/etc/caddy/Caddyfile"}
+{"level":"info","ts":1795766431.030893,"msg":"adapted config to JSON","adapter":"caddyfile"}
+{"level":"info","ts":1795766431.0311606,"logger":"http.auto_https","msg":"server is listening only on the HTTPS port but has no TLS connection policies; adding one to enable TLS","server_name":"srv0","https_port":443}
+{"level":"info","ts":1795766431.0311742,"logger":"http.auto_https","msg":"enabling automatic HTTP->HTTPS redirects","server_name":"srv0"}
+{"level":"info","ts":1795766431.0312464,"logger":"tls.cache.maintenance","msg":"started background certificate maintenance","cache":"0x28fe69725e80"}
+{"level":"info","ts":1795766431.0312858,"logger":"tls.cache.maintenance","msg":"stopped background certificate maintenance","cache":"0x28fe69725e80"}
+{"level":"info","ts":1795766431.0312963,"logger":"http","msg":"servers shutting down with eternal grace period"}
+Valid configuration
+    Finished `release` profile [optimized] target(s) in 0.00s
+Command stop sent success
+Caddy serves the WASM asset over HTTP/2 and advertises HTTP/3; UDP 443 is listening (Puma PID 543202).
+The hosting/network firewall must also allow inbound UDP port 443.
+[2026-11-27T08:00:38+00:00] Update finished with status 0
